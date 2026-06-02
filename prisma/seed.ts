@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import { randomBytes, scryptSync } from 'node:crypto';
 import {
   ContentStatus,

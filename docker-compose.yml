@@ -1,0 +1,24 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: dragon-games-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: dragon
+      POSTGRES_PASSWORD: dragon
+      POSTGRES_DB: dragon_games
+    ports:
+      # Host 5433 to avoid clashing with a local Postgres on 5432.
+      - '5433:5432'
+    volumes:
+      - dragon-games-pgdata:/var/lib/postgresql/data
+      # Creates the dedicated integration-test database on first init.
+      - ./docker/postgres/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U dragon -d dragon_games']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  dragon-games-pgdata:
