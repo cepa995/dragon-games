@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next';
+import { WebVitals } from './_components/web-vitals';
 import './globals.css';
 
 export const metadata: Metadata = {
@@ -20,7 +21,10 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   // finalised in M2 (#10, next-intl). Default to Serbian for the foundation.
   return (
     <html lang="sr">
-      <body>{children}</body>
+      <body>
+        <WebVitals />
+        {children}
+      </body>
     </html>
   );
 }
