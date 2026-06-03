@@ -3,20 +3,32 @@ updates:
   - package-ecosystem: npm
     directory: '/'
     schedule:
-      interval: weekly
-    open-pull-requests-limit: 10
+      interval: monthly
+    open-pull-requests-limit: 5
+    # One batched PR for all minor/patch updates. Major bumps are ignored so we
+    # upgrade them deliberately (several have breaking changes — Prisma 7, zod 4,
+    # Sentry 10, etc.), not via an auto-PR flood.
     groups:
-      # Batch low-risk updates to reduce PR noise.
-      minor-and-patch:
+      npm:
+        patterns: ['*']
         update-types:
           - minor
           - patch
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
     labels:
       - dependencies
 
   - package-ecosystem: github-actions
     directory: '/'
     schedule:
-      interval: weekly
+      interval: monthly
+    groups:
+      github-actions:
+        patterns: ['*']
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
     labels:
       - dependencies
