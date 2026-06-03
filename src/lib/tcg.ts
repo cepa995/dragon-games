@@ -1,9 +1,6 @@
 import type { TournamentGame } from '@/generated/prisma';
 
-/**
- * Supported TCGs — display metadata shared across the site. Drop official logos
- * (transparent PNG/SVG) at the `logo` paths; until then the `glyph` is shown.
- */
+/** Supported TCGs — display metadata + branded banner art, shared across the site. */
 export const TCGS = [
   {
     key: 'mtg',
@@ -11,7 +8,7 @@ export const TCGS = [
     slug: 'magic-the-gathering',
     accent: 'var(--color-tcg-mtg)',
     glyph: '✦',
-    logo: '/images/tcg/mtg.png',
+    banner: '/images/game-banners/MTG-banner.jpg',
   },
   {
     key: 'pokemon',
@@ -19,7 +16,7 @@ export const TCGS = [
     slug: 'pokemon',
     accent: 'var(--color-tcg-pokemon)',
     glyph: '◓',
-    logo: '/images/tcg/pokemon.png',
+    banner: '/images/game-banners/Pokemon-banner.webp',
   },
   {
     key: 'yugioh',
@@ -27,7 +24,7 @@ export const TCGS = [
     slug: 'yu-gi-oh',
     accent: 'var(--color-tcg-yugioh)',
     glyph: '✪',
-    logo: '/images/tcg/yugioh.png',
+    banner: '/images/game-banners/YuGiOh-banner.jpeg',
   },
   {
     key: 'riftbound',
@@ -35,7 +32,7 @@ export const TCGS = [
     slug: 'riftbound',
     accent: 'var(--color-tcg-riftbound)',
     glyph: '◈',
-    logo: '/images/tcg/riftbound.png',
+    banner: '/images/game-banners/riftbound-banner.webp',
   },
 ] as const;
 
