@@ -1,0 +1,51 @@
+{
+  "brand": {
+    "name": "Dragon Games",
+    "tagline": "TCG i board games klub od 1994."
+  },
+  "nav": {
+    "catalog": "Katalog",
+    "tournaments": "Turniri",
+    "news": "Vesti",
+    "guides": "Vodiči",
+    "about": "O nama",
+    "locations": "Lokacije",
+    "contact": "Kontakt",
+    "account": "Nalog",
+    "cart": "Korpa",
+    "search": "Pretraga"
+  },
+  "actions": {
+    "skipToContent": "Pređi na sadržaj",
+    "toggleTheme": "Promeni temu",
+    "switchLanguage": "Promeni jezik",
+    "openMenu": "Otvori meni",
+    "closeMenu": "Zatvori meni",
+    "browseCatalog": "Pregledaj katalog"
+  },
+  "home": {
+    "tagline": "TCG i board games klub od 1994.",
+    "subtitle": "Nova web platforma je u izradi. Temelji aplikacije su postavljeni — katalog, turniri i nalozi stižu uskoro."
+  },
+  "footer": {
+    "hours": "Radno vreme",
+    "hoursValue": "Sreda – Nedelja, 15:00 – 21:00",
+    "locations": "Lokacije",
+    "shop": "Prodavnica: Stražilovska 3, Novi Sad",
+    "club": "Klub: Kralja Aleksandra 4, Novi Sad",
+    "follow": "Pratite nas",
+    "legal": "Pravne informacije",
+    "privacy": "Politika privatnosti",
+    "terms": "Uslovi korišćenja",
+    "rights": "Sva prava zadržana."
+  },
+  "cart": {
+    "summary": "{count, plural, =0 {Korpa je prazna} one {# artikal} few {# artikla} other {# artikala}}"
+  },
+  "language": {
+    "sr": "Srpski",
+    "en": "Engleski",
+    "srShort": "SR",
+    "enShort": "EN"
+  }
+}
