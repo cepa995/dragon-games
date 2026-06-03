@@ -48,13 +48,17 @@
       "subtitle": "Pridruži se igri — FNM, prerelease i još mnogo toga.",
       "viewAll": "Svi turniri",
       "empty": "Trenutno nema zakazanih turnira. Vrati se uskoro.",
-      "free": "Besplatno"
+      "free": "Besplatno",
+      "entryFee": "Kotizacija",
+      "statusOpen": "Prijave otvorene",
+      "statusFull": "Popunjeno"
     },
     "news": {
       "title": "Najnovije vesti",
       "subtitle": "Najave, izveštaji sa turnira i novosti iz kluba.",
       "viewAll": "Sve vesti",
-      "empty": "Još nema objavljenih vesti."
+      "empty": "Još nema objavljenih vesti.",
+      "readMore": "Pročitaj"
     },
     "locations": {
       "title": "Posetite nas",
@@ -62,7 +66,9 @@
       "shopLabel": "Prodavnica",
       "clubLabel": "Klub",
       "hoursLabel": "Radno vreme",
-      "directions": "Uputstva za dolazak"
+      "directions": "Uputstva za dolazak",
+      "openNow": "Otvoreno",
+      "closed": "Zatvoreno"
     },
     "newsletter": {
       "title": "Budi u toku",
@@ -90,7 +96,8 @@
     "legal": "Pravne informacije",
     "privacy": "Politika privatnosti",
     "terms": "Uslovi korišćenja",
-    "rights": "Sva prava zadržana."
+    "rights": "Sva prava zadržana.",
+    "explore": "Istraži"
   },
   "cart": {
     "summary": "{count, plural, =0 {Korpa je prazna} one {# artikal} few {# artikla} other {# artikala}}"

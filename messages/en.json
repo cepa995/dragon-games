@@ -48,13 +48,17 @@
       "subtitle": "Join the game — FNM, prereleases and more.",
       "viewAll": "All tournaments",
       "empty": "No tournaments scheduled right now. Check back soon.",
-      "free": "Free"
+      "free": "Free",
+      "entryFee": "Entry",
+      "statusOpen": "Registration open",
+      "statusFull": "Full"
     },
     "news": {
       "title": "Latest news",
       "subtitle": "Announcements, tournament reports and club news.",
       "viewAll": "All news",
-      "empty": "No news published yet."
+      "empty": "No news published yet.",
+      "readMore": "Read more"
     },
     "locations": {
       "title": "Visit us",
@@ -62,7 +66,9 @@
       "shopLabel": "Shop",
       "clubLabel": "Club",
       "hoursLabel": "Opening hours",
-      "directions": "Get directions"
+      "directions": "Get directions",
+      "openNow": "Open now",
+      "closed": "Closed"
     },
     "newsletter": {
       "title": "Stay in the loop",
@@ -90,7 +96,8 @@
     "legal": "Legal",
     "privacy": "Privacy policy",
     "terms": "Terms of service",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "explore": "Explore"
   },
   "cart": {
     "summary": "{count, plural, =0 {Your cart is empty} one {# item} other {# items}}"

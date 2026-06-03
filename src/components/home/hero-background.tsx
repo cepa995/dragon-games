@@ -133,6 +133,9 @@ export function HeroBackground({ reduce }: { reduce: boolean }) {
             'radial-gradient(120% 100% at 50% 40%, transparent 55%, color-mix(in oklch, var(--color-background) 85%, transparent))',
         }}
       />
+
+      {/* Smooth fade into the page background at the bottom */}
+      <div className="to-background absolute inset-x-0 bottom-0 h-48 bg-gradient-to-b from-transparent" />
     </div>
   );
 }

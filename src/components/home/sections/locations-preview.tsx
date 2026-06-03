@@ -1,11 +1,11 @@
 import { Clock, MapPin, Navigation } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
+import { isOpenNow, type WeeklyHours } from '@/lib/datetime';
 import { prisma } from '@/lib/prisma';
 import { Section } from './section';
 
-type BusinessInfo = {
-  locations?: { key: string; address: string }[];
-};
+type BusinessInfo = { locations?: { key: string; address: string }[] };
+type BusinessHours = { weekly?: WeeklyHours };
 
 const FALLBACK = {
   shop: 'Stražilovska 3, Novi Sad',
@@ -20,9 +20,14 @@ export async function LocationsPreview() {
   const t = await getTranslations('home.locations');
   const tFooter = await getTranslations('footer');
 
-  const setting = await prisma.setting.findUnique({ where: { key: 'business.info' } });
-  const info = (setting?.value as BusinessInfo | undefined) ?? {};
+  const [infoSetting, hoursSetting] = await Promise.all([
+    prisma.setting.findUnique({ where: { key: 'business.info' } }),
+    prisma.setting.findUnique({ where: { key: 'business.hours' } }),
+  ]);
+  const info = (infoSetting?.value as BusinessInfo | undefined) ?? {};
+  const hours = (hoursSetting?.value as BusinessHours | undefined) ?? {};
   const byKey = new Map((info.locations ?? []).map((l) => [l.key, l.address]));
+  const open = isOpenNow(hours.weekly);
 
   const locations = [
     { key: 'shop', label: t('shopLabel'), address: byKey.get('shop') ?? FALLBACK.shop },
@@ -31,27 +36,40 @@ export async function LocationsPreview() {
 
   return (
     <Section title={t('title')} subtitle={t('subtitle')}>
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-5 md:grid-cols-2">
         {locations.map((loc) => (
           <div
             key={loc.key}
-            className="rounded-hero border-border bg-surface relative overflow-hidden border p-6"
+            className="group rounded-hero border-border bg-surface hover:border-accent/40 relative overflow-hidden border p-6 transition-all duration-300 hover:-translate-y-1"
           >
-            {/* faux-map grid backdrop */}
+            {/* faux-map grid + glow */}
             <div
-              className="pointer-events-none absolute inset-0 opacity-[0.05]"
+              className="pointer-events-none absolute inset-0 opacity-[0.06]"
               style={{
                 backgroundImage:
                   'linear-gradient(var(--color-foreground) 1px, transparent 1px), linear-gradient(90deg, var(--color-foreground) 1px, transparent 1px)',
-                backgroundSize: '28px 28px',
+                backgroundSize: '30px 30px',
               }}
             />
+            <div className="bg-accent/15 pointer-events-none absolute -top-16 -right-16 size-48 rounded-full blur-3xl" />
+
             <div className="relative space-y-3">
-              <p className="text-accent text-xs font-semibold tracking-widest uppercase">
-                {loc.label}
-              </p>
-              <p className="flex items-start gap-2 font-medium">
-                <MapPin className="text-accent mt-0.5 size-5 shrink-0" />
+              <div className="flex items-center justify-between">
+                <p className="text-accent text-xs font-semibold tracking-widest uppercase">
+                  {loc.label}
+                </p>
+                <span className="inline-flex items-center gap-1.5 text-xs font-medium">
+                  <span
+                    className={`size-2 rounded-full ${open ? 'bg-success shadow-success shadow-[0_0_8px]' : 'bg-muted-foreground'}`}
+                  />
+                  <span className={open ? 'text-success' : 'text-muted-foreground'}>
+                    {open ? t('openNow') : t('closed')}
+                  </span>
+                </span>
+              </div>
+
+              <p className="flex items-start gap-2 text-lg font-medium">
+                <MapPin className="text-accent mt-1 size-5 shrink-0" />
                 {loc.address}
               </p>
               <p className="text-muted-foreground flex items-center gap-2 text-sm">
@@ -62,7 +80,7 @@ export async function LocationsPreview() {
                 href={directionsUrl(loc.address)}
                 target="_blank"
                 rel="noreferrer noopener"
-                className="text-accent hover:text-foreground inline-flex items-center gap-1.5 text-sm font-semibold"
+                className="border-border hover:border-accent/50 hover:text-accent inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-semibold transition-colors"
               >
                 <Navigation className="size-4" />
                 {t('directions')}
