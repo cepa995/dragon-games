@@ -7,8 +7,16 @@ export function generateToken(): string {
   return randomBytes(32).toString('base64url');
 }
 
-/** Tokens are stored only as their SHA-256 hash, never in plaintext. */
+/**
+ * Hash a token for storage. These are **256-bit cryptographically-random**
+ * values from `generateToken()` (not user passwords), so a fast hash is the
+ * correct, standard choice — the same approach used for reset/verification
+ * tokens by Django, Rails, etc. There is nothing to brute-force at 2^256, so a
+ * slow KDF (Argon2/bcrypt) would add cost without security benefit. User
+ * passwords use Argon2id in `password.ts`.
+ */
 export function hashToken(token: string): string {
+  // codeql[js/insufficient-password-hash] — random tokens, not passwords.
   return createHash('sha256').update(token).digest('hex');
 }
 
