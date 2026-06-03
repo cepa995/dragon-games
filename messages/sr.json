@@ -47,5 +47,122 @@
     "en": "Engleski",
     "srShort": "SR",
     "enShort": "EN"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "passwordLabel": "Lozinka",
+    "nameLabel": "Ime",
+    "logout": "Odjava",
+    "login": {
+      "title": "Prijava",
+      "submit": "Prijavi se",
+      "orDivider": "ili",
+      "magicSubmit": "Pošalji link za prijavu",
+      "magicSent": "Poslali smo vam link za prijavu. Proverite email.",
+      "forgot": "Zaboravili ste lozinku?",
+      "noAccount": "Nemate nalog?",
+      "registerLink": "Registrujte se"
+    },
+    "register": {
+      "title": "Registracija",
+      "submit": "Kreiraj nalog",
+      "success": "Nalog je kreiran. Proverite email da potvrdite adresu.",
+      "haveAccount": "Već imate nalog?",
+      "loginLink": "Prijavite se"
+    },
+    "forgot": {
+      "title": "Zaboravljena lozinka",
+      "submit": "Pošalji link za resetovanje",
+      "sent": "Ako nalog postoji, poslali smo link za resetovanje lozinke.",
+      "back": "Nazad na prijavu"
+    },
+    "reset": {
+      "title": "Nova lozinka",
+      "submit": "Sačuvaj lozinku",
+      "success": "Lozinka je promenjena. Sada se možete prijaviti.",
+      "loginLink": "Idi na prijavu"
+    },
+    "verify": {
+      "success": "Email adresa je potvrđena. Hvala!",
+      "failed": "Link nije važeći ili je istekao.",
+      "loginLink": "Idi na prijavu"
+    },
+    "twoFactor": {
+      "title": "Dvofaktorska autentifikacija (2FA)",
+      "description": "Dodatni sloj zaštite za vaš nalog pomoću aplikacije za kodove (npr. Google Authenticator).",
+      "enabledBadge": "2FA je aktivna",
+      "enable": "Uključi 2FA",
+      "disable": "Isključi 2FA",
+      "scan": "Skenirajte QR kod u aplikaciji za autentifikaciju, pa unesite kod.",
+      "secretLabel": "Ili ručno unesite ključ:",
+      "codeLabel": "Kod iz aplikacije",
+      "confirm": "Potvrdi i uključi",
+      "recoveryTitle": "Sačuvajte kodove za oporavak",
+      "recoveryHint": "Svaki kod se može iskoristiti jednom. Čuvajte ih na sigurnom mestu.",
+      "done": "Završeno"
+    },
+    "errors": {
+      "invalid": "Proverite unete podatke.",
+      "invalid_credentials": "Pogrešan email ili lozinka.",
+      "email_taken": "Nalog sa ovom email adresom već postoji.",
+      "rate_limited": "Previše pokušaja. Pokušajte ponovo za minut.",
+      "magic_failed": "Slanje linka nije uspelo. Pokušajte ponovo.",
+      "invalid_token": "Link nije važeći ili je istekao.",
+      "totp_invalid": "Pogrešan kod. Pokušajte ponovo.",
+      "unauthorized": "Morate biti prijavljeni."
+    }
+  },
+  "account": {
+    "title": "Nalog",
+    "logout": "Odjava",
+    "nav": {
+      "profile": "Profil",
+      "addresses": "Adrese",
+      "favorites": "Omiljeno",
+      "security": "Bezbednost",
+      "privacy": "Privatnost"
+    },
+    "favorites": {
+      "title": "Omiljeni proizvodi",
+      "empty": "Još nemate omiljenih proizvoda.",
+      "remove": "Ukloni iz omiljenih"
+    },
+    "privacy": {
+      "exportTitle": "Izvoz podataka",
+      "exportHint": "Preuzmite kopiju svojih podataka u JSON formatu.",
+      "exportButton": "Preuzmi moje podatke",
+      "deleteTitle": "Brisanje naloga",
+      "deleteHint": "Vaš nalog se briše, a podaci se anonimizuju nakon 30 dana. Porudžbine se čuvaju u anonimizovanom obliku.",
+      "passwordLabel": "Potvrdite lozinkom",
+      "deleteButton": "Obriši nalog"
+    },
+    "profile": {
+      "title": "Profil",
+      "nameLabel": "Ime",
+      "phoneLabel": "Telefon",
+      "emailLabel": "Email",
+      "save": "Sačuvaj",
+      "saved": "Promene su sačuvane.",
+      "verified": "Email potvrđen",
+      "unverified": "Email nije potvrđen",
+      "resend": "Pošalji ponovo potvrdu",
+      "resent": "Poslali smo email za potvrdu.",
+      "languageTitle": "Jezik",
+      "languageHint": "Izaberite podrazumevani jezik naloga."
+    },
+    "addresses": {
+      "title": "Adrese",
+      "add": "Dodaj adresu",
+      "empty": "Još nemate sačuvanih adresa.",
+      "labelLabel": "Naziv (npr. Kuća)",
+      "streetLabel": "Ulica i broj",
+      "cityLabel": "Grad",
+      "postalLabel": "Poštanski broj",
+      "countryLabel": "Država",
+      "defaultBadge": "Podrazumevana",
+      "makeDefault": "Postavi kao podrazumevanu",
+      "delete": "Obriši",
+      "save": "Sačuvaj adresu"
+    }
   }
 }

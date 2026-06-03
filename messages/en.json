@@ -47,5 +47,122 @@
     "en": "English",
     "srShort": "SR",
     "enShort": "EN"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "nameLabel": "Name",
+    "logout": "Log out",
+    "login": {
+      "title": "Log in",
+      "submit": "Log in",
+      "orDivider": "or",
+      "magicSubmit": "Send sign-in link",
+      "magicSent": "We sent you a sign-in link. Check your email.",
+      "forgot": "Forgot your password?",
+      "noAccount": "No account?",
+      "registerLink": "Sign up"
+    },
+    "register": {
+      "title": "Sign up",
+      "submit": "Create account",
+      "success": "Account created. Check your email to confirm your address.",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Log in"
+    },
+    "forgot": {
+      "title": "Forgot password",
+      "submit": "Send reset link",
+      "sent": "If an account exists, we sent a password reset link.",
+      "back": "Back to login"
+    },
+    "reset": {
+      "title": "New password",
+      "submit": "Save password",
+      "success": "Your password was changed. You can now log in.",
+      "loginLink": "Go to login"
+    },
+    "verify": {
+      "success": "Your email has been confirmed. Thank you!",
+      "failed": "The link is invalid or has expired.",
+      "loginLink": "Go to login"
+    },
+    "twoFactor": {
+      "title": "Two-factor authentication (2FA)",
+      "description": "An extra layer of protection for your account using an authenticator app (e.g. Google Authenticator).",
+      "enabledBadge": "2FA is active",
+      "enable": "Enable 2FA",
+      "disable": "Disable 2FA",
+      "scan": "Scan the QR code in your authenticator app, then enter the code.",
+      "secretLabel": "Or enter the key manually:",
+      "codeLabel": "Code from the app",
+      "confirm": "Confirm and enable",
+      "recoveryTitle": "Save your recovery codes",
+      "recoveryHint": "Each code can be used once. Keep them somewhere safe.",
+      "done": "Done"
+    },
+    "errors": {
+      "invalid": "Please check the details you entered.",
+      "invalid_credentials": "Incorrect email or password.",
+      "email_taken": "An account with this email already exists.",
+      "rate_limited": "Too many attempts. Try again in a minute.",
+      "magic_failed": "Could not send the link. Please try again.",
+      "invalid_token": "The link is invalid or has expired.",
+      "totp_invalid": "Wrong code. Please try again.",
+      "unauthorized": "You must be signed in."
+    }
+  },
+  "account": {
+    "title": "Account",
+    "logout": "Log out",
+    "nav": {
+      "profile": "Profile",
+      "addresses": "Addresses",
+      "favorites": "Favorites",
+      "security": "Security",
+      "privacy": "Privacy"
+    },
+    "favorites": {
+      "title": "Favorite products",
+      "empty": "You have no favorite products yet.",
+      "remove": "Remove from favorites"
+    },
+    "privacy": {
+      "exportTitle": "Export your data",
+      "exportHint": "Download a copy of your data in JSON format.",
+      "exportButton": "Download my data",
+      "deleteTitle": "Delete account",
+      "deleteHint": "Your account is deleted and your data anonymized after 30 days. Orders are kept in anonymized form.",
+      "passwordLabel": "Confirm with password",
+      "deleteButton": "Delete account"
+    },
+    "profile": {
+      "title": "Profile",
+      "nameLabel": "Name",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "save": "Save",
+      "saved": "Your changes were saved.",
+      "verified": "Email verified",
+      "unverified": "Email not verified",
+      "resend": "Resend verification",
+      "resent": "We sent a verification email.",
+      "languageTitle": "Language",
+      "languageHint": "Choose the default language for your account."
+    },
+    "addresses": {
+      "title": "Addresses",
+      "add": "Add address",
+      "empty": "You have no saved addresses yet.",
+      "labelLabel": "Label (e.g. Home)",
+      "streetLabel": "Street and number",
+      "cityLabel": "City",
+      "postalLabel": "Postal code",
+      "countryLabel": "Country",
+      "defaultBadge": "Default",
+      "makeDefault": "Set as default",
+      "delete": "Delete",
+      "save": "Save address"
+    }
   }
 }

@@ -4,12 +4,12 @@ import { useLocale, useTranslations } from 'next-intl';
 import { useTransition } from 'react';
 import { usePathname, useRouter } from '@/i18n/navigation';
 import { routing, type Locale } from '@/i18n/routing';
+import { setLocalePreferenceAction } from '@/lib/account/actions';
 
 /**
  * SR / EN switcher (SRS FR-26.1/26.2). Switching navigates to the same path in
- * the target locale (preserving scroll) and persists the choice via the
- * NEXT_LOCALE cookie set by next-intl. DB persistence for logged-in users is
- * reconciled in M3 (#13).
+ * the target locale (preserving scroll), persists the choice via the NEXT_LOCALE
+ * cookie (next-intl), and — for logged-in users — to the DB (no-op for guests).
  */
 export function LanguageSwitcher() {
   const locale = useLocale();
@@ -21,7 +21,8 @@ export function LanguageSwitcher() {
 
   function switchTo(next: Locale) {
     if (next === locale) return;
-    startTransition(() => {
+    startTransition(async () => {
+      await setLocalePreferenceAction(next);
       router.replace(pathname, { locale: next });
     });
   }
