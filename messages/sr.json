@@ -24,8 +24,14 @@
     "browseCatalog": "Pregledaj katalog"
   },
   "home": {
-    "tagline": "TCG i board games klub od 1994.",
-    "subtitle": "Nova web platforma je u izradi. Temelji aplikacije su postavljeni — katalog, turniri i nalozi stižu uskoro."
+    "hero": {
+      "eyebrow": "Dragon Games · Novi Sad · od 1994.",
+      "title": "Igra počinje ovde",
+      "subtitle": "Magic, Pokémon, Yu-Gi-Oh!, Riftbound, društvene igre i turniri — u srcu Novog Sada.",
+      "ctaCatalog": "Pregledaj katalog",
+      "ctaTournaments": "Predstojeći turniri",
+      "scrollHint": "Skroluj"
+    }
   },
   "footer": {
     "hours": "Radno vreme",

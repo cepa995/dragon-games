@@ -1,31 +1,15 @@
-import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Stagger, StaggerItem } from '@/components/motion/reveal';
+import { setRequestLocale } from 'next-intl/server';
+import { Hero } from '@/components/home/hero';
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations('home');
-  const tBrand = await getTranslations('brand');
 
-  // Placeholder home — replaced by the real informational home in M4 (#16).
+  // Hero first (#16). The featured TCGs / products / tournaments / news /
+  // locations / newsletter sections follow in the next step.
   return (
-    <main
-      id="main-content"
-      className="mx-auto flex min-h-[70vh] max-w-3xl flex-col items-center justify-center px-6 py-16 text-center"
-    >
-      <Stagger className="flex flex-col items-center gap-4">
-        <StaggerItem>
-          <p className="text-accent text-sm font-medium tracking-widest uppercase">
-            {tBrand('name')}
-          </p>
-        </StaggerItem>
-        <StaggerItem>
-          <h1 className="text-4xl sm:text-5xl">{t('tagline')}</h1>
-        </StaggerItem>
-        <StaggerItem>
-          <p className="text-muted-foreground max-w-prose">{t('subtitle')}</p>
-        </StaggerItem>
-      </Stagger>
+    <main id="main-content">
+      <Hero />
     </main>
   );
 }

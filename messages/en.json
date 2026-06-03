@@ -24,8 +24,14 @@
     "browseCatalog": "Browse catalog"
   },
   "home": {
-    "tagline": "TCG & board games club since 1994.",
-    "subtitle": "The new web platform is in the works. The app foundation is in place — catalog, tournaments and accounts are coming soon."
+    "hero": {
+      "eyebrow": "Dragon Games · Novi Sad · since 1994",
+      "title": "The game begins here",
+      "subtitle": "Magic, Pokémon, Yu-Gi-Oh!, Riftbound, board games and tournaments — in the heart of Novi Sad.",
+      "ctaCatalog": "Browse catalog",
+      "ctaTournaments": "Upcoming tournaments",
+      "scrollHint": "Scroll"
+    }
   },
   "footer": {
     "hours": "Opening hours",

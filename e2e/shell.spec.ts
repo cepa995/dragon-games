@@ -12,7 +12,7 @@ test('language switch navigates to the selected locale', async ({ page }) => {
   await page.goto('/sr');
   await page.locator('header').getByRole('button', { name: 'EN', exact: true }).click();
   await expect(page).toHaveURL(/\/en$/);
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('since 1994');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('The game begins here');
 });
 
 test('mobile menu opens and closes', async ({ page }) => {
