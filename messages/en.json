@@ -1,0 +1,51 @@
+{
+  "brand": {
+    "name": "Dragon Games",
+    "tagline": "TCG & board games club since 1994."
+  },
+  "nav": {
+    "catalog": "Catalog",
+    "tournaments": "Tournaments",
+    "news": "News",
+    "guides": "Guides",
+    "about": "About",
+    "locations": "Locations",
+    "contact": "Contact",
+    "account": "Account",
+    "cart": "Cart",
+    "search": "Search"
+  },
+  "actions": {
+    "skipToContent": "Skip to content",
+    "toggleTheme": "Toggle theme",
+    "switchLanguage": "Switch language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "browseCatalog": "Browse catalog"
+  },
+  "home": {
+    "tagline": "TCG & board games club since 1994.",
+    "subtitle": "The new web platform is in the works. The app foundation is in place — catalog, tournaments and accounts are coming soon."
+  },
+  "footer": {
+    "hours": "Opening hours",
+    "hoursValue": "Wednesday – Sunday, 15:00 – 21:00",
+    "locations": "Locations",
+    "shop": "Shop: Stražilovska 3, Novi Sad",
+    "club": "Club: Kralja Aleksandra 4, Novi Sad",
+    "follow": "Follow us",
+    "legal": "Legal",
+    "privacy": "Privacy policy",
+    "terms": "Terms of service",
+    "rights": "All rights reserved."
+  },
+  "cart": {
+    "summary": "{count, plural, =0 {Your cart is empty} one {# item} other {# items}}"
+  },
+  "language": {
+    "sr": "Serbian",
+    "en": "English",
+    "srShort": "SR",
+    "enShort": "EN"
+  }
+}
