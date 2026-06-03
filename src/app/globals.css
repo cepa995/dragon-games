@@ -159,6 +159,51 @@
   }
 }
 
+@keyframes nebula-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(3%, -2.5%, 0) scale(1.12);
+  }
+}
+
+@keyframes rune-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ash-float {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: var(--ash-opacity, 0.5);
+  }
+  92% {
+    opacity: var(--ash-opacity, 0.5);
+  }
+  100% {
+    transform: translate3d(var(--ash-drift, 24px), -112vh, 0) rotate(160deg);
+    opacity: 0;
+  }
+}
+
+@keyframes ray-shift {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translateX(0) skewX(-14deg);
+  }
+  50% {
+    opacity: 0.45;
+    transform: translateX(3%) skewX(-14deg);
+  }
+}
+
 /* Respect reduced-motion globally (SRS C-8). */
 @media (prefers-reduced-motion: reduce) {
   *,

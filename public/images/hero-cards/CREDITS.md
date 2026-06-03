@@ -1,16 +1,19 @@
 # Hero card art — sources & attribution
 
-Iconic dragon cards showcased in the home hero, fetched once from open card
-databases and self-hosted (per each API's guidance to cache, not hotlink).
-Card names and artwork are trademarks/copyright of their respective publishers;
-used to showcase products carried by Dragon Games (SRS §2.6).
+Modern showcase cards displayed in the home hero, fetched once from open card
+databases and self-hosted (per each API's caching guidance). Card names and art
+are trademarks/copyright of their publishers; shown to showcase products carried
+by Dragon Games (SRS §2.6).
 
-- `mtg-shivan-dragon.jpg` — Magic: The Gathering, "Shivan Dragon".
-  Source: Scryfall API (https://scryfall.com). © Wizards of the Coast.
-- `ygo-blue-eyes.jpg` — Yu-Gi-Oh!, "Blue-Eyes White Dragon".
-  Source: YGOPRODeck API (https://ygoprodeck.com). © Konami / Studio Dice.
-- `pokemon-charizard.png` — Pokémon TCG, "Charizard" (Base Set).
+- `mtg-dragon.jpg` — Magic: The Gathering, "The Ur-Dragon" (borderless).
+  Source: Scryfall (https://scryfall.com). © Wizards of the Coast.
+- `ygo-blue-eyes.jpg` — Yu-Gi-Oh!, "Blue-Eyes Alternative White Dragon".
+  Source: YGOPRODeck (https://ygoprodeck.com). © Konami / Studio Dice.
+- `pokemon-charizard.png` — Pokémon TCG, "Mega Charizard X ex" (ME02 Phantasmal Flames, Special Illustration Rare).
   Source: Pokémon TCG API (https://pokemontcg.io). © The Pokémon Company / Nintendo.
 
-Riftbound has no stable open card API yet; it uses a stylized fallback card in
-the hero until a source is available.
+Riftbound has no stable open card API yet (Riot's developer portal requires a
+registered key); it uses a stylized fallback card in the hero for now.
+
+- `riftbound-elder-dragon.jpg` — Riftbound (League of Legends TCG), "Elder Dragon".
+  © Riot Games. Added by the client.

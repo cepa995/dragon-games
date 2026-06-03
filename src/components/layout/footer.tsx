@@ -1,5 +1,6 @@
 import { Clock, MapPin } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { LanguageSwitcher } from '@/components/i18n/language-switcher';
 import { Link } from '@/i18n/navigation';
 
@@ -14,8 +15,14 @@ export function Footer() {
   return (
     <footer className="border-border bg-surface border-t">
       <div className="mx-auto grid max-w-[1280px] gap-8 px-4 py-12 sm:px-6 md:grid-cols-3">
-        <div className="space-y-2">
-          <p className="font-display text-lg font-bold">{tBrand('name')}</p>
+        <div className="space-y-3">
+          <Image
+            src="/images/dragon_games_logo.png"
+            alt={tBrand('name')}
+            width={1254}
+            height={1254}
+            className="h-14 w-14"
+          />
           <p className="text-muted-foreground text-sm">{tBrand('tagline')}</p>
         </div>
 

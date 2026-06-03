@@ -1,58 +1,33 @@
 'use client';
 
-import {
-  motion,
-  useMotionValue,
-  useReducedMotion,
-  useSpring,
-  useTransform,
-  type MotionValue,
-} from 'framer-motion';
+import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
+import { HeroBackground } from './hero-background';
+import { HoloCard, type HeroCard } from './holo-card';
 
-type CardConfig = {
-  key: string;
-  label: string;
-  glyph: string;
-  accent: string;
-  image?: string;
-  left: string;
-  top: string;
-  rotate: number;
-  depth: number;
-  delay: number;
-  float: number;
-};
-
-// Positioned around the headline; `depth` drives parallax strength.
-const CARDS: CardConfig[] = [
+// Depth-layered composition: near cards are large/sharp, far cards small/blurred.
+const CARDS: HeroCard[] = [
   {
     key: 'mtg',
-    label: 'Magic',
+    label: 'Magic: The Gathering',
     glyph: '✦',
     accent: 'var(--color-tcg-mtg)',
-    image: '/images/hero-cards/mtg-shivan-dragon.jpg',
-    left: '8%',
-    top: '18%',
-    rotate: -12,
-    depth: 1.1,
+    image: '/images/hero-cards/mtg-dragon.jpg',
+    w: 488,
+    h: 680,
+    left: '4%',
+    top: '19%',
+    rotate: -13,
+    scale: 1.12,
+    blur: 0,
+    opacity: 1,
+    depth: 1.2,
     delay: 0.15,
-    float: 6,
-  },
-  {
-    key: 'riftbound',
-    label: 'Riftbound',
-    glyph: '◈',
-    accent: 'var(--color-tcg-riftbound)',
-    left: '17%',
-    top: '58%',
-    rotate: -6,
-    depth: 1.9,
-    delay: 0.35,
-    float: 7.5,
+    float: 6.5,
+    z: 3,
   },
   {
     key: 'pokemon',
@@ -60,138 +35,58 @@ const CARDS: CardConfig[] = [
     glyph: '◓',
     accent: 'var(--color-tcg-pokemon)',
     image: '/images/hero-cards/pokemon-charizard.png',
-    left: '74%',
-    top: '20%',
-    rotate: 10,
-    depth: 1.5,
-    delay: 0.25,
-    float: 6.8,
+    w: 733,
+    h: 1024,
+    left: '72%',
+    top: '12%',
+    rotate: 11,
+    scale: 1.05,
+    blur: 0,
+    opacity: 1,
+    depth: 1.6,
+    delay: 0.28,
+    float: 7.2,
+    z: 3,
   },
   {
     key: 'yugioh',
     label: 'Yu-Gi-Oh!',
     glyph: '✪',
     accent: 'var(--color-tcg-yugioh)',
-    image: '/images/hero-cards/ygo-blue-eyes.jpg',
-    left: '80%',
-    top: '60%',
-    rotate: 14,
-    depth: 1.3,
-    delay: 0.45,
+    image: '/images/hero-cards/ygo-slifer.jpg',
+    w: 813,
+    h: 1185,
+    left: '78%',
+    top: '54%',
+    rotate: 13,
+    scale: 0.96,
+    blur: 0,
+    opacity: 1,
+    depth: 1.35,
+    delay: 0.42,
     float: 8,
+    z: 2,
+  },
+  {
+    key: 'riftbound',
+    label: 'Riftbound',
+    glyph: '◈',
+    accent: 'var(--color-tcg-riftbound)',
+    image: '/images/hero-cards/riftbound-elder-dragon.webp',
+    w: 437,
+    h: 610,
+    left: '10%',
+    top: '58%',
+    rotate: -7,
+    scale: 0.9,
+    blur: 0,
+    opacity: 1,
+    depth: 2.1,
+    delay: 0.34,
+    float: 9,
+    z: 1,
   },
 ];
-
-// Deterministic so SSR and client markup match (no hydration mismatch).
-const EMBERS = Array.from({ length: 28 }, (_, i) => ({
-  left: (i * 101) % 100,
-  size: 2 + (i % 3),
-  delay: (i % 9) * 0.6,
-  duration: 5 + (i % 6),
-}));
-
-function FloatingCard({
-  card,
-  sx,
-  sy,
-  reduce,
-}: {
-  card: CardConfig;
-  sx: MotionValue<number>;
-  sy: MotionValue<number>;
-  reduce: boolean;
-}) {
-  const x = useTransform(sx, (v) => v * card.depth * 38);
-  const y = useTransform(sy, (v) => v * card.depth * 30);
-  const rotateY = useTransform(sx, (v) => v * card.depth * 9);
-  const rotateX = useTransform(sy, (v) => -v * card.depth * 9);
-
-  return (
-    <motion.div
-      className="absolute hidden md:block"
-      style={{ left: card.left, top: card.top }}
-      initial={reduce ? false : { opacity: 0, scale: 0.82 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: card.delay, duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-    >
-      <motion.div
-        className="[transform-style:preserve-3d]"
-        style={reduce ? undefined : { x, y, rotateX, rotateY }}
-      >
-        <motion.div
-          animate={reduce ? undefined : { y: [0, -10, 0] }}
-          transition={
-            reduce ? undefined : { duration: card.float, repeat: Infinity, ease: 'easeInOut' }
-          }
-          style={
-            {
-              rotate: `${card.rotate}deg`,
-              ['--accent' as string]: card.accent,
-            } as React.CSSProperties
-          }
-        >
-          {card.image ? (
-            // Real card art (self-hosted), with an accent glow + rim.
-            <div
-              className="relative aspect-[2.5/3.5] w-[clamp(104px,12vw,156px)] overflow-hidden rounded-xl ring-1"
-              style={
-                {
-                  boxShadow:
-                    '0 26px 70px -16px color-mix(in oklch, var(--accent) 60%, transparent)',
-                  ['--tw-ring-color' as string]:
-                    'color-mix(in oklch, var(--accent) 45%, transparent)',
-                } as React.CSSProperties
-              }
-            >
-              <Image
-                src={card.image}
-                alt={card.label}
-                fill
-                sizes="160px"
-                className="object-cover"
-              />
-              <span
-                className="pointer-events-none absolute inset-0 rounded-xl"
-                style={{
-                  boxShadow: 'inset 0 0 32px color-mix(in oklch, var(--accent) 30%, transparent)',
-                }}
-              />
-            </div>
-          ) : (
-            // Stylized fallback (e.g. Riftbound — no open card API yet).
-            <div
-              className="relative flex aspect-[2.5/3.5] w-[clamp(104px,12vw,156px)] flex-col justify-between rounded-xl border p-3 backdrop-blur-sm"
-              style={{
-                borderColor: 'color-mix(in oklch, var(--accent) 55%, transparent)',
-                background:
-                  'linear-gradient(155deg, color-mix(in oklch, var(--accent) 18%, var(--color-surface)), var(--color-surface))',
-                boxShadow: '0 22px 60px -14px color-mix(in oklch, var(--accent) 50%, transparent)',
-              }}
-            >
-              <span className="text-foreground/70 text-[10px] font-semibold tracking-wide">
-                {card.label}
-              </span>
-              <span
-                className="font-display text-5xl leading-none"
-                style={{ color: 'var(--accent)' }}
-                aria-hidden
-              >
-                {card.glyph}
-              </span>
-              <span
-                className="absolute inset-0 rounded-xl opacity-60"
-                style={{
-                  background:
-                    'radial-gradient(120% 80% at 50% 0%, color-mix(in oklch, var(--accent) 22%, transparent), transparent 60%)',
-                }}
-              />
-            </div>
-          )}
-        </motion.div>
-      </motion.div>
-    </motion.div>
-  );
-}
 
 export function Hero() {
   const t = useTranslations('home.hero');
@@ -199,83 +94,102 @@ export function Hero() {
 
   const px = useMotionValue(0);
   const py = useMotionValue(0);
-  const sx = useSpring(px, { stiffness: 50, damping: 18 });
-  const sy = useSpring(py, { stiffness: 50, damping: 18 });
+  const sx = useSpring(px, { stiffness: 45, damping: 18 });
+  const sy = useSpring(py, { stiffness: 45, damping: 18 });
 
-  function onMouseMove(e: React.MouseEvent<HTMLElement>) {
+  // Subtle 3D parallax for the dragon centerpiece.
+  const dragonX = useTransform(sx, (v) => v * 26);
+  const dragonRotateY = useTransform(sx, (v) => v * 12);
+  const dragonRotateX = useTransform(sy, (v) => -v * 8);
+
+  function onPointerMove(e: React.PointerEvent<HTMLElement>) {
     if (reduce) return;
     const rect = e.currentTarget.getBoundingClientRect();
     px.set((e.clientX - rect.left) / rect.width - 0.5);
     py.set((e.clientY - rect.top) / rect.height - 0.5);
   }
 
-  function onMouseLeave() {
+  function onPointerLeave() {
     px.set(0);
     py.set(0);
   }
 
   const reveal = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 24, filter: 'blur(6px)' },
     visible: (i: number) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: 0.1 + i * 0.1, duration: 0.6, ease: [0.22, 1, 0.36, 1] as const },
+      filter: 'blur(0px)',
+      transition: { delay: 0.15 + i * 0.12, duration: 0.7, ease: [0.22, 1, 0.36, 1] as const },
     }),
   };
 
   return (
     <section
-      onMouseMove={onMouseMove}
-      onMouseLeave={onMouseLeave}
-      className="relative flex min-h-[88vh] items-center justify-center overflow-hidden px-6"
+      onPointerMove={onPointerMove}
+      onPointerLeave={onPointerLeave}
+      className="relative flex min-h-[92vh] items-center justify-center overflow-hidden px-6"
     >
-      {/* Ambient glow */}
-      <div
-        className="pointer-events-none absolute top-[42%] left-1/2 size-[42rem] max-w-[90vw] rounded-full blur-3xl"
-        style={{
-          transform: 'translate(-50%, -50%)',
-          background:
-            'radial-gradient(circle, color-mix(in oklch, var(--color-accent) 26%, transparent), transparent 62%)',
-          animation: reduce ? undefined : 'glow-pulse 7s ease-in-out infinite',
-        }}
-      />
+      <HeroBackground reduce={reduce} />
 
-      {/* Embers */}
-      {!reduce && (
-        <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
-          {EMBERS.map((ember, i) => (
-            <span
-              key={i}
-              className="absolute bottom-0 rounded-full"
-              style={{
-                left: `${ember.left}%`,
-                width: ember.size,
-                height: ember.size,
-                background: 'var(--color-accent)',
-                opacity: 0,
-                animation: `ember-rise ${ember.duration}s linear ${ember.delay}s infinite`,
-              }}
-            />
-          ))}
-        </div>
-      )}
-
-      {/* Floating cards */}
-      <div className="pointer-events-none absolute inset-0 mx-auto max-w-6xl">
+      {/* Floating holographic cards */}
+      <div className="absolute inset-0 mx-auto max-w-[1400px]">
         {CARDS.map((card) => (
-          <FloatingCard key={card.key} card={card} sx={sx} sy={sy} reduce={reduce} />
+          <HoloCard key={card.key} card={card} sx={sx} sy={sy} reduce={reduce} />
         ))}
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
+      <div className="pointer-events-none relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
+        {/* Dragon centerpiece */}
+        <motion.div
+          initial={reduce ? false : { opacity: 0, scale: 0.7, y: 16 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ delay: 0.05, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+          className="relative -mb-3"
+          style={{ perspective: 900 }}
+        >
+          <div
+            className="absolute top-1/2 left-1/2 -z-10 size-[130%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
+            style={{
+              background:
+                'radial-gradient(circle, color-mix(in oklch, var(--color-tcg-riftbound) 42%, transparent), transparent 64%)',
+            }}
+          />
+          <motion.div
+            animate={reduce ? undefined : { y: [0, -10, 0] }}
+            transition={reduce ? undefined : { duration: 6, repeat: Infinity, ease: 'easeInOut' }}
+            style={
+              reduce
+                ? undefined
+                : {
+                    x: dragonX,
+                    rotateX: dragonRotateX,
+                    rotateY: dragonRotateY,
+                    transformStyle: 'preserve-3d',
+                  }
+            }
+          >
+            <Image
+              src="/images/hero-cards/dragon-3d-model-v2.png"
+              alt=""
+              width={1254}
+              height={1254}
+              priority
+              aria-hidden
+              className="h-[clamp(150px,20vw,260px)] w-auto drop-shadow-[0_24px_48px_rgba(0,0,0,0.55)]"
+            />
+          </motion.div>
+        </motion.div>
+
         <motion.p
           custom={0}
           variants={reveal}
           initial={reduce ? false : 'hidden'}
           animate="visible"
-          className="border-border bg-surface/60 text-muted-foreground rounded-full border px-4 py-1.5 text-xs font-medium tracking-widest uppercase backdrop-blur-sm"
+          className="border-border bg-surface/50 text-muted-foreground inline-flex items-center gap-2 rounded-full border px-4 py-1.5 text-xs font-medium tracking-[0.2em] uppercase backdrop-blur-md"
         >
+          <span className="bg-accent shadow-accent size-1.5 rounded-full shadow-[0_0_8px]" />
           {t('eyebrow')}
         </motion.p>
 
@@ -284,13 +198,15 @@ export function Hero() {
           variants={reveal}
           initial={reduce ? false : 'hidden'}
           animate="visible"
-          className="font-display text-5xl leading-[1.05] sm:text-6xl lg:text-7xl"
+          className="font-display text-6xl leading-[1.02] sm:text-7xl lg:text-8xl"
           style={{
             backgroundImage:
-              'linear-gradient(180deg, var(--color-foreground), color-mix(in oklch, var(--color-accent) 75%, var(--color-foreground)))',
+              'linear-gradient(180deg, var(--color-foreground) 30%, color-mix(in oklch, var(--color-accent) 85%, var(--color-foreground)))',
             backgroundClip: 'text',
             WebkitBackgroundClip: 'text',
             color: 'transparent',
+            filter:
+              'drop-shadow(0 6px 30px color-mix(in oklch, var(--color-accent) 40%, transparent))',
           }}
         >
           {t('title')}
@@ -311,18 +227,19 @@ export function Hero() {
           variants={reveal}
           initial={reduce ? false : 'hidden'}
           animate="visible"
-          className="flex flex-col gap-3 sm:flex-row"
+          className="pointer-events-auto flex flex-col gap-3 pt-2 sm:flex-row"
         >
           <Link
             href="/catalog"
-            className="group bg-primary text-primary-foreground shadow-primary focus-visible:outline-ring inline-flex items-center justify-center gap-2 rounded-full px-7 py-3 text-sm font-semibold shadow-[0_10px_40px_-10px] transition-transform hover:scale-[1.03] focus-visible:outline-2"
+            className="group bg-primary text-primary-foreground shadow-primary focus-visible:outline-ring relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full px-8 py-3.5 text-sm font-semibold shadow-[0_12px_45px_-10px] transition-transform hover:scale-[1.04] focus-visible:outline-2"
           >
+            <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
             {t('ctaCatalog')}
             <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
           </Link>
           <Link
             href="/tournaments"
-            className="border-border bg-surface/50 text-foreground hover:bg-surface-elevated focus-visible:outline-ring inline-flex items-center justify-center gap-2 rounded-full border px-7 py-3 text-sm font-semibold backdrop-blur-sm transition-colors focus-visible:outline-2"
+            className="border-border bg-surface/40 text-foreground hover:border-accent/50 hover:bg-surface-elevated focus-visible:outline-ring inline-flex items-center justify-center gap-2 rounded-full border px-8 py-3.5 text-sm font-semibold backdrop-blur-md transition-colors focus-visible:outline-2"
           >
             {t('ctaTournaments')}
           </Link>
@@ -333,11 +250,11 @@ export function Hero() {
       <motion.div
         initial={reduce ? false : { opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.1, duration: 0.8 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
         className="text-muted-foreground absolute bottom-6 left-1/2 flex -translate-x-1/2 flex-col items-center gap-1"
         aria-hidden
       >
-        <span className="text-[10px] tracking-widest uppercase">{t('scrollHint')}</span>
+        <span className="text-[10px] tracking-[0.3em] uppercase">{t('scrollHint')}</span>
         <motion.span
           animate={reduce ? undefined : { y: [0, 6, 0] }}
           transition={reduce ? undefined : { duration: 1.6, repeat: Infinity, ease: 'easeInOut' }}

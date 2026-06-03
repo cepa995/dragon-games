@@ -2,6 +2,7 @@
 
 import { Menu, Search, ShoppingCart, User, X } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { LanguageSwitcher } from '@/components/i18n/language-switcher';
 import { ThemeToggle } from '@/components/theme/theme-toggle';
@@ -35,8 +36,15 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between gap-4 px-4 sm:px-6">
-        <Link href="/" className="font-display text-foreground text-xl font-bold tracking-wide">
-          Dragon Games
+        <Link href="/" aria-label="Dragon Games" className="flex items-center">
+          <Image
+            src="/images/dragon_games_logo.png"
+            alt="Dragon Games"
+            width={1254}
+            height={1254}
+            priority
+            className="h-11 w-11 transition-transform hover:scale-105"
+          />
         </Link>
 
         {/* Desktop navigation */}
