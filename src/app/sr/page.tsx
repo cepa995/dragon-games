@@ -11,11 +11,9 @@ export const metadata: Metadata = {
 export default function HomePageSr() {
   return (
     <main className="mx-auto flex min-h-dvh max-w-3xl flex-col items-center justify-center gap-4 px-6 text-center">
-      <p className="text-sm font-medium tracking-widest text-[var(--color-accent)] uppercase">
-        Dragon Games
-      </p>
-      <h1 className="text-4xl font-bold sm:text-5xl">TCG i board games klub od 1994.</h1>
-      <p className="max-w-prose text-[var(--color-muted)]">
+      <p className="text-accent text-sm font-medium tracking-widest uppercase">Dragon Games</p>
+      <h1 className="text-4xl sm:text-5xl">TCG i board games klub od 1994.</h1>
+      <p className="text-muted-foreground max-w-prose">
         Nova web platforma je u izradi. Temelji aplikacije (M1) su postavljeni — katalog, turniri i
         nalozi stižu uskoro.
       </p>
