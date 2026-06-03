@@ -83,7 +83,7 @@ The SRS (§9) recommends Supabase/Drizzle as one option; **this project override
 ## 4. Workflow & conventions
 
 - **Branching**: never commit directly to `main`. Branch per issue: `feat/<issue#>-slug`, `fix/<issue#>-slug`, `chore/...`.
-- **Commits**: Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `test:`, `refactor:`). Keep `main` protected and green.
+- **Commits**: Conventional Commits (`feat:`, `fix:`, `chore:`, `docs:`, `test:`, `refactor:`). Keep `main` protected and green. Do not mention the AI assistant's name (e.g. Claude) anywhere in commit messages.
 - **PRs**: reference the issue ("Closes #N"), describe what/why, list tests added, confirm CI green. Only commit/push when the user asks.
 - **Prisma**: schema changes go through `prisma migrate dev` (committed migrations). Update the seed when adding core models.
 - **Commands** (once scaffolded): `pnpm dev`, `pnpm build`, `pnpm test`, `pnpm test:e2e`, `pnpm lint`, `pnpm typecheck`, `pnpm prisma migrate dev`, `pnpm prisma studio`.
