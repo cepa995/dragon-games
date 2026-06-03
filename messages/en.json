@@ -111,5 +111,42 @@
       "totp_invalid": "Wrong code. Please try again.",
       "unauthorized": "You must be signed in."
     }
+  },
+  "account": {
+    "title": "Account",
+    "logout": "Log out",
+    "nav": {
+      "profile": "Profile",
+      "addresses": "Addresses",
+      "security": "Security"
+    },
+    "profile": {
+      "title": "Profile",
+      "nameLabel": "Name",
+      "phoneLabel": "Phone",
+      "emailLabel": "Email",
+      "save": "Save",
+      "saved": "Your changes were saved.",
+      "verified": "Email verified",
+      "unverified": "Email not verified",
+      "resend": "Resend verification",
+      "resent": "We sent a verification email.",
+      "languageTitle": "Language",
+      "languageHint": "Choose the default language for your account."
+    },
+    "addresses": {
+      "title": "Addresses",
+      "add": "Add address",
+      "empty": "You have no saved addresses yet.",
+      "labelLabel": "Label (e.g. Home)",
+      "streetLabel": "Street and number",
+      "cityLabel": "City",
+      "postalLabel": "Postal code",
+      "countryLabel": "Country",
+      "defaultBadge": "Default",
+      "makeDefault": "Set as default",
+      "delete": "Delete",
+      "save": "Save address"
+    }
   }
 }

@@ -111,5 +111,42 @@
       "totp_invalid": "Pogrešan kod. Pokušajte ponovo.",
       "unauthorized": "Morate biti prijavljeni."
     }
+  },
+  "account": {
+    "title": "Nalog",
+    "logout": "Odjava",
+    "nav": {
+      "profile": "Profil",
+      "addresses": "Adrese",
+      "security": "Bezbednost"
+    },
+    "profile": {
+      "title": "Profil",
+      "nameLabel": "Ime",
+      "phoneLabel": "Telefon",
+      "emailLabel": "Email",
+      "save": "Sačuvaj",
+      "saved": "Promene su sačuvane.",
+      "verified": "Email potvrđen",
+      "unverified": "Email nije potvrđen",
+      "resend": "Pošalji ponovo potvrdu",
+      "resent": "Poslali smo email za potvrdu.",
+      "languageTitle": "Jezik",
+      "languageHint": "Izaberite podrazumevani jezik naloga."
+    },
+    "addresses": {
+      "title": "Adrese",
+      "add": "Dodaj adresu",
+      "empty": "Još nemate sačuvanih adresa.",
+      "labelLabel": "Naziv (npr. Kuća)",
+      "streetLabel": "Ulica i broj",
+      "cityLabel": "Grad",
+      "postalLabel": "Poštanski broj",
+      "countryLabel": "Država",
+      "defaultBadge": "Podrazumevana",
+      "makeDefault": "Postavi kao podrazumevanu",
+      "delete": "Obriši",
+      "save": "Sačuvaj adresu"
+    }
   }
 }
