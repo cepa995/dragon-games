@@ -285,7 +285,12 @@
       "subtitle": "Our doors are open to all game lovers. Visit us in Novi Sad or get in touch.",
       "locations": "View location",
       "contact": "Contact us"
-    }
+    },
+    "games": {
+      "title": "Games we nurture",
+      "subtitle": "From Magic to Riftbound — every game has its place at the table here."
+    },
+    "galleryAlt": "Inside the Dragon Games club"
   },
   "locations": {
     "metaTitle": "Location",

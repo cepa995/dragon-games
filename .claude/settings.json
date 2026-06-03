@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ps -o pid,ppid,cmd -C next-server)",
+      "Bash(pkill -9 -f \"pnpm dev\")",
+      "Bash(pkill -9 -f \"next dev\")"
+    ]
+  }
+}

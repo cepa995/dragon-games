@@ -285,7 +285,12 @@
       "subtitle": "Naša vrata su otvorena za sve ljubitelje igara. Poseti nas u Novom Sadu ili nam se javi.",
       "locations": "Pogledaj lokaciju",
       "contact": "Kontaktiraj nas"
-    }
+    },
+    "games": {
+      "title": "Igre koje negujemo",
+      "subtitle": "Od Magic-a do Riftbound-a — kod nas svaka igra ima svoje mesto za stolom."
+    },
+    "galleryAlt": "Prostor kluba Dragon Games"
   },
   "locations": {
     "metaTitle": "Lokacija",
