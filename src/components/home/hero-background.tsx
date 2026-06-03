@@ -81,49 +81,6 @@ export function HeroBackground({ reduce }: { reduce: boolean }) {
         ))}
       </div>
 
-      {/* Rotating rune sigil behind the headline */}
-      <svg
-        className="absolute top-1/2 left-1/2 size-[40rem] max-w-[92vw] -translate-x-1/2 -translate-y-1/2 opacity-[0.07]"
-        viewBox="0 0 400 400"
-        fill="none"
-        style={{ animation: reduce ? undefined : 'rune-spin 90s linear infinite' }}
-      >
-        <circle cx="200" cy="200" r="190" stroke="currentColor" strokeWidth="1" />
-        <circle
-          cx="200"
-          cy="200"
-          r="150"
-          stroke="currentColor"
-          strokeWidth="1"
-          strokeDasharray="2 10"
-        />
-        <circle cx="200" cy="200" r="120" stroke="currentColor" strokeWidth="1" />
-        <circle
-          cx="200"
-          cy="200"
-          r="120"
-          stroke="currentColor"
-          strokeWidth="1"
-          strokeDasharray="1 16"
-        />
-        {Array.from({ length: 24 }).map((_, i) => {
-          const a = (i / 24) * Math.PI * 2;
-          // Fixed precision so server and client emit identical strings (no
-          // float-formatting hydration mismatch).
-          return (
-            <line
-              key={i}
-              x1={(200 + Math.cos(a) * 150).toFixed(2)}
-              y1={(200 + Math.sin(a) * 150).toFixed(2)}
-              x2={(200 + Math.cos(a) * 190).toFixed(2)}
-              y2={(200 + Math.sin(a) * 190).toFixed(2)}
-              stroke="currentColor"
-              strokeWidth="1"
-            />
-          );
-        })}
-      </svg>
-
       {/* Ember fields (depth: far sharp + near blurred) */}
       {!reduce && (
         <>

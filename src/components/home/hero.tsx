@@ -132,6 +132,47 @@ export function Hero() {
     >
       <HeroBackground reduce={reduce} />
 
+      {/* Dragon backdrop — large, behind the text (z auto < cards/content) */}
+      <motion.div
+        initial={reduce ? false : { opacity: 0, scale: 0.84 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 0.05, duration: 1, ease: [0.22, 1, 0.36, 1] }}
+        className="pointer-events-none absolute inset-0 flex items-center justify-center"
+        style={{ perspective: 1100 }}
+      >
+        <div
+          className="absolute top-1/2 left-1/2 size-[clamp(360px,46vw,660px)] -translate-x-1/2 -translate-y-[58%] rounded-full blur-3xl"
+          style={{
+            background:
+              'radial-gradient(circle, color-mix(in oklch, var(--color-tcg-riftbound) 34%, transparent), transparent 62%)',
+          }}
+        />
+        <motion.div
+          animate={reduce ? undefined : { y: [0, -14, 0] }}
+          transition={reduce ? undefined : { duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+          style={
+            reduce
+              ? undefined
+              : {
+                  x: dragonX,
+                  rotateX: dragonRotateX,
+                  rotateY: dragonRotateY,
+                  transformStyle: 'preserve-3d',
+                }
+          }
+        >
+          <Image
+            src="/images/hero-cards/dragon-3d-model-v2.png"
+            alt=""
+            width={1254}
+            height={1254}
+            priority
+            aria-hidden
+            className="h-[clamp(340px,44vw,620px)] w-auto -translate-y-10 drop-shadow-[0_30px_70px_rgba(0,0,0,0.6)]"
+          />
+        </motion.div>
+      </motion.div>
+
       {/* Floating holographic cards */}
       <div className="absolute inset-0 mx-auto max-w-[1400px]">
         {CARDS.map((card) => (
@@ -141,46 +182,15 @@ export function Hero() {
 
       {/* Content */}
       <div className="pointer-events-none relative z-10 mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-        {/* Dragon centerpiece */}
-        <motion.div
-          initial={reduce ? false : { opacity: 0, scale: 0.7, y: 16 }}
-          animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ delay: 0.05, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-          className="relative -mb-3"
-          style={{ perspective: 900 }}
-        >
-          <div
-            className="absolute top-1/2 left-1/2 -z-10 size-[130%] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
-            style={{
-              background:
-                'radial-gradient(circle, color-mix(in oklch, var(--color-tcg-riftbound) 42%, transparent), transparent 64%)',
-            }}
-          />
-          <motion.div
-            animate={reduce ? undefined : { y: [0, -10, 0] }}
-            transition={reduce ? undefined : { duration: 6, repeat: Infinity, ease: 'easeInOut' }}
-            style={
-              reduce
-                ? undefined
-                : {
-                    x: dragonX,
-                    rotateX: dragonRotateX,
-                    rotateY: dragonRotateY,
-                    transformStyle: 'preserve-3d',
-                  }
-            }
-          >
-            <Image
-              src="/images/hero-cards/dragon-3d-model-v2.png"
-              alt=""
-              width={1254}
-              height={1254}
-              priority
-              aria-hidden
-              className="h-[clamp(150px,20vw,260px)] w-auto drop-shadow-[0_24px_48px_rgba(0,0,0,0.55)]"
-            />
-          </motion.div>
-        </motion.div>
+        {/* Legibility scrim so the headline reads over the dragon */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute top-1/2 left-1/2 -z-10 h-[140%] w-[150%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] blur-2xl"
+          style={{
+            background:
+              'radial-gradient(circle, color-mix(in oklch, var(--color-background) 82%, transparent), transparent 70%)',
+          }}
+        />
 
         <motion.p
           custom={0}
