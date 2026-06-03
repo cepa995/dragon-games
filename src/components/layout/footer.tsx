@@ -74,6 +74,22 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <Link
+                href="/about"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {tNav('about')}
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/locations"
+                className="text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {tNav('locations')}
+              </Link>
+            </li>
           </ul>
         </nav>
 

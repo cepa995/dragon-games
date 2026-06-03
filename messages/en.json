@@ -70,7 +70,8 @@
       "hoursLabel": "Opening hours",
       "directions": "Get directions",
       "openNow": "Open now",
-      "closed": "Closed"
+      "closed": "Closed",
+      "viewPage": "View location"
     },
     "newsletter": {
       "title": "Stay in the loop",
@@ -225,5 +226,79 @@
       "delete": "Delete",
       "save": "Save address"
     }
+  },
+  "about": {
+    "metaTitle": "About",
+    "metaDescription": "Dragon Games — a TCG and board-games club and shop in Novi Sad since 1994. WPN and OTS certified.",
+    "eyebrow": "Since 1994",
+    "title": "Where the gaming community comes together",
+    "lead": "Dragon Games is a TCG and board-games club and shop in Novi Sad. Since 1994 we've brought players together, run tournaments and shared a love of card and board games.",
+    "stats": {
+      "since": {
+        "value": "1994",
+        "label": "Founded"
+      },
+      "wpn": {
+        "value": "WPN",
+        "label": "Certified MTG store"
+      },
+      "ots": {
+        "value": "OTS",
+        "label": "Official Yu-Gi-Oh tournaments"
+      },
+      "community": {
+        "value": "30+",
+        "label": "Years of community"
+      }
+    },
+    "story": {
+      "title": "Our story",
+      "p1": "We started back in 1994 as a small group of enthusiasts gathered around Magic: The Gathering. Over the decades we've grown into one of the oldest and best-known spots for card and board game fans in Serbia.",
+      "p2": "Today Dragon Games offers a wide range of products, regular tournaments and a space where generations of players still gather, learn and compete."
+    },
+    "mission": {
+      "title": "Our mission",
+      "p1": "We believe games bring people together. Our goal is an open, welcoming community where everyone — from beginners to seasoned competitors — finds their place at the table.",
+      "p2": "We work to bring the latest releases, run fair and well-organized tournaments, and support the local card and board gaming scene."
+    },
+    "highlights": {
+      "title": "What sets us apart",
+      "wpn": {
+        "title": "WPN store",
+        "body": "Officially certified Wizards Play Network store for Magic: The Gathering."
+      },
+      "ots": {
+        "title": "OTS center",
+        "body": "Official Tournament Store for Yu-Gi-Oh! — sanctioned tournaments and prizing."
+      },
+      "community": {
+        "title": "Community-driven",
+        "body": "Three decades of bringing together players of all ages and skill levels."
+      },
+      "events": {
+        "title": "Regular events",
+        "body": "Weekly tournaments, prerelease events and meetups throughout the year."
+      }
+    },
+    "cta": {
+      "title": "Drop by and meet us",
+      "subtitle": "Our doors are open to all game lovers. Visit us in Novi Sad or get in touch.",
+      "locations": "View location",
+      "contact": "Contact us"
+    }
+  },
+  "locations": {
+    "metaTitle": "Location",
+    "metaDescription": "Visit Dragon Games in Novi Sad — Kralja Aleksandra 4. Map, opening hours and contact.",
+    "title": "Visit us",
+    "intro": "Our shop and club are in the heart of Novi Sad. Drop by for a tournament, some shopping or just a game.",
+    "shopClubLabel": "Shop & club",
+    "openNow": "Open now",
+    "closedNow": "Closed",
+    "hoursLabel": "Opening hours",
+    "closedDay": "Closed",
+    "directions": "Get directions",
+    "email": "Email",
+    "mapTitle": "Map — {address}"
   }
 }

@@ -35,7 +35,12 @@ export async function LocationsPreview() {
   ];
 
   return (
-    <Section title={t('title')} subtitle={t('subtitle')}>
+    <Section
+      title={t('title')}
+      subtitle={t('subtitle')}
+      actionHref="/locations"
+      actionLabel={t('viewPage')}
+    >
       <div className="grid gap-5">
         {locations.map((loc) => (
           <div

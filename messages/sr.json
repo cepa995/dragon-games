@@ -70,7 +70,8 @@
       "hoursLabel": "Radno vreme",
       "directions": "Uputstva za dolazak",
       "openNow": "Otvoreno",
-      "closed": "Zatvoreno"
+      "closed": "Zatvoreno",
+      "viewPage": "Pogledaj lokaciju"
     },
     "newsletter": {
       "title": "Budi u toku",
@@ -225,5 +226,79 @@
       "delete": "Obriši",
       "save": "Sačuvaj adresu"
     }
+  },
+  "about": {
+    "metaTitle": "O nama",
+    "metaDescription": "Dragon Games — TCG i board games klub i prodavnica u Novom Sadu od 1994. WPN i OTS sertifikovani.",
+    "eyebrow": "Od 1994.",
+    "title": "Mesto gde se okuplja zajednica igrača",
+    "lead": "Dragon Games je TCG i board games klub i prodavnica iz Novog Sada. Od 1994. godine okupljamo igrače, organizujemo turnire i delimo ljubav prema kartičnim i društvenim igrama.",
+    "stats": {
+      "since": {
+        "value": "1994",
+        "label": "Godina osnivanja"
+      },
+      "wpn": {
+        "value": "WPN",
+        "label": "Sertifikovana MTG prodavnica"
+      },
+      "ots": {
+        "value": "OTS",
+        "label": "Zvanični Yu-Gi-Oh turniri"
+      },
+      "community": {
+        "value": "30+",
+        "label": "Godina zajednice"
+      }
+    },
+    "story": {
+      "title": "Naša priča",
+      "p1": "Počeli smo davne 1994. godine kao mala grupa entuzijasta okupljenih oko Magic: The Gathering karata. Kroz decenije smo izrasli u jedno od najstarijih i najpoznatijih mesta za ljubitelje kartičnih i društvenih igara u Srbiji.",
+      "p2": "Danas Dragon Games nudi širok asortiman proizvoda, redovne turnire i prostor u kome se generacije igrača i dalje okupljaju, uče i takmiče."
+    },
+    "mission": {
+      "title": "Naša misija",
+      "p1": "Verujemo da igre spajaju ljude. Naš cilj je otvorena i gostoljubiva zajednica u kojoj svako — od početnika do iskusnih takmičara — pronalazi svoje mesto za stolom.",
+      "p2": "Trudimo se da donesemo najnovija izdanja, organizujemo fer i kvalitetne turnire i podržimo lokalnu scenu kartičnih i društvenih igara."
+    },
+    "highlights": {
+      "title": "Šta nas izdvaja",
+      "wpn": {
+        "title": "WPN prodavnica",
+        "body": "Zvanično sertifikovana Wizards Play Network prodavnica za Magic: The Gathering."
+      },
+      "ots": {
+        "title": "OTS centar",
+        "body": "Official Tournament Store za Yu-Gi-Oh! — zvanični turniri i nagrade."
+      },
+      "community": {
+        "title": "Vođeni zajednicom",
+        "body": "Tri decenije okupljamo igrače svih uzrasta i nivoa iskustva."
+      },
+      "events": {
+        "title": "Redovni događaji",
+        "body": "Nedeljni turniri, prerelease eventi i druženja tokom cele godine."
+      }
+    },
+    "cta": {
+      "title": "Svrati i upoznaj nas",
+      "subtitle": "Naša vrata su otvorena za sve ljubitelje igara. Poseti nas u Novom Sadu ili nam se javi.",
+      "locations": "Pogledaj lokaciju",
+      "contact": "Kontaktiraj nas"
+    }
+  },
+  "locations": {
+    "metaTitle": "Lokacija",
+    "metaDescription": "Poseti Dragon Games u Novom Sadu — Kralja Aleksandra 4. Mapa, radno vreme i kontakt.",
+    "title": "Poseti nas",
+    "intro": "Naša prodavnica i klub nalaze se u srcu Novog Sada. Svrati na turnir, kupovinu ili samo na partiju.",
+    "shopClubLabel": "Prodavnica i klub",
+    "openNow": "Otvoreno",
+    "closedNow": "Zatvoreno",
+    "hoursLabel": "Radno vreme",
+    "closedDay": "Zatvoreno",
+    "directions": "Uputstva za dolazak",
+    "email": "Email",
+    "mapTitle": "Mapa — {address}"
   }
 }

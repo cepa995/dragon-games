@@ -30,6 +30,7 @@ async function seedSettings() {
       value: {
         name: 'Dragon Games',
         email: 'info@dragon.rs',
+        phone: '063 624 038',
         viber: '063624038',
         social: {
           facebook: 'https://facebook.com/klubdragonnovisad',
@@ -113,10 +114,20 @@ async function seedCategories() {
     });
   }
 
-  return { mtgBoosterId: mtgBooster.id, pokemonId: gameCategories['pokemon']! };
+  return {
+    mtgBoosterId: mtgBooster.id,
+    pokemonId: gameCategories['pokemon']!,
+    yugiohId: gameCategories['yu-gi-oh']!,
+    riftboundId: gameCategories['riftbound']!,
+  };
 }
 
-async function seedProducts(categoryIds: { mtgBoosterId: string; pokemonId: string }) {
+async function seedProducts(categoryIds: {
+  mtgBoosterId: string;
+  pokemonId: string;
+  yugiohId: string;
+  riftboundId: string;
+}) {
   const products = [
     {
       sku: 'MTG-FDN-PLAY-EN',
@@ -166,6 +177,46 @@ async function seedProducts(categoryIds: { mtgBoosterId: string; pokemonId: stri
         altEn: 'Pokémon 151 ETB',
       },
       attributes: [{ key: 'game', valueSr: 'Pokémon', valueEn: 'Pokémon' }],
+      variants: [],
+    },
+    {
+      sku: 'YGO-AGOV-BOOSTER-EN',
+      slug: 'yugioh-age-of-overlord-booster-box',
+      nameSr: 'Yu-Gi-Oh! Age of Overlord Booster kutija',
+      nameEn: 'Yu-Gi-Oh! Age of Overlord Booster Box',
+      descSr: 'Booster kutija za Yu-Gi-Oh! Age of Overlord set (24 pakovanja).',
+      descEn: '24-pack booster box for the Yu-Gi-Oh! Age of Overlord set.',
+      categoryId: categoryIds.yugiohId,
+      priceRsd: 9800,
+      stockOnHand: 5,
+      featured: true,
+      status: ContentStatus.PUBLISHED,
+      image: {
+        url: '/images/products/yugioh-booster.jpg',
+        altSr: 'Yu-Gi-Oh! booster kutija',
+        altEn: 'Yu-Gi-Oh! booster box',
+      },
+      attributes: [{ key: 'game', valueSr: 'Yu-Gi-Oh!', valueEn: 'Yu-Gi-Oh!' }],
+      variants: [],
+    },
+    {
+      sku: 'RIFT-OGN-STARTER-EN',
+      slug: 'riftbound-origins-starter-deck',
+      nameSr: 'Riftbound Origins starter špil',
+      nameEn: 'Riftbound Origins Starter Deck',
+      descSr: 'Starter špil za Riftbound: League of Legends TCG — idealan za početak.',
+      descEn: 'Starter deck for the Riftbound: League of Legends TCG — a perfect entry point.',
+      categoryId: categoryIds.riftboundId,
+      priceRsd: 3500,
+      stockOnHand: 0,
+      featured: true,
+      status: ContentStatus.PUBLISHED,
+      image: {
+        url: '/images/products/riftbound-starter.jpg',
+        altSr: 'Riftbound starter špil',
+        altEn: 'Riftbound starter deck',
+      },
+      attributes: [{ key: 'game', valueSr: 'Riftbound', valueEn: 'Riftbound' }],
       variants: [],
     },
   ];
