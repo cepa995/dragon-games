@@ -6,6 +6,7 @@ import { requireUser } from '@/lib/auth/session';
 const NAV = [
   { href: '/account/profile', key: 'profile' },
   { href: '/account/addresses', key: 'addresses' },
+  { href: '/account/favorites', key: 'favorites' },
   { href: '/account/security', key: 'security' },
 ] as const;
 

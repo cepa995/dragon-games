@@ -23,6 +23,10 @@ vi.mock('@/i18n/navigation', () => ({
   usePathname: () => '/',
 }));
 
+// The language switcher syncs the choice to the DB via a server action; mock it
+// so the test doesn't pull the Auth.js/server chain into jsdom.
+vi.mock('@/lib/account/actions', () => ({ setLocalePreferenceAction: vi.fn() }));
+
 import { Header } from './header';
 
 function renderHeader() {

@@ -118,7 +118,13 @@
     "nav": {
       "profile": "Profil",
       "addresses": "Adrese",
+      "favorites": "Omiljeno",
       "security": "Bezbednost"
+    },
+    "favorites": {
+      "title": "Omiljeni proizvodi",
+      "empty": "Još nemate omiljenih proizvoda.",
+      "remove": "Ukloni iz omiljenih"
     },
     "profile": {
       "title": "Profil",

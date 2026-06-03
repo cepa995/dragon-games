@@ -118,7 +118,13 @@
     "nav": {
       "profile": "Profile",
       "addresses": "Addresses",
+      "favorites": "Favorites",
       "security": "Security"
+    },
+    "favorites": {
+      "title": "Favorite products",
+      "empty": "You have no favorite products yet.",
+      "remove": "Remove from favorites"
     },
     "profile": {
       "title": "Profile",
