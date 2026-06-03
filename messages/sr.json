@@ -31,7 +31,54 @@
       "ctaCatalog": "Pregledaj katalog",
       "ctaTournaments": "Predstojeći turniri",
       "scrollHint": "Skroluj"
+    },
+    "featuredTcgs": {
+      "title": "Igre koje igramo",
+      "subtitle": "Od Magica do Riftbounda — pronađi svoju igru i zaroni.",
+      "explore": "Istraži"
+    },
+    "featuredProducts": {
+      "title": "Izdvojeno iz ponude",
+      "subtitle": "Najnovija pakovanja, špilovi i dodaci na lageru.",
+      "viewAll": "Ceo katalog",
+      "empty": "Uskoro dodajemo izdvojene proizvode."
+    },
+    "tournaments": {
+      "title": "Predstojeći turniri",
+      "subtitle": "Pridruži se igri — FNM, prerelease i još mnogo toga.",
+      "viewAll": "Svi turniri",
+      "empty": "Trenutno nema zakazanih turnira. Vrati se uskoro.",
+      "free": "Besplatno"
+    },
+    "news": {
+      "title": "Najnovije vesti",
+      "subtitle": "Najave, izveštaji sa turnira i novosti iz kluba.",
+      "viewAll": "Sve vesti",
+      "empty": "Još nema objavljenih vesti."
+    },
+    "locations": {
+      "title": "Posetite nas",
+      "subtitle": "Dve lokacije u Novom Sadu — prodavnica i klub.",
+      "shopLabel": "Prodavnica",
+      "clubLabel": "Klub",
+      "hoursLabel": "Radno vreme",
+      "directions": "Uputstva za dolazak"
+    },
+    "newsletter": {
+      "title": "Budi u toku",
+      "subtitle": "Prijavi se na newsletter za najave novih setova i turnira.",
+      "placeholder": "tvoj@email.com",
+      "submit": "Prijavi se",
+      "success": "Hvala! Proveri email da potvrdiš prijavu.",
+      "error": "Došlo je do greške. Pokušaj ponovo.",
+      "privacy": "Bez spama. Odjava u svakom trenutku."
     }
+  },
+  "product": {
+    "inStock": "Na stanju",
+    "lowStock": "Poslednji komadi",
+    "outOfStock": "Rasprodato",
+    "preOrder": "Pretprodaja"
   },
   "footer": {
     "hours": "Radno vreme",

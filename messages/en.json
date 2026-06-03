@@ -31,7 +31,54 @@
       "ctaCatalog": "Browse catalog",
       "ctaTournaments": "Upcoming tournaments",
       "scrollHint": "Scroll"
+    },
+    "featuredTcgs": {
+      "title": "Games we play",
+      "subtitle": "From Magic to Riftbound — find your game and dive in.",
+      "explore": "Explore"
+    },
+    "featuredProducts": {
+      "title": "Featured products",
+      "subtitle": "The latest boxes, decks and accessories in stock.",
+      "viewAll": "Full catalog",
+      "empty": "Featured products are coming soon."
+    },
+    "tournaments": {
+      "title": "Upcoming tournaments",
+      "subtitle": "Join the game — FNM, prereleases and more.",
+      "viewAll": "All tournaments",
+      "empty": "No tournaments scheduled right now. Check back soon.",
+      "free": "Free"
+    },
+    "news": {
+      "title": "Latest news",
+      "subtitle": "Announcements, tournament reports and club news.",
+      "viewAll": "All news",
+      "empty": "No news published yet."
+    },
+    "locations": {
+      "title": "Visit us",
+      "subtitle": "Two locations in Novi Sad — the shop and the club.",
+      "shopLabel": "Shop",
+      "clubLabel": "Club",
+      "hoursLabel": "Opening hours",
+      "directions": "Get directions"
+    },
+    "newsletter": {
+      "title": "Stay in the loop",
+      "subtitle": "Subscribe for new set releases and tournament announcements.",
+      "placeholder": "you@email.com",
+      "submit": "Subscribe",
+      "success": "Thanks! Check your email to confirm.",
+      "error": "Something went wrong. Please try again.",
+      "privacy": "No spam. Unsubscribe anytime."
     }
+  },
+  "product": {
+    "inStock": "In stock",
+    "lowStock": "Low stock",
+    "outOfStock": "Out of stock",
+    "preOrder": "Pre-order"
   },
   "footer": {
     "hours": "Opening hours",
