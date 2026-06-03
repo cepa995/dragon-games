@@ -37,7 +37,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       <AboutHero />
 
       <div className="mx-auto w-full max-w-[1280px] px-4 sm:px-6">
-        {/* Story + mission, beside a fanned card-art collage */}
+        {/* Story + mission, beside the club photo gallery */}
         <section className="grid items-center gap-10 py-16 sm:py-20 md:grid-cols-2">
           <Reveal>
             <div className="space-y-8">
