@@ -10,6 +10,7 @@ import {
 } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 
 type CardConfig = {
@@ -17,6 +18,7 @@ type CardConfig = {
   label: string;
   glyph: string;
   accent: string;
+  image?: string;
   left: string;
   top: string;
   rotate: number;
@@ -32,6 +34,7 @@ const CARDS: CardConfig[] = [
     label: 'Magic',
     glyph: '✦',
     accent: 'var(--color-tcg-mtg)',
+    image: '/images/hero-cards/mtg-shivan-dragon.jpg',
     left: '8%',
     top: '18%',
     rotate: -12,
@@ -56,6 +59,7 @@ const CARDS: CardConfig[] = [
     label: 'Pokémon',
     glyph: '◓',
     accent: 'var(--color-tcg-pokemon)',
+    image: '/images/hero-cards/pokemon-charizard.png',
     left: '74%',
     top: '20%',
     rotate: 10,
@@ -68,6 +72,7 @@ const CARDS: CardConfig[] = [
     label: 'Yu-Gi-Oh!',
     glyph: '✪',
     accent: 'var(--color-tcg-yugioh)',
+    image: '/images/hero-cards/ygo-blue-eyes.jpg',
     left: '80%',
     top: '60%',
     rotate: 14,
@@ -125,33 +130,63 @@ function FloatingCard({
             } as React.CSSProperties
           }
         >
-          <div
-            className="relative flex h-[clamp(120px,15vw,176px)] w-[clamp(86px,10.5vw,124px)] flex-col justify-between rounded-2xl border p-3 backdrop-blur-sm"
-            style={{
-              borderColor: 'color-mix(in oklch, var(--accent) 55%, transparent)',
-              background:
-                'linear-gradient(155deg, color-mix(in oklch, var(--accent) 16%, var(--color-surface)), var(--color-surface))',
-              boxShadow: '0 18px 50px -12px color-mix(in oklch, var(--accent) 50%, transparent)',
-            }}
-          >
-            <span className="text-foreground/70 text-[10px] font-semibold tracking-wide">
-              {card.label}
-            </span>
-            <span
-              className="font-display text-4xl leading-none"
-              style={{ color: 'var(--accent)' }}
-              aria-hidden
+          {card.image ? (
+            // Real card art (self-hosted), with an accent glow + rim.
+            <div
+              className="relative aspect-[2.5/3.5] w-[clamp(104px,12vw,156px)] overflow-hidden rounded-xl ring-1"
+              style={
+                {
+                  boxShadow:
+                    '0 26px 70px -16px color-mix(in oklch, var(--accent) 60%, transparent)',
+                  ['--tw-ring-color' as string]:
+                    'color-mix(in oklch, var(--accent) 45%, transparent)',
+                } as React.CSSProperties
+              }
             >
-              {card.glyph}
-            </span>
-            <span
-              className="absolute inset-0 rounded-2xl opacity-60"
+              <Image
+                src={card.image}
+                alt={card.label}
+                fill
+                sizes="160px"
+                className="object-cover"
+              />
+              <span
+                className="pointer-events-none absolute inset-0 rounded-xl"
+                style={{
+                  boxShadow: 'inset 0 0 32px color-mix(in oklch, var(--accent) 30%, transparent)',
+                }}
+              />
+            </div>
+          ) : (
+            // Stylized fallback (e.g. Riftbound — no open card API yet).
+            <div
+              className="relative flex aspect-[2.5/3.5] w-[clamp(104px,12vw,156px)] flex-col justify-between rounded-xl border p-3 backdrop-blur-sm"
               style={{
+                borderColor: 'color-mix(in oklch, var(--accent) 55%, transparent)',
                 background:
-                  'radial-gradient(120% 80% at 50% 0%, color-mix(in oklch, var(--accent) 22%, transparent), transparent 60%)',
+                  'linear-gradient(155deg, color-mix(in oklch, var(--accent) 18%, var(--color-surface)), var(--color-surface))',
+                boxShadow: '0 22px 60px -14px color-mix(in oklch, var(--accent) 50%, transparent)',
               }}
-            />
-          </div>
+            >
+              <span className="text-foreground/70 text-[10px] font-semibold tracking-wide">
+                {card.label}
+              </span>
+              <span
+                className="font-display text-5xl leading-none"
+                style={{ color: 'var(--accent)' }}
+                aria-hidden
+              >
+                {card.glyph}
+              </span>
+              <span
+                className="absolute inset-0 rounded-xl opacity-60"
+                style={{
+                  background:
+                    'radial-gradient(120% 80% at 50% 0%, color-mix(in oklch, var(--accent) 22%, transparent), transparent 60%)',
+                }}
+              />
+            </div>
+          )}
         </motion.div>
       </motion.div>
     </motion.div>

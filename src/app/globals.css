@@ -16,15 +16,16 @@
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *, :root:not([data-theme='light']) *));
 
 :root {
-  /* Surfaces & text (dark) */
-  --background: oklch(0.17 0.015 285);
-  --surface: oklch(0.21 0.018 285);
-  --surface-elevated: oklch(0.25 0.02 285);
-  --foreground: oklch(0.96 0.005 285);
-  --muted: oklch(0.27 0.018 285);
-  --muted-foreground: oklch(0.7 0.015 285);
-  --border: oklch(0.3 0.02 285);
-  --input: oklch(0.3 0.02 285);
+  /* Surfaces & text (dark) — deep "tavern at night", near-black with a faint
+     violet tint so the warm gold accent and per-TCG glows read strongly. */
+  --background: oklch(0.115 0.014 285);
+  --surface: oklch(0.155 0.016 285);
+  --surface-elevated: oklch(0.2 0.018 285);
+  --foreground: oklch(0.97 0.005 285);
+  --muted: oklch(0.21 0.016 285);
+  --muted-foreground: oklch(0.66 0.014 285);
+  --border: oklch(0.25 0.016 285);
+  --input: oklch(0.25 0.016 285);
   --ring: oklch(0.72 0.16 60);
 
   /* Brand accent — warm tavern firelight (amber/gold) */
