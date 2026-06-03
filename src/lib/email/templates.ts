@@ -51,6 +51,22 @@ const copy = {
       ignore: 'If you did not request this, you can ignore this email.',
     },
   },
+  newsletter: {
+    sr: {
+      subject: 'Potvrdite prijavu na newsletter — Dragon Games',
+      heading: 'Potvrdite prijavu',
+      body: 'Hvala na interesovanju! Kliknite na dugme da potvrdite prijavu na Dragon Games newsletter.',
+      cta: 'Potvrdi prijavu',
+      ignore: 'Ako se niste vi prijavili, slobodno ignorišite ovu poruku.',
+    },
+    en: {
+      subject: 'Confirm your newsletter subscription — Dragon Games',
+      heading: 'Confirm your subscription',
+      body: 'Thanks for your interest! Click the button to confirm your subscription to the Dragon Games newsletter.',
+      cta: 'Confirm subscription',
+      ignore: 'If you did not sign up, you can safely ignore this email.',
+    },
+  },
 } as const;
 
 function layout(c: { heading: string; body: string; cta: string; ignore: string }, url: string) {
@@ -79,4 +95,28 @@ export function passwordResetEmail(to: string, url: string, locale: Locale): Ema
 export function magicLinkEmail(to: string, url: string, locale: Locale): EmailMessage {
   const c = copy.magic[locale];
   return { to, subject: c.subject, ...layout(c, url) };
+}
+
+export function newsletterConfirmEmail(to: string, url: string, locale: Locale): EmailMessage {
+  const c = copy.newsletter[locale];
+  return { to, subject: c.subject, ...layout(c, url) };
+}
+
+/** Admin notification for a new contact-form submission (SRS FR-7.2). */
+export function contactNotificationEmail(
+  to: string,
+  msg: { name: string; email: string; subject: string; body: string },
+): EmailMessage {
+  const heading = `Nova poruka sa sajta: ${msg.subject}`;
+  const safe = (s: string) => s.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  const html = `<!doctype html><html><body style="font-family:system-ui,sans-serif;background:#1a1625;color:#f5f3f7;padding:24px">
+  <div style="max-width:560px;margin:0 auto">
+    <h1 style="font-size:20px">${heading}</h1>
+    <p style="color:#cfc9d6"><strong>Ime:</strong> ${safe(msg.name)}</p>
+    <p style="color:#cfc9d6"><strong>Email:</strong> ${safe(msg.email)}</p>
+    <p style="color:#cfc9d6"><strong>Naslov:</strong> ${safe(msg.subject)}</p>
+    <p style="color:#cfc9d6;white-space:pre-wrap">${safe(msg.body)}</p>
+  </div></body></html>`;
+  const text = `${heading}\n\nIme: ${msg.name}\nEmail: ${msg.email}\nNaslov: ${msg.subject}\n\n${msg.body}`;
+  return { to, subject: `[Kontakt] ${msg.subject}`, html, text };
 }

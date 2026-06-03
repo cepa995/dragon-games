@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { newsletterSignupAction, type NewsletterState } from '@/lib/newsletter-actions';
 
-export function NewsletterForm() {
+export function NewsletterForm({ source = 'home' }: { source?: string }) {
   const t = useTranslations('home.newsletter');
   const [state, action, pending] = useActionState<NewsletterState, FormData>(
     newsletterSignupAction,
@@ -19,6 +19,16 @@ export function NewsletterForm() {
 
   return (
     <form action={action} className="flex w-full max-w-md flex-col gap-3 sm:flex-row">
+      <input type="hidden" name="source" value={source} />
+      {/* Honeypot — hidden from users, visible to bots. */}
+      <input
+        type="text"
+        name="company"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden
+        className="hidden"
+      />
       <Input
         name="email"
         type="email"

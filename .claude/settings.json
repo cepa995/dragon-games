@@ -3,7 +3,10 @@
     "allow": [
       "Bash(ps -o pid,ppid,cmd -C next-server)",
       "Bash(pkill -9 -f \"pnpm dev\")",
-      "Bash(pkill -9 -f \"next dev\")"
+      "Bash(pkill -9 -f \"next dev\")",
+      "Bash(node -e \"const m=require\\('./messages/sr.json'\\); console.log\\('success:', m.home.newsletter.success\\); console.log\\('privacy:', m.home.newsletter.privacy\\);\")",
+      "Bash(ps -eo pid,lstart,cmd)",
+      "Bash(kill -9 3545983)"
     ]
   }
 }

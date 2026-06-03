@@ -305,5 +305,18 @@
     "directions": "Get directions",
     "email": "Email",
     "mapTitle": "Map — {address}"
+  },
+  "newsletter": {
+    "metaConfirm": "Confirm subscription",
+    "metaUnsubscribe": "Unsubscribe",
+    "confirmedTitle": "Subscription confirmed 🎉",
+    "confirmedBody": "Thanks! You're now subscribed to the Dragon Games newsletter.",
+    "confirmErrorTitle": "Invalid link",
+    "confirmErrorBody": "This confirmation link is invalid or has already been used.",
+    "unsubscribedTitle": "Unsubscribed",
+    "unsubscribedBody": "You've been unsubscribed from the newsletter. Sorry to see you go!",
+    "unsubscribeErrorTitle": "Invalid link",
+    "unsubscribeErrorBody": "This unsubscribe link is invalid or has already been used.",
+    "backHome": "Back to home"
   }
 }

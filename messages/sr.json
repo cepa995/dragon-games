@@ -305,5 +305,18 @@
     "directions": "Uputstva za dolazak",
     "email": "Email",
     "mapTitle": "Mapa — {address}"
+  },
+  "newsletter": {
+    "metaConfirm": "Potvrda prijave",
+    "metaUnsubscribe": "Odjava",
+    "confirmedTitle": "Prijava potvrđena 🎉",
+    "confirmedBody": "Hvala! Uspešno ste se prijavili na Dragon Games newsletter.",
+    "confirmErrorTitle": "Link nije važeći",
+    "confirmErrorBody": "Ovaj link za potvrdu je neispravan ili je već iskorišćen.",
+    "unsubscribedTitle": "Odjava uspešna",
+    "unsubscribedBody": "Odjavljeni ste sa newslettera. Žao nam je što odlazite!",
+    "unsubscribeErrorTitle": "Link nije važeći",
+    "unsubscribeErrorBody": "Ovaj link za odjavu je neispravan ili je već iskorišćen.",
+    "backHome": "Nazad na početnu"
   }
 }
