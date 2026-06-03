@@ -8,7 +8,11 @@ export async function NewsletterSignup() {
   return (
     <section className="relative mx-auto w-full max-w-[1280px] px-4 pb-24 sm:px-6">
       <Reveal>
-        <div className="rounded-hero border-border from-surface to-background relative overflow-hidden border bg-gradient-to-br p-8 text-center sm:p-12">
+        <div
+          data-theme="dark"
+          style={{ colorScheme: 'dark' }}
+          className="rounded-hero border-border from-surface-elevated to-background text-foreground relative overflow-hidden border bg-gradient-to-br p-8 text-center sm:p-12"
+        >
           <div className="bg-accent/20 pointer-events-none absolute -top-24 left-1/2 size-80 -translate-x-1/2 rounded-full blur-3xl" />
           <div className="relative mx-auto flex max-w-lg flex-col items-center gap-3">
             <h2 className="font-display text-3xl sm:text-4xl">{t('title')}</h2>

@@ -24,8 +24,7 @@ export function AshField() {
               left: `${a.left}%`,
               width: a.size,
               height: a.size,
-              background:
-                'color-mix(in oklch, var(--color-accent) 38%, var(--color-muted-foreground))',
+              background: 'var(--ash)',
               opacity: 0,
               ['--ash-drift']: `${a.drift}px`,
               ['--ash-opacity']: a.opacity,

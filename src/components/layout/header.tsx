@@ -29,10 +29,12 @@ export function Header() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full transition-colors duration-200 ${
+      data-theme="dark"
+      style={{ colorScheme: 'dark' }}
+      className={`text-foreground sticky top-0 z-50 w-full backdrop-blur-md transition-colors duration-200 ${
         scrolled
-          ? 'border-border bg-background/80 border-b backdrop-blur-md'
-          : 'border-b border-transparent'
+          ? 'border-border bg-background/85 border-b'
+          : 'bg-background/55 border-b border-transparent'
       }`}
     >
       <div className="mx-auto flex h-16 max-w-[1280px] items-center justify-between gap-4 px-4 sm:px-6">

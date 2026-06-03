@@ -22,7 +22,11 @@ export function Footer() {
   const tBrand = useTranslations('brand');
 
   return (
-    <footer className="border-border bg-surface relative border-t">
+    <footer
+      data-theme="dark"
+      style={{ colorScheme: 'dark' }}
+      className="border-border bg-surface text-foreground relative border-t"
+    >
       {/* top accent glow */}
       <div className="via-accent/60 pointer-events-none absolute inset-x-0 -top-px h-px bg-gradient-to-r from-transparent to-transparent" />
       <div className="bg-accent/10 pointer-events-none absolute top-0 left-1/2 size-64 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl" />
