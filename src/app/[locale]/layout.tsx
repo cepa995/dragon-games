@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
 import { SkipLink } from '@/components/layout/skip-link';
+import { MotionProvider } from '@/components/motion/motion-provider';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { fontVariables } from '@/lib/fonts';
 import { routing } from '@/i18n/routing';
@@ -52,13 +53,15 @@ export default async function LocaleLayout({
       <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
-            <WebVitals />
-            <SkipLink />
-            <div className="flex min-h-dvh flex-col">
-              <Header />
-              <div className="flex-1">{children}</div>
-              <Footer />
-            </div>
+            <MotionProvider>
+              <WebVitals />
+              <SkipLink />
+              <div className="flex min-h-dvh flex-col">
+                <Header />
+                <div className="flex-1">{children}</div>
+                <Footer />
+              </div>
+            </MotionProvider>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
