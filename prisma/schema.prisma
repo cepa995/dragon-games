@@ -116,6 +116,10 @@ model User {
   totpSecret    String?
   totpEnabledAt DateTime?
   lastLoginAt   DateTime?
+  // Right to erasure: soft-delete request time; anonymized after a 30-day
+  // grace period (FR-13.7 / NFR-3.5).
+  deletionRequestedAt DateTime?
+  anonymizedAt        DateTime?
   createdAt     DateTime   @default(now())
   updatedAt     DateTime   @updatedAt
 

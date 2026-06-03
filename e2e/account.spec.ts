@@ -21,6 +21,11 @@ async function registerAndLogin(page: import('@playwright/test').Page, email: st
   await expect(page).toHaveURL(/\/sr$/);
 }
 
+test('the data export endpoint requires authentication', async ({ request }) => {
+  const res = await request.get('/api/account/export');
+  expect(res.status()).toBe(401);
+});
+
 test('a member can update their profile and add an address', async ({ page }) => {
   await registerAndLogin(page, uniqueEmail());
 

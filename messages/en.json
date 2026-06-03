@@ -119,12 +119,22 @@
       "profile": "Profile",
       "addresses": "Addresses",
       "favorites": "Favorites",
-      "security": "Security"
+      "security": "Security",
+      "privacy": "Privacy"
     },
     "favorites": {
       "title": "Favorite products",
       "empty": "You have no favorite products yet.",
       "remove": "Remove from favorites"
+    },
+    "privacy": {
+      "exportTitle": "Export your data",
+      "exportHint": "Download a copy of your data in JSON format.",
+      "exportButton": "Download my data",
+      "deleteTitle": "Delete account",
+      "deleteHint": "Your account is deleted and your data anonymized after 30 days. Orders are kept in anonymized form.",
+      "passwordLabel": "Confirm with password",
+      "deleteButton": "Delete account"
     },
     "profile": {
       "title": "Profile",

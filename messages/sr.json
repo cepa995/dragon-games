@@ -119,12 +119,22 @@
       "profile": "Profil",
       "addresses": "Adrese",
       "favorites": "Omiljeno",
-      "security": "Bezbednost"
+      "security": "Bezbednost",
+      "privacy": "Privatnost"
     },
     "favorites": {
       "title": "Omiljeni proizvodi",
       "empty": "Još nemate omiljenih proizvoda.",
       "remove": "Ukloni iz omiljenih"
+    },
+    "privacy": {
+      "exportTitle": "Izvoz podataka",
+      "exportHint": "Preuzmite kopiju svojih podataka u JSON formatu.",
+      "exportButton": "Preuzmi moje podatke",
+      "deleteTitle": "Brisanje naloga",
+      "deleteHint": "Vaš nalog se briše, a podaci se anonimizuju nakon 30 dana. Porudžbine se čuvaju u anonimizovanom obliku.",
+      "passwordLabel": "Potvrdite lozinkom",
+      "deleteButton": "Obriši nalog"
     },
     "profile": {
       "title": "Profil",

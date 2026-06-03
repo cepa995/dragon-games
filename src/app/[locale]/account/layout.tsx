@@ -8,6 +8,7 @@ const NAV = [
   { href: '/account/addresses', key: 'addresses' },
   { href: '/account/favorites', key: 'favorites' },
   { href: '/account/security', key: 'security' },
+  { href: '/account/privacy', key: 'privacy' },
 ] as const;
 
 export default async function AccountLayout({
