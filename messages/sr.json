@@ -47,5 +47,53 @@
     "en": "Engleski",
     "srShort": "SR",
     "enShort": "EN"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "passwordLabel": "Lozinka",
+    "nameLabel": "Ime",
+    "logout": "Odjava",
+    "login": {
+      "title": "Prijava",
+      "submit": "Prijavi se",
+      "orDivider": "ili",
+      "magicSubmit": "Pošalji link za prijavu",
+      "magicSent": "Poslali smo vam link za prijavu. Proverite email.",
+      "forgot": "Zaboravili ste lozinku?",
+      "noAccount": "Nemate nalog?",
+      "registerLink": "Registrujte se"
+    },
+    "register": {
+      "title": "Registracija",
+      "submit": "Kreiraj nalog",
+      "success": "Nalog je kreiran. Proverite email da potvrdite adresu.",
+      "haveAccount": "Već imate nalog?",
+      "loginLink": "Prijavite se"
+    },
+    "forgot": {
+      "title": "Zaboravljena lozinka",
+      "submit": "Pošalji link za resetovanje",
+      "sent": "Ako nalog postoji, poslali smo link za resetovanje lozinke.",
+      "back": "Nazad na prijavu"
+    },
+    "reset": {
+      "title": "Nova lozinka",
+      "submit": "Sačuvaj lozinku",
+      "success": "Lozinka je promenjena. Sada se možete prijaviti.",
+      "loginLink": "Idi na prijavu"
+    },
+    "verify": {
+      "success": "Email adresa je potvrđena. Hvala!",
+      "failed": "Link nije važeći ili je istekao.",
+      "loginLink": "Idi na prijavu"
+    },
+    "errors": {
+      "invalid": "Proverite unete podatke.",
+      "invalid_credentials": "Pogrešan email ili lozinka.",
+      "email_taken": "Nalog sa ovom email adresom već postoji.",
+      "rate_limited": "Previše pokušaja. Pokušajte ponovo za minut.",
+      "magic_failed": "Slanje linka nije uspelo. Pokušajte ponovo.",
+      "invalid_token": "Link nije važeći ili je istekao."
+    }
   }
 }

@@ -107,25 +107,105 @@ model User {
   passwordHash  String?
   name          String?
   phone         String?
+  image         String?
   role          UserRole   @default(MEMBER)
   status        UserStatus @default(ACTIVE)
   locale        Locale     @default(SR)
   emailVerified DateTime?
-  // Set during admin/staff 2FA enrolment in M3 (#12).
+  // Admin/staff 2FA (TOTP) — enrolment in M3 (#12).
   totpSecret    String?
+  totpEnabledAt DateTime?
   lastLoginAt   DateTime?
   createdAt     DateTime   @default(now())
   updatedAt     DateTime   @updatedAt
 
-  addresses     Address[]
-  orders        Order[]
-  favorites     Favorite[]
-  newsPosts     NewsPost[]
-  auditLogs     AuditLog[]
-  statusChanges OrderStatusHistory[]
+  addresses      Address[]
+  orders         Order[]
+  favorites      Favorite[]
+  newsPosts      NewsPost[]
+  auditLogs      AuditLog[]
+  statusChanges  OrderStatusHistory[]
+  accounts       Account[]
+  sessions       Session[]
+  tokens         UserToken[]
+  recoveryCodes  RecoveryCode[]
 
   @@index([role])
   @@index([status])
+}
+
+// ── Auth.js adapter tables ──
+
+model Account {
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
+  @@index([userId])
+}
+
+model Session {
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model VerificationToken {
+  identifier String
+  token      String
+  expires    DateTime
+
+  @@unique([identifier, token])
+}
+
+// ── Custom security tokens (email verification, password reset) ──
+
+enum UserTokenPurpose {
+  EMAIL_VERIFICATION
+  PASSWORD_RESET
+}
+
+model UserToken {
+  id        String           @id @default(cuid())
+  userId    String
+  purpose   UserTokenPurpose
+  tokenHash String           @unique // sha-256 of the emailed token
+  expires   DateTime
+  createdAt DateTime         @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, purpose])
+}
+
+// ── 2FA recovery codes (single-use). Enrolment in #12. ──
+
+model RecoveryCode {
+  id       String    @id @default(cuid())
+  userId   String
+  codeHash String    @unique
+  usedAt   DateTime?
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
 }
 
 model Address {

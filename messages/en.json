@@ -47,5 +47,53 @@
     "en": "English",
     "srShort": "SR",
     "enShort": "EN"
+  },
+  "auth": {
+    "emailLabel": "Email",
+    "passwordLabel": "Password",
+    "nameLabel": "Name",
+    "logout": "Log out",
+    "login": {
+      "title": "Log in",
+      "submit": "Log in",
+      "orDivider": "or",
+      "magicSubmit": "Send sign-in link",
+      "magicSent": "We sent you a sign-in link. Check your email.",
+      "forgot": "Forgot your password?",
+      "noAccount": "No account?",
+      "registerLink": "Sign up"
+    },
+    "register": {
+      "title": "Sign up",
+      "submit": "Create account",
+      "success": "Account created. Check your email to confirm your address.",
+      "haveAccount": "Already have an account?",
+      "loginLink": "Log in"
+    },
+    "forgot": {
+      "title": "Forgot password",
+      "submit": "Send reset link",
+      "sent": "If an account exists, we sent a password reset link.",
+      "back": "Back to login"
+    },
+    "reset": {
+      "title": "New password",
+      "submit": "Save password",
+      "success": "Your password was changed. You can now log in.",
+      "loginLink": "Go to login"
+    },
+    "verify": {
+      "success": "Your email has been confirmed. Thank you!",
+      "failed": "The link is invalid or has expired.",
+      "loginLink": "Go to login"
+    },
+    "errors": {
+      "invalid": "Please check the details you entered.",
+      "invalid_credentials": "Incorrect email or password.",
+      "email_taken": "An account with this email already exists.",
+      "rate_limited": "Too many attempts. Try again in a minute.",
+      "magic_failed": "Could not send the link. Please try again.",
+      "invalid_token": "The link is invalid or has expired."
+    }
   }
 }

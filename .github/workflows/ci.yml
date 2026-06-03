@@ -15,6 +15,9 @@ env:
   # pnpm install runs `prisma generate` (postinstall) and needs a URL present.
   DATABASE_URL: postgresql://dragon:dragon@localhost:5432/dragon_games_test?schema=public
   SKIP_ENV_VALIDATION: '1'
+  # Non-secret, CI-only value so Auth.js can issue JWTs during e2e. Real secrets
+  # live in environment configuration, never in the repo.
+  AUTH_SECRET: ci-only-not-a-real-secret-000000000000000000000000
 
 jobs:
   quality:

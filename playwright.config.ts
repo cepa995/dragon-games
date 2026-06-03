@@ -27,5 +27,8 @@ export default defineConfig({
     url: `${baseURL}/api/health`,
     reuseExistingServer: !process.env.CI,
     timeout: 120_000,
+    // All e2e requests originate from localhost (one IP), so the per-IP auth
+    // limiter would make happy-path specs flaky. Its logic is unit-tested.
+    env: { AUTH_RATE_LIMIT_DISABLED: '1' },
   },
 });
