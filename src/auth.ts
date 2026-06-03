@@ -3,8 +3,9 @@ import NextAuth from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
 import Resend from 'next-auth/providers/resend';
 import type { Locale, UserRole } from '@/generated/prisma';
-import { verifyPassword } from '@/lib/auth/password';
+import { verifyCredentials } from '@/lib/auth/login';
 import { loginSchema } from '@/lib/auth/schemas';
+import { shouldExpireForInactivity } from '@/lib/auth/session-policy';
 import { magicLinkEmail } from '@/lib/email/templates';
 import { sendEmail } from '@/lib/email/send';
 import { logger } from '@/lib/logger';
@@ -24,17 +25,16 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   pages: { signIn: '/sr/login' },
   providers: [
     Credentials({
-      credentials: { email: {}, password: {} },
+      credentials: { email: {}, password: {}, totp: {} },
       authorize: async (credentials) => {
         const parsed = loginSchema.safeParse(credentials);
         if (!parsed.success) return null;
 
-        const user = await prisma.user.findUnique({ where: { email: parsed.data.email } });
-        if (!user?.passwordHash || user.status !== 'ACTIVE') return null;
+        const totp = typeof credentials?.totp === 'string' ? credentials.totp : null;
+        const result = await verifyCredentials({ ...parsed.data, totp });
+        if (!result.ok) return null;
 
-        const valid = await verifyPassword(user.passwordHash, parsed.data.password);
-        if (!valid) return null;
-
+        const { user } = result;
         await prisma.user.update({ where: { id: user.id }, data: { lastLoginAt: new Date() } });
         return {
           id: user.id,
@@ -69,10 +69,20 @@ export const { handlers, auth, signIn, signOut } = NextAuth({
   },
   callbacks: {
     jwt({ token, user }) {
+      const now = Date.now();
       if (user) {
         token.uid = user.id;
         token.role = (user as { role?: UserRole }).role;
+        token.lastActivity = now;
+        return token;
       }
+      // Enforce the 8h inactivity timeout for admin/staff sessions (FR-14.5).
+      const role = token.role as UserRole | undefined;
+      const lastActivity = token.lastActivity as number | undefined;
+      if (shouldExpireForInactivity(role, lastActivity, now)) {
+        return null;
+      }
+      token.lastActivity = now;
       return token;
     },
     session({ session, token }) {

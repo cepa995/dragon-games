@@ -43,3 +43,13 @@ test('forgot-password always reports success (no account enumeration)', async ({
   await page.getByRole('button', { name: 'Pošalji link za resetovanje' }).click();
   await expect(page.getByText('poslali smo link')).toBeVisible();
 });
+
+test('a protected account page redirects to login when signed out', async ({ page }) => {
+  await page.goto('/sr/account/security');
+  await expect(page).toHaveURL(/\/sr\/login/);
+});
+
+test('the admin area redirects to login when signed out', async ({ page }) => {
+  await page.goto('/sr/admin');
+  await expect(page).toHaveURL(/\/sr\/login/);
+});

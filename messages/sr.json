@@ -87,13 +87,29 @@
       "failed": "Link nije važeći ili je istekao.",
       "loginLink": "Idi na prijavu"
     },
+    "twoFactor": {
+      "title": "Dvofaktorska autentifikacija (2FA)",
+      "description": "Dodatni sloj zaštite za vaš nalog pomoću aplikacije za kodove (npr. Google Authenticator).",
+      "enabledBadge": "2FA je aktivna",
+      "enable": "Uključi 2FA",
+      "disable": "Isključi 2FA",
+      "scan": "Skenirajte QR kod u aplikaciji za autentifikaciju, pa unesite kod.",
+      "secretLabel": "Ili ručno unesite ključ:",
+      "codeLabel": "Kod iz aplikacije",
+      "confirm": "Potvrdi i uključi",
+      "recoveryTitle": "Sačuvajte kodove za oporavak",
+      "recoveryHint": "Svaki kod se može iskoristiti jednom. Čuvajte ih na sigurnom mestu.",
+      "done": "Završeno"
+    },
     "errors": {
       "invalid": "Proverite unete podatke.",
       "invalid_credentials": "Pogrešan email ili lozinka.",
       "email_taken": "Nalog sa ovom email adresom već postoji.",
       "rate_limited": "Previše pokušaja. Pokušajte ponovo za minut.",
       "magic_failed": "Slanje linka nije uspelo. Pokušajte ponovo.",
-      "invalid_token": "Link nije važeći ili je istekao."
+      "invalid_token": "Link nije važeći ili je istekao.",
+      "totp_invalid": "Pogrešan kod. Pokušajte ponovo.",
+      "unauthorized": "Morate biti prijavljeni."
     }
   }
 }

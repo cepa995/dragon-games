@@ -87,13 +87,29 @@
       "failed": "The link is invalid or has expired.",
       "loginLink": "Go to login"
     },
+    "twoFactor": {
+      "title": "Two-factor authentication (2FA)",
+      "description": "An extra layer of protection for your account using an authenticator app (e.g. Google Authenticator).",
+      "enabledBadge": "2FA is active",
+      "enable": "Enable 2FA",
+      "disable": "Disable 2FA",
+      "scan": "Scan the QR code in your authenticator app, then enter the code.",
+      "secretLabel": "Or enter the key manually:",
+      "codeLabel": "Code from the app",
+      "confirm": "Confirm and enable",
+      "recoveryTitle": "Save your recovery codes",
+      "recoveryHint": "Each code can be used once. Keep them somewhere safe.",
+      "done": "Done"
+    },
     "errors": {
       "invalid": "Please check the details you entered.",
       "invalid_credentials": "Incorrect email or password.",
       "email_taken": "An account with this email already exists.",
       "rate_limited": "Too many attempts. Try again in a minute.",
       "magic_failed": "Could not send the link. Please try again.",
-      "invalid_token": "The link is invalid or has expired."
+      "invalid_token": "The link is invalid or has expired.",
+      "totp_invalid": "Wrong code. Please try again.",
+      "unauthorized": "You must be signed in."
     }
   }
 }
