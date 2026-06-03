@@ -17,6 +17,16 @@ export function formatDate(date: Date, locale: string): string {
   }).format(date);
 }
 
+export function dateParts(date: Date, locale: string) {
+  const l = intlLocale(locale);
+  return {
+    day: new Intl.DateTimeFormat(l, { day: 'numeric' }).format(date),
+    month: new Intl.DateTimeFormat(l, { month: 'short' }).format(date).replace('.', ''),
+    weekday: new Intl.DateTimeFormat(l, { weekday: 'long' }).format(date),
+    time: new Intl.DateTimeFormat(l, { hour: '2-digit', minute: '2-digit' }).format(date),
+  };
+}
+
 export function formatDateTime(date: Date, locale: string): string {
   return new Intl.DateTimeFormat(intlLocale(locale), {
     weekday: 'short',

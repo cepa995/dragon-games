@@ -7,10 +7,7 @@ import { Section } from './section';
 type BusinessInfo = { locations?: { key: string; address: string }[] };
 type BusinessHours = { weekly?: WeeklyHours };
 
-const FALLBACK = {
-  shop: 'Stražilovska 3, Novi Sad',
-  club: 'Kralja Aleksandra 4, Novi Sad',
-} as const;
+const FALLBACK_ADDRESS = 'Kralja Aleksandra 4, Novi Sad';
 
 function directionsUrl(address: string) {
   return `https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(address)}`;
@@ -30,13 +27,16 @@ export async function LocationsPreview() {
   const open = isOpenNow(hours.weekly);
 
   const locations = [
-    { key: 'shop', label: t('shopLabel'), address: byKey.get('shop') ?? FALLBACK.shop },
-    { key: 'club', label: t('clubLabel'), address: byKey.get('club') ?? FALLBACK.club },
+    {
+      key: 'shop',
+      label: t('shopLabel'),
+      address: byKey.get('shop') ?? info.locations?.[0]?.address ?? FALLBACK_ADDRESS,
+    },
   ];
 
   return (
     <Section title={t('title')} subtitle={t('subtitle')}>
-      <div className="grid gap-5 md:grid-cols-2">
+      <div className="grid gap-5">
         {locations.map((loc) => (
           <div
             key={loc.key}

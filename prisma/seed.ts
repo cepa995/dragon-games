@@ -35,10 +35,7 @@ async function seedSettings() {
           facebook: 'https://facebook.com/klubdragonnovisad',
           instagram: 'https://instagram.com/dragon_novi_sad',
         },
-        locations: [
-          { key: 'shop', address: 'Stražilovska 3, Novi Sad' },
-          { key: 'club', address: 'Kralja Aleksandra 4, Novi Sad' },
-        ],
+        locations: [{ key: 'shop', address: 'Kralja Aleksandra 4, Novi Sad' }],
       },
     },
     {
@@ -256,18 +253,21 @@ async function seedContent() {
     update: {},
   });
 
+  const welcomePost = {
+    titleSr: 'Dobrodošli na novu Dragon Games platformu',
+    titleEn: 'Welcome to the new Dragon Games platform',
+    bodySr:
+      'Nakon više od 30 godina, Dragon Games dobija novi digitalni dom. Pregledajte katalog, pratite turnire i ostanite u toku sa svim dešavanjima u klubu — sve na jednom mestu. Vidimo se u prodavnici na Kralja Aleksandra 4!',
+    bodyEn:
+      'After more than 30 years, Dragon Games gets a new digital home. Browse the catalog, follow tournaments and keep up with everything happening at the club — all in one place. See you at the shop on Kralja Aleksandra 4!',
+    coverImage: '/images/news/welcome.jpg',
+    status: PostStatus.PUBLISHED,
+    publishedAt: new Date('2026-06-01T10:00:00+02:00'),
+  };
   await prisma.newsPost.upsert({
     where: { slug: 'dobrodosli-na-novu-platformu' },
-    create: {
-      slug: 'dobrodosli-na-novu-platformu',
-      titleSr: 'Dobrodošli na novu Dragon Games platformu',
-      titleEn: 'Welcome to the new Dragon Games platform',
-      bodySr: 'Radimo na novom sajtu — uskoro stiže katalog, turniri i još mnogo toga.',
-      bodyEn: 'We are building a new site — catalog, tournaments and more are coming soon.',
-      status: PostStatus.PUBLISHED,
-      publishedAt: new Date('2026-06-01T10:00:00+02:00'),
-    },
-    update: {},
+    create: { slug: 'dobrodosli-na-novu-platformu', ...welcomePost },
+    update: welcomePost,
   });
 
   for (const page of [
@@ -280,10 +280,10 @@ async function seedContent() {
     },
     {
       key: 'locations',
-      titleSr: 'Lokacije',
-      titleEn: 'Locations',
-      bodySr: 'Stražilovska 3 i Kralja Aleksandra 4, Novi Sad.',
-      bodyEn: 'Stražilovska 3 and Kralja Aleksandra 4, Novi Sad.',
+      titleSr: 'Lokacija',
+      titleEn: 'Location',
+      bodySr: 'Kralja Aleksandra 4, Novi Sad.',
+      bodyEn: 'Kralja Aleksandra 4, Novi Sad.',
     },
   ]) {
     await prisma.staticPage.upsert({ where: { key: page.key }, create: page, update: page });

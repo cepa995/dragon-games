@@ -51,7 +51,9 @@
       "free": "Free",
       "entryFee": "Entry",
       "statusOpen": "Registration open",
-      "statusFull": "Full"
+      "statusFull": "Full",
+      "spots": "{count, plural, one {# spot} other {# spots}}",
+      "at": "at"
     },
     "news": {
       "title": "Latest news",
@@ -62,7 +64,7 @@
     },
     "locations": {
       "title": "Visit us",
-      "subtitle": "Two locations in Novi Sad — the shop and the club.",
+      "subtitle": "Our shop in the heart of Novi Sad.",
       "shopLabel": "Shop",
       "clubLabel": "Club",
       "hoursLabel": "Opening hours",
@@ -89,9 +91,8 @@
   "footer": {
     "hours": "Opening hours",
     "hoursValue": "Wednesday – Sunday, 15:00 – 21:00",
-    "locations": "Locations",
-    "shop": "Shop: Stražilovska 3, Novi Sad",
-    "club": "Club: Kralja Aleksandra 4, Novi Sad",
+    "locations": "Location",
+    "shop": "Kralja Aleksandra 4, Novi Sad",
     "follow": "Follow us",
     "legal": "Legal",
     "privacy": "Privacy policy",

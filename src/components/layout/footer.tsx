@@ -79,7 +79,6 @@ export function Footer() {
             <MapPin className="text-accent size-4" /> {t('locations')}
           </p>
           <p className="text-muted-foreground">{t('shop')}</p>
-          <p className="text-muted-foreground">{t('club')}</p>
           <p className="flex items-center gap-2 pt-1 font-semibold">
             <Clock className="text-accent size-4" /> {t('hours')}
           </p>

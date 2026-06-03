@@ -51,7 +51,9 @@
       "free": "Besplatno",
       "entryFee": "Kotizacija",
       "statusOpen": "Prijave otvorene",
-      "statusFull": "Popunjeno"
+      "statusFull": "Popunjeno",
+      "spots": "{count, plural, one {# mesto} few {# mesta} other {# mesta}}",
+      "at": "u"
     },
     "news": {
       "title": "Najnovije vesti",
@@ -62,7 +64,7 @@
     },
     "locations": {
       "title": "Posetite nas",
-      "subtitle": "Dve lokacije u Novom Sadu — prodavnica i klub.",
+      "subtitle": "Naša prodavnica u srcu Novog Sada.",
       "shopLabel": "Prodavnica",
       "clubLabel": "Klub",
       "hoursLabel": "Radno vreme",
@@ -89,9 +91,8 @@
   "footer": {
     "hours": "Radno vreme",
     "hoursValue": "Sreda – Nedelja, 15:00 – 21:00",
-    "locations": "Lokacije",
-    "shop": "Prodavnica: Stražilovska 3, Novi Sad",
-    "club": "Klub: Kralja Aleksandra 4, Novi Sad",
+    "locations": "Lokacija",
+    "shop": "Kralja Aleksandra 4, Novi Sad",
     "follow": "Pratite nas",
     "legal": "Pravne informacije",
     "privacy": "Politika privatnosti",
