@@ -1,0 +1,459 @@
+// Dragon Games — Prisma schema (M1 foundation).
+//
+// Covers the core V1 domain model from SRS §9.3. Auth.js adapter tables
+// (Account/Session/VerificationToken) and TOTP fields are layered on in M3
+// (#11/#12); the forum tables (V2) are added in M10 (#47) — the model is shaped
+// so those additions don't require a large refactor.
+//
+// Money convention: prices are stored in whole RSD (Int). EUR is a secondary,
+// admin-rate-derived display value (Setting `currency.rsd_eur_rate`), with an
+// optional per-product override. See FR-12.5 for stock semantics: orders
+// reserve stock (`stockReserved`) without reducing `stockOnHand`.
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─────────────────────────── Enums ───────────────────────────
+
+enum UserRole {
+  ADMIN
+  STAFF
+  MEMBER
+  MODERATOR // reserved for V2 forum moderation
+}
+
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+  BANNED
+  PENDING_DELETION // soft-deleted, awaiting anonymization (FR-13.7)
+}
+
+enum Locale {
+  SR
+  EN
+}
+
+enum ContentStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum PostStatus {
+  DRAFT
+  SCHEDULED
+  PUBLISHED
+  ARCHIVED
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  READY_FOR_PICKUP
+  SHIPPED
+  COMPLETED
+  CANCELLED
+}
+
+enum FulfillmentMethod {
+  PICKUP_SHOP
+  PICKUP_CLUB
+  DELIVERY
+}
+
+enum PaymentMethod {
+  CASH_ON_PICKUP
+  CASH_ON_DELIVERY
+  BANK_TRANSFER
+}
+
+enum TournamentGame {
+  MTG
+  YUGIOH
+  POKEMON
+  RIFTBOUND
+  OTHER
+}
+
+enum TournamentStatus {
+  SCHEDULED
+  OPEN
+  FULL
+  CANCELLED
+  COMPLETED
+}
+
+enum StockAdjustmentReason {
+  SALE
+  RESTOCK
+  CORRECTION
+  DAMAGE
+  RETURN
+}
+
+// ─────────────────────────── Users & accounts ───────────────────────────
+
+model User {
+  id            String     @id @default(cuid())
+  email         String     @unique
+  passwordHash  String?
+  name          String?
+  phone         String?
+  role          UserRole   @default(MEMBER)
+  status        UserStatus @default(ACTIVE)
+  locale        Locale     @default(SR)
+  emailVerified DateTime?
+  // Set during admin/staff 2FA enrolment in M3 (#12).
+  totpSecret    String?
+  lastLoginAt   DateTime?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+
+  addresses     Address[]
+  orders        Order[]
+  favorites     Favorite[]
+  newsPosts     NewsPost[]
+  auditLogs     AuditLog[]
+  statusChanges OrderStatusHistory[]
+
+  @@index([role])
+  @@index([status])
+}
+
+model Address {
+  id         String  @id @default(cuid())
+  userId     String
+  label      String?
+  street     String
+  city       String
+  postalCode String
+  country    String  @default("RS")
+  isDefault  Boolean @default(false)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+}
+
+model Favorite {
+  id        String   @id @default(cuid())
+  userId    String
+  productId String
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, productId])
+  @@index([userId])
+}
+
+// ─────────────────────────── Catalog ───────────────────────────
+
+model Category {
+  id          String        @id @default(cuid())
+  parentId    String?
+  slug        String        @unique
+  nameSr      String
+  nameEn      String?
+  descSr      String?
+  descEn      String?
+  heroImage   String?
+  sortOrder   Int           @default(0)
+  status      ContentStatus @default(PUBLISHED)
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+
+  parent   Category?  @relation("CategoryTree", fields: [parentId], references: [id], onDelete: Restrict)
+  children Category[] @relation("CategoryTree")
+  products Product[]
+
+  @@index([parentId])
+  @@index([status])
+}
+
+model Product {
+  id               String        @id @default(cuid())
+  sku              String        @unique
+  slug             String        @unique
+  nameSr           String
+  nameEn           String?
+  descSr           String?
+  descEn           String?
+  shortDescSr      String?
+  shortDescEn      String?
+  categoryId       String?
+  priceRsd         Int // whole dinars
+  priceEurOverride Int? // optional manual EUR override (eurocents); else derived from rate
+  costRsd          Int? // admin-only, for margin (FR-16.2)
+  stockOnHand      Int           @default(0)
+  stockReserved    Int           @default(0)
+  lowStockThreshold Int          @default(3)
+  status           ContentStatus @default(DRAFT)
+  featured         Boolean       @default(false)
+  preOrder         Boolean       @default(false)
+  popularityScore  Int           @default(0) // admin-pinned popularity (FR-9.6)
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+  archivedAt       DateTime?
+
+  category         Category?          @relation(fields: [categoryId], references: [id], onDelete: SetNull)
+  images           ProductImage[]
+  variants         ProductVariant[]
+  attributes       ProductAttribute[]
+  tags             Tag[]              @relation("ProductTags")
+  favorites        Favorite[]
+  orderItems       OrderItem[]
+  stockAdjustments StockAdjustment[]
+
+  @@index([categoryId])
+  @@index([status])
+  @@index([featured])
+}
+
+model ProductVariant {
+  id            String  @id @default(cuid())
+  productId     String
+  sku           String  @unique
+  // Variant-defining attributes, e.g. { "language": "EN" } (FR-11.3).
+  attributes    Json    @default("{}")
+  priceRsd      Int?
+  stockOnHand   Int     @default(0)
+  stockReserved Int     @default(0)
+
+  product    Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  orderItems OrderItem[]
+
+  @@index([productId])
+}
+
+model ProductImage {
+  id        String  @id @default(cuid())
+  productId String
+  url       String
+  altSr     String?
+  altEn     String?
+  sortOrder Int     @default(0)
+  isPrimary Boolean @default(false)
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([productId])
+}
+
+model ProductAttribute {
+  id        String  @id @default(cuid())
+  productId String
+  key       String // e.g. "game", "set", "language", "condition"
+  valueSr   String
+  valueEn   String?
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([productId])
+  @@index([key, valueSr])
+}
+
+model Tag {
+  id     String @id @default(cuid())
+  slug   String @unique
+  nameSr String
+  nameEn String?
+
+  products  Product[]  @relation("ProductTags")
+  newsPosts NewsPost[] @relation("NewsTags")
+}
+
+model StockAdjustment {
+  id        String                @id @default(cuid())
+  productId String
+  delta     Int // signed change applied to stockOnHand
+  reason    StockAdjustmentReason
+  note      String?
+  actorId   String?
+  createdAt DateTime              @default(now())
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@index([productId])
+}
+
+// ─────────────────────────── Orders (inquiry-based, no payments) ───────────────────────────
+
+model Order {
+  id                String            @id @default(cuid())
+  refNo             String            @unique // e.g. DG-2026-00123
+  userId            String?
+  customerName      String
+  email             String
+  phone             String
+  fulfillmentMethod FulfillmentMethod
+  deliveryAddress   Json? // snapshot when fulfillmentMethod = DELIVERY
+  paymentMethod     PaymentMethod
+  status            OrderStatus       @default(PENDING)
+  locale            Locale            @default(SR)
+  notesCustomer     String?
+  notesInternal     String?
+  subtotalRsd       Int               @default(0)
+  totalRsd          Int               @default(0)
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+
+  user          User?                @relation(fields: [userId], references: [id], onDelete: SetNull)
+  items         OrderItem[]
+  statusHistory OrderStatusHistory[]
+
+  @@index([userId])
+  @@index([status])
+  @@index([createdAt])
+}
+
+model OrderItem {
+  id                  String  @id @default(cuid())
+  orderId             String
+  productId           String?
+  variantId           String?
+  nameSnapshot        String
+  skuSnapshot         String
+  unitPriceSnapshotRsd Int
+  quantity            Int
+
+  order   Order           @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  product Product?        @relation(fields: [productId], references: [id], onDelete: SetNull)
+  variant ProductVariant? @relation(fields: [variantId], references: [id], onDelete: SetNull)
+
+  @@index([orderId])
+}
+
+model OrderStatusHistory {
+  id          String       @id @default(cuid())
+  orderId     String
+  fromStatus  OrderStatus?
+  toStatus    OrderStatus
+  changedById String?
+  note        String?
+  createdAt   DateTime     @default(now())
+
+  order     Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  changedBy User? @relation(fields: [changedById], references: [id], onDelete: SetNull)
+
+  @@index([orderId])
+}
+
+// ─────────────────────────── Tournaments ───────────────────────────
+
+model Tournament {
+  id            String           @id @default(cuid())
+  slug          String           @unique
+  nameSr        String
+  nameEn        String?
+  game          TournamentGame
+  format        String? // Standard, Modern, Pioneer, Commander, FNM, ...
+  descSr        String?
+  descEn        String?
+  startsAt      DateTime
+  endsAt        DateTime?
+  entryFeeRsd   Int              @default(0)
+  capacity      Int?
+  prizeSr       String?
+  prizeEn       String?
+  status        TournamentStatus @default(SCHEDULED)
+  reportSr      String? // post-event report (FR-19.3)
+  reportEn      String?
+  createdAt     DateTime         @default(now())
+  updatedAt     DateTime         @updatedAt
+
+  @@index([game])
+  @@index([status])
+  @@index([startsAt])
+}
+
+// ─────────────────────────── Content & CMS ───────────────────────────
+
+model NewsPost {
+  id          String     @id @default(cuid())
+  slug        String     @unique
+  titleSr     String
+  titleEn     String?
+  bodySr      String?
+  bodyEn      String?
+  coverImage  String?
+  authorId    String?
+  status      PostStatus @default(DRAFT)
+  publishedAt DateTime?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  author User? @relation(fields: [authorId], references: [id], onDelete: SetNull)
+  tags   Tag[] @relation("NewsTags")
+
+  @@index([status])
+  @@index([publishedAt])
+}
+
+model StaticPage {
+  id        String   @id @default(cuid())
+  key       String   @unique // "about", "locations", "guide-mtg", ...
+  titleSr   String
+  titleEn   String?
+  bodySr    String?
+  bodyEn    String?
+  updatedAt DateTime @updatedAt
+}
+
+model Setting {
+  key       String   @id // "currency.rsd_eur_rate", "business.hours", ...
+  value     Json
+  updatedAt DateTime @updatedAt
+}
+
+// ─────────────────────────── Marketing & ops ───────────────────────────
+
+model NewsletterSubscriber {
+  id               String    @id @default(cuid())
+  email            String    @unique
+  confirmedAt      DateTime?
+  source           String?
+  unsubscribeToken String    @unique
+  consentIp        String?
+  consentAt        DateTime?
+  createdAt        DateTime  @default(now())
+
+  @@index([confirmedAt])
+}
+
+model ContactMessage {
+  id        String    @id @default(cuid())
+  name      String
+  email     String
+  subject   String
+  body      String
+  handledAt DateTime?
+  createdAt DateTime  @default(now())
+
+  @@index([createdAt])
+}
+
+model AuditLog {
+  id         String   @id @default(cuid())
+  actorId    String?
+  action     String // "product.update", "order.status_change", ...
+  entityType String
+  entityId   String?
+  before     Json?
+  after      Json?
+  createdAt  DateTime @default(now())
+
+  actor User? @relation(fields: [actorId], references: [id], onDelete: SetNull)
+
+  @@index([entityType, entityId])
+  @@index([createdAt])
+}
