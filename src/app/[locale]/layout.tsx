@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from 'next';
 import { hasLocale, NextIntlClientProvider } from 'next-intl';
 import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
+import { Footer } from '@/components/layout/footer';
+import { Header } from '@/components/layout/header';
+import { SkipLink } from '@/components/layout/skip-link';
 import { ThemeProvider } from '@/components/theme/theme-provider';
 import { fontVariables } from '@/lib/fonts';
 import { routing } from '@/i18n/routing';
@@ -50,7 +53,12 @@ export default async function LocaleLayout({
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <WebVitals />
-            {children}
+            <SkipLink />
+            <div className="flex min-h-dvh flex-col">
+              <Header />
+              <div className="flex-1">{children}</div>
+              <Footer />
+            </div>
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>
