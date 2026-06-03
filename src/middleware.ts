@@ -1,23 +1,36 @@
+import createIntlMiddleware from 'next-intl/middleware';
 import { NextResponse, type NextRequest } from 'next/server';
 import { CORRELATION_HEADER, generateCorrelationId } from '@/lib/correlation';
+import { routing } from '@/i18n/routing';
+
+const intlMiddleware = createIntlMiddleware(routing);
 
 /**
- * Assigns a correlation id to every request and echoes it on the response so it
- * can be tied to structured logs and error reports (NFR-7.1). Locale routing
- * (M2 / #10) and auth gating (M3 / #12) extend this middleware later.
+ * Composes locale routing (next-intl) with correlation-id propagation (NFR-7.1).
+ * Every response — including `/api/*`, which next-intl skips — carries an
+ * `x-request-id`. Locale gating/redirects apply only to page routes.
  */
 export function middleware(request: NextRequest) {
   const correlationId = request.headers.get(CORRELATION_HEADER) ?? generateCorrelationId();
+  const { pathname } = request.nextUrl;
 
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set(CORRELATION_HEADER, correlationId);
+  // API and other non-page routes: correlation only, no locale handling.
+  const isPageRoute = !pathname.startsWith('/api');
 
-  const response = NextResponse.next({ request: { headers: requestHeaders } });
+  let response: NextResponse;
+  if (isPageRoute) {
+    response = intlMiddleware(request);
+  } else {
+    const requestHeaders = new Headers(request.headers);
+    requestHeaders.set(CORRELATION_HEADER, correlationId);
+    response = NextResponse.next({ request: { headers: requestHeaders } });
+  }
+
   response.headers.set(CORRELATION_HEADER, correlationId);
   return response;
 }
 
 export const config = {
-  // Run on everything except Next internals and static assets.
+  // Everything except Next internals and static assets (so `/api` is covered).
   matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
 };
