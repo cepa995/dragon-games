@@ -458,52 +458,56 @@
         "overview": "Pokémon TCG je dinamična igra u kojoj koristiš Pokémone, Trener karte i Energiju da onesvestiš protivnikove Pokémone. Šarena, pristupačna i zabavna za sve uzraste.",
         "steps": [
           {
-            "title": "Uzmi Elite Trainer Box",
-            "detail": "Sadrži boostere, energije i sve dodatke za početak."
+            "title": "Uzmi Elite Trainer Box ili gotov špil",
+            "detail": "Elite Trainer Box sadrži boostere, Energiju i sve dodatke. Gotovi špilovi su odmah spremni za igru."
           },
           {
-            "title": "Nauči tipove energije",
-            "detail": "Svaki Pokémon koristi određeni tip energije za napade."
+            "title": "Nauči tipove i Energiju",
+            "detail": "Svaki Pokémon pripada tipu (vatra, voda, trava…) i napada uz odgovarajuću Energiju koju mu prikačiš svakog poteza."
           },
           {
-            "title": "Evoluiraj svoje Pokémone",
-            "detail": "Od osnovnih do moćnijih oblika tokom partije."
+            "title": "Evoluiraj i sastavi špil od 60 karata",
+            "detail": "Od osnovnih Pokémona ka moćnijim evolucijama. Špil čine Pokémoni, Treneri i Energija — najviše 4 iste karte."
           },
           {
             "title": "Dođi na ligu",
-            "detail": "Subotom igramo Pokémon mečeve — dođi i upoznaj zajednicu."
+            "detail": "Subotom igramo Pokémon mečeve i lige — najlakši način da naučiš jeste partija uz naše igrače."
           }
         ],
         "formats": [
           {
             "name": "Standard",
-            "detail": "Najnoviji setovi; format za većinu zvaničnih događaja."
+            "detail": "Najnoviji setovi; lista dozvoljenih karata rotira svake godine. Najpristupačniji format za početak."
           },
           {
             "name": "Expanded",
-            "detail": "Veći broj dozvoljenih setova za više opcija."
+            "detail": "Mnogo veći broj setova — od Black & White (2011) naovamo, uz manju ban-listu."
           },
           {
             "name": "Prerelease",
-            "detail": "Igraj sa najnovijim setom pre zvaničnog izlaska."
+            "detail": "Igraj sa najnovijim setom pre zvaničnog izlaska, gradeći špil iz svežih boostera."
           },
           {
-            "name": "Liga subotom",
-            "detail": "Opuštene partije i sticanje iskustva uz nagrade."
+            "name": "Liga (League)",
+            "detail": "Opuštene partije kroz sezonu, sa promo kartama i nagradama — odlično za nove igrače."
           }
         ],
         "faq": [
           {
             "q": "Za koji uzrast je igra?",
-            "a": "Pokémon TCG je sjajan za decu i odrasle — pravila su jednostavna, a strategija dovoljno duboka."
+            "a": "Pokémon TCG je sjajan za decu (6+) i odrasle — pravila su jednostavna, a strategija dovoljno duboka."
           },
           {
-            "q": "Šta je Elite Trainer Box?",
-            "a": "Set koji sadrži boostere, energije i dodatke — najbolji početak za nove igrače."
+            "q": "Šta mi treba za prvu partiju?",
+            "a": "Dovoljan je jedan gotov špil ili Elite Trainer Box. Ne treba ti velika kolekcija da bi počeo."
           },
           {
-            "q": "Mogu li da igram bez velike kolekcije?",
-            "a": "Da, gotovi špilovi su odlični za početak i odmah su spremni za igru."
+            "q": "Kako se pobeđuje?",
+            "a": "Uzmeš svih šest Nagradnih karata onesposobljavajući protivničke Pokémone, ili kad protivnik ostane bez Pokémona ili karata za izvlačenje."
+          },
+          {
+            "q": "Gde mogu da naučim pravila?",
+            "a": "Na našim ligama pokazaćemo ti uživo. Postoji i zvanični vodič, kao i besplatna aplikacija Pokémon TCG Live."
           }
         ],
         "facts": {
@@ -512,22 +516,20 @@
           "complexity": "Laka",
           "age": "6+"
         },
-        "glossary": [
+        "about": [
+          "Pokémon TCG nastao je 1996. godine i danas je jedna od najpopularnijih kartičnih igara na svetu, sa više od 64 milijarde odštampanih karata. Spaja šareni svet Pokémona sa pristupačnom, ali dubokom strategijom.",
+          "U partiji postavljaš svoje Pokémone, napajaš ih Energijom i napadaš protivničke. Pobeđuješ tako što onesposobiš šest protivničkih Pokémona i uzmeš svih šest Nagradnih (Prize) karata.",
+          "Špil ima tačno 60 karata — Pokémone, Trener karte i Energiju — sa najviše 4 primerka iste karte. Jednostavna pravila čine ga savršenim za decu i početnike, a dubina zadržava i iskusne igrače.",
+          "U Dragon Games-u organizujemo redovne Pokémon mečeve i lige, gde početnici uče uz iskusnije igrače. Karte sa prelepim ilustracijama mnogi i sakupljaju, pa je Pokémon istovremeno igra i hobi."
+        ],
+        "references": [
           {
-            "term": "Energija",
-            "def": "Karte koje napajaju napade tvojih Pokémona."
+            "label": "Kako se igra (Pokémon)",
+            "url": "https://tcg.pokemon.com/en-us/how-to-play/"
           },
           {
-            "term": "Evolucija",
-            "def": "Nadogradnja Pokémona u jači oblik."
-          },
-          {
-            "term": "Trener karte",
-            "def": "Karte koje ti daju dodatne efekte i prednosti."
-          },
-          {
-            "term": "Prize karte",
-            "def": "Karte koje uzimaš kad onesvestiš protivnikovog Pokémona."
+            "label": "Standardni format (Bulbapedia)",
+            "url": "https://bulbapedia.bulbagarden.net/wiki/Standard_format_(TCG)"
           }
         ]
       },
@@ -537,75 +539,77 @@
         "steps": [
           {
             "title": "Uzmi Structure Deck",
-            "detail": "Gotov špil napravljen baš za učenje osnova."
+            "detail": "Gotov špil dizajniran za učenje — uravnotežen i spreman za igru iz kutije."
           },
           {
             "title": "Upoznaj tipove karata",
-            "detail": "Čudovišta, magije i zamke — svaka ima svoju ulogu."
+            "detail": "Monster karte se bore, Spell karte daju efekte, a Trap karte se postavljaju licem nadole za iznenađenja."
           },
           {
             "title": "Nauči faze poteza",
-            "detail": "Od izvlačenja do borbe — redosled je ključ strategije."
+            "detail": "Draw, Main, Battle i End faza — redosled poteza je ključ strategije i tajminga."
           },
           {
             "title": "Odigraj prvi duel",
-            "detail": "Naši OTS igrači će ti rado pokazati kako se igra."
+            "detail": "Naši OTS igrači rado pokazuju osnove; najbrže se uči kroz prvi duel uz iskusnije igrače."
           }
         ],
         "formats": [
           {
             "name": "Advanced",
-            "detail": "Zvanični format sa aktuelnom ban-listom."
-          },
-          {
-            "name": "Structure Deck dueli",
-            "detail": "Ujednačeni mečevi gotovim špilovima — odlični za početak."
-          },
-          {
-            "name": "OTS turniri",
-            "detail": "Zvanični turniri sa nagradama i rangiranjem."
+            "detail": "Zvanični format sa aktuelnom Forbidden & Limited listom — standard za većinu turnira."
           },
           {
             "name": "Speed Duel",
-            "detail": "Brža varijanta sa manjim špilovima."
+            "detail": "Brža, jednostavnija varijanta (4000 LP) bazirana na Duel Links — idealna za početnike."
+          },
+          {
+            "name": "OTS turniri",
+            "detail": "Zvanični turniri u našoj prodavnici, sa nagradama i promo kartama."
+          },
+          {
+            "name": "Structure Deck dueli",
+            "detail": "Ujednačeni mečevi gotovim špilovima — fer i odlični za učenje."
           }
         ],
         "faq": [
           {
-            "q": "Šta je OTS?",
-            "a": "Official Tournament Store — zvanični status za organizaciju Yu-Gi-Oh! turnira sa nagradama."
-          },
-          {
             "q": "Da li je igra teška za početak?",
-            "a": "Structure Deck-ovi su napravljeni baš za početnike i lako se uče."
+            "a": "Structure Deck-ovi su napravljeni baš za početnike. Osnove se nauče za jednu partiju, a dubina dolazi vremenom."
           },
           {
-            "q": "Koliko traje meč?",
-            "a": "Dueli su brzi — obično 10–20 minuta po meču."
+            "q": "Šta je OTS?",
+            "a": "Official Tournament Store — zvanični status za organizaciju Yu-Gi-Oh! turnira sa zvaničnim nagradama."
+          },
+          {
+            "q": "Koliko karata ima špil?",
+            "a": "Glavni špil ima 40–60 karata (preporučeno bliže 40), uz Extra i Side špil. Najviše 3 primerka iste karte."
+          },
+          {
+            "q": "Koliko traje duel?",
+            "a": "Uobičajeno 20–40 minuta; Speed Duel je još brži."
           }
         ],
         "facts": {
           "players": "2",
-          "time": "10–20 min",
+          "time": "20–40 min",
           "complexity": "Srednja",
           "age": "10+"
         },
-        "glossary": [
+        "about": [
+          "Yu-Gi-Oh! TRADING CARD GAME, nastao 1999. godine po uzoru na čuvenu mangu, jedna je od najprodavanijih kartičnih igara svih vremena. Poznat je po brzim, spektakularnim potezima i moćnim kombinacijama.",
+          "Dvojica duelista bore se Monster, Spell i Trap kartama da svedu protivnikove Životne poene sa 8000 na 0. Prizivanje moćnih čudovišta i lančani efekti čine svaki duel dinamičnim.",
+          "Glavni špil ima 40 do 60 karata (preporučeno bliže 40), uz poseban Extra špil za napredna prizivanja i Side špil za prilagođavanje meča. Dozvoljena su najviše 3 primerka iste karte.",
+          "Kao OTS (Official Tournament Store), Dragon Games organizuje zvanične Yu-Gi-Oh! turnire sa nagradama. Početnici kreću Structure špilovima i brzo ulaze u igru uz pomoć zajednice."
+        ],
+        "references": [
           {
-            "term": "Prizivanje",
-            "def": "Stavljanje čudovišta na teren; normalno ili specijalno."
+            "label": "Pravilnik i vodič za početnike (Konami)",
+            "url": "https://www.yugioh-card.com/en/rulebook/"
           },
           {
-            "term": "Lanac (Chain)",
-            "def": "Redosled aktiviranja efekata koji se rešavaju obrnuto."
-          },
-          {
-            "term": "Tribute",
-            "def": "Žrtvovanje čudovišta da prizoveš jače."
-          },
-          {
-            "term": "Set karta",
-            "def": "Postavljena licem nadole, spremna za aktiviranje."
+            "label": "Speed Duel vodič za početnike",
+            "url": "https://www.yugioh-card.com/eu/play/speed-duel-beginners-guide/"
           }
         ]
       },
@@ -614,76 +618,78 @@
         "overview": "Riftbound je nova kartična igra smeštena u univerzum League of Legends. Igraj omiljenim šampionima, kontroliši bojište i savladaj protivnika u brzim, taktičkim mečevima.",
         "steps": [
           {
-            "title": "Uzmi Starter špil",
-            "detail": "Posvećen jednom šampionu — spreman za igru iz kutije."
+            "title": "Izaberi šampiona (Legend)",
+            "detail": "Champion Legend karta određuje boje tvog špila i šampiona oko kog gradiš strategiju."
           },
           {
-            "title": "Upoznaj šampiona",
-            "detail": "Svaki špil se vrti oko jednog LoL šampiona i njegovog stila."
+            "title": "Sastavi špil od 40 karata",
+            "detail": "Jedinice, čarolije i opremu u bojama tvog Legenda — najviše 3 primerka iste karte."
           },
           {
-            "title": "Bori se za bojišta",
-            "detail": "Kontrola terena i resursa donosi pobedu."
+            "title": "Osvajaj bojišta",
+            "detail": "Šalji jedinice na bojišta i zadrži ih — kontrola terena donosi poene do pobede."
           },
           {
             "title": "Dođi na demo veče",
-            "detail": "Probaj igru bez kupovine i upoznaj zajednicu."
+            "detail": "Probaj igru bez kupovine uz naše vodiče i upoznaj Riftbound zajednicu."
           }
         ],
         "formats": [
           {
             "name": "Constructed",
-            "detail": "Sastavi sopstveni špil i takmiči se."
+            "detail": "Sastavi sopstveni špil od 40 karata oko izabranog šampiona i takmiči se."
           },
           {
-            "name": "Starter dueli",
-            "detail": "Ujednačeni mečevi gotovim špilovima."
+            "name": "2v2 (timski)",
+            "detail": "Igra u parovima do 11 poena — dinamična varijanta za društvo."
           },
           {
             "name": "Demo večeri",
-            "detail": "Besplatno isprobavanje igre uz naše vodiče."
+            "detail": "Besplatno isprobavanje igre uz gotove špilove i naše vodiče."
           },
           {
             "name": "Casual lige",
-            "detail": "Opuštene partije i napredovanje kroz sezonu."
+            "detail": "Opuštene partije i napredovanje kroz sezonu u prijateljskoj atmosferi."
           }
         ],
         "faq": [
           {
             "q": "Da li moram da igram League of Legends?",
-            "a": "Ne — Riftbound je samostalna igra, mada će ti poznati šampioni biti prijatan bonus."
+            "a": "Ne — Riftbound je samostalna igra. Poznavanje šampiona je prijatan bonus, ali nije potrebno."
+          },
+          {
+            "q": "Koliko igrača može da igra?",
+            "a": "Od 2 do 4 igrača — klasično 1 na 1, a postoji i timski 2v2 režim."
+          },
+          {
+            "q": "Kako se pobeđuje?",
+            "a": "Prvi do 8 poena (11 u 2v2), osvajajući i držeći bojišta svojim jedinicama."
           },
           {
             "q": "Gde mogu da probam igru?",
-            "a": "Organizujemo demo večeri gde možeš da igraš bez kupovine."
-          },
-          {
-            "q": "Da li je igra dostupna kod vas?",
-            "a": "Da, donosimo Riftbound proizvode čim postanu dostupni."
+            "a": "Na našim demo večerima — daćemo ti gotov špil i provešćemo te kroz prvu partiju."
           }
         ],
         "facts": {
-          "players": "2",
-          "time": "20–30 min",
+          "players": "2–4",
+          "time": "20–40 min",
           "complexity": "Srednja",
           "age": "14+"
         },
-        "glossary": [
+        "about": [
+          "Riftbound je zvanična kartična igra smeštena u univerzum League of Legends, predstavljena 2025. godine. Namenjena je za 2 do 4 igrača: biraš šampiona i šalješ svoju vojsku da osvoji bojišta.",
+          "Cilj je da prvi sakupiš 8 poena (11 u timskoj igri), osvajajući i držeći bojišta svojim jedinicama. Brzi, taktički mečevi nagrađuju kontrolu terena i pametno trošenje resursa.",
+          "Špil gradiš oko Champion Legend karte koja određuje boje (domene) i šampiona. Špil ima tačno 40 karata (uključujući šampiona), najviše 3 primerka iste, a karte plaćaš Runama.",
+          "Riftbound je nov i brzo raste. U Dragon Games-u organizujemo demo večeri gde možeš da probaš igru bez kupovine i upoznaš zajednicu okupljenu oko omiljenih šampiona."
+        ],
+        "references": [
           {
-            "term": "Šampion",
-            "def": "Centralna karta špila inspirisana herojem iz League of Legends."
+            "label": "Kako se igra (Riftbound)",
+            "url": "https://riftbound.leagueoflegends.com/en-us/news/rules-and-releases/how-to-play-get-started/"
           },
           {
-            "term": "Bojište",
-            "def": "Lokacija za koju se igrači bore tokom partije."
-          },
-          {
-            "term": "Runa / Resurs",
-            "def": "Energija kojom igraš karte i sposobnosti."
-          },
-          {
-            "term": "Domet (Range)",
-            "def": "Koliko daleko jedinica može da deluje na terenu."
+            "label": "Osnovna pravila",
+            "url": "https://riftbound.leagueoflegends.com/en-us/news/rules-and-releases/gameplay-guide-core-rules/"
           }
         ]
       }

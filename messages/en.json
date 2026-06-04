@@ -458,52 +458,56 @@
         "overview": "Pokémon TCG is a dynamic game where you use Pokémon, Trainer cards and Energy to knock out your opponent's Pokémon. Colorful, approachable and fun for all ages.",
         "steps": [
           {
-            "title": "Grab an Elite Trainer Box",
-            "detail": "It contains boosters, energy and every accessory to start."
+            "title": "Grab an Elite Trainer Box or a ready deck",
+            "detail": "An Elite Trainer Box has boosters, Energy and every accessory. Ready-made decks are playable straight away."
           },
           {
-            "title": "Learn the energy types",
-            "detail": "Each Pokémon uses a specific energy type for its attacks."
+            "title": "Learn the types and Energy",
+            "detail": "Each Pokémon has a type (fire, water, grass…) and attacks using the matching Energy you attach each turn."
           },
           {
-            "title": "Evolve your Pokémon",
-            "detail": "From basics into stronger forms during the game."
+            "title": "Evolve and build a 60-card deck",
+            "detail": "From basic Pokémon to stronger evolutions. A deck is Pokémon, Trainers and Energy — at most 4 of any card."
           },
           {
             "title": "Come to league",
-            "detail": "We play Pokémon matches on Saturdays — come and meet the community."
+            "detail": "We play Pokémon matches and leagues on Saturdays — the easiest way to learn is a game with our players."
           }
         ],
         "formats": [
           {
             "name": "Standard",
-            "detail": "The newest sets; the format for most official events."
+            "detail": "The newest sets; the legal card list rotates each year. The most approachable format to begin."
           },
           {
             "name": "Expanded",
-            "detail": "A larger pool of legal sets for more options."
+            "detail": "A much larger pool — from Black & White (2011) onward, with a small ban list."
           },
           {
             "name": "Prerelease",
-            "detail": "Play with the newest set before its official release."
+            "detail": "Play with the newest set before its official release, building from fresh boosters."
           },
           {
-            "name": "Saturday league",
-            "detail": "Relaxed games and experience with prizes."
+            "name": "League",
+            "detail": "Relaxed games through the season, with promos and prizes — great for new players."
           }
         ],
         "faq": [
           {
             "q": "What age is the game for?",
-            "a": "Pokémon TCG is great for kids and adults — the rules are simple, the strategy deep enough."
+            "a": "Pokémon TCG is great for kids (6+) and adults — the rules are simple, the strategy deep enough."
           },
           {
-            "q": "What is an Elite Trainer Box?",
-            "a": "A set with boosters, energy and accessories — the best start for new players."
+            "q": "What do I need for a first game?",
+            "a": "A single ready-made deck or an Elite Trainer Box is enough. You don’t need a big collection to start."
           },
           {
-            "q": "Can I play without a big collection?",
-            "a": "Yes, ready-made decks are great to start and are ready to play out of the box."
+            "q": "How do you win?",
+            "a": "Take all six Prize cards by knocking out the opponent’s Pokémon, or when they run out of Pokémon or cards to draw."
+          },
+          {
+            "q": "Where can I learn the rules?",
+            "a": "We’ll show you in person at league. There’s also an official guide and the free Pokémon TCG Live app."
           }
         ],
         "facts": {
@@ -512,22 +516,20 @@
           "complexity": "Easy",
           "age": "6+"
         },
-        "glossary": [
+        "about": [
+          "The Pokémon TCG launched in 1996 and is today one of the most popular card games in the world, with more than 64 billion cards printed. It blends the colorful world of Pokémon with approachable yet deep strategy.",
+          "During a game you set up your Pokémon, power them with Energy and attack your opponent’s. You win by knocking out six of your opponent’s Pokémon and taking all six of your Prize cards.",
+          "A deck is exactly 60 cards — Pokémon, Trainer cards and Energy — with at most 4 copies of any card. Simple rules make it perfect for kids and beginners, while its depth keeps experienced players hooked.",
+          "At Dragon Games we run regular Pokémon matches and leagues where beginners learn alongside seasoned players. Many also collect the cards for their beautiful art, so Pokémon is both a game and a hobby."
+        ],
+        "references": [
           {
-            "term": "Energy",
-            "def": "Cards that power your Pokémon attacks."
+            "label": "How to Play (Pokémon)",
+            "url": "https://tcg.pokemon.com/en-us/how-to-play/"
           },
           {
-            "term": "Evolution",
-            "def": "Upgrading a Pokémon into a stronger form."
-          },
-          {
-            "term": "Trainer cards",
-            "def": "Cards that give you extra effects and advantages."
-          },
-          {
-            "term": "Prize cards",
-            "def": "Cards you take when you knock out an opposing Pokémon."
+            "label": "Standard format (Bulbapedia)",
+            "url": "https://bulbapedia.bulbagarden.net/wiki/Standard_format_(TCG)"
           }
         ]
       },
@@ -537,75 +539,77 @@
         "steps": [
           {
             "title": "Pick up a Structure Deck",
-            "detail": "A ready-made deck built exactly for learning the basics."
+            "detail": "A ready-made deck designed for learning — balanced and playable out of the box."
           },
           {
             "title": "Meet the card types",
-            "detail": "Monsters, spells and traps — each has its own role."
+            "detail": "Monsters fight, Spells give effects, and Traps are set face-down for surprises."
           },
           {
             "title": "Learn the turn phases",
-            "detail": "From draw to battle — the order is the key to strategy."
+            "detail": "Draw, Main, Battle and End phases — the order of play is the key to strategy and timing."
           },
           {
             "title": "Play your first duel",
-            "detail": "Our OTS players will gladly show you the ropes."
+            "detail": "Our OTS players gladly show the basics; the fastest way to learn is a first duel with experienced players."
           }
         ],
         "formats": [
           {
             "name": "Advanced",
-            "detail": "The official format with the current ban list."
-          },
-          {
-            "name": "Structure Deck duels",
-            "detail": "Even matches with ready-made decks — great to start."
-          },
-          {
-            "name": "OTS tournaments",
-            "detail": "Sanctioned tournaments with prizing and ranking."
+            "detail": "The official format with the current Forbidden & Limited list — the standard for most tournaments."
           },
           {
             "name": "Speed Duel",
-            "detail": "A faster variant with smaller decks."
+            "detail": "A faster, simpler variant (4000 LP) based on Duel Links — ideal for beginners."
+          },
+          {
+            "name": "OTS tournaments",
+            "detail": "Sanctioned tournaments in our shop, with prizing and promo cards."
+          },
+          {
+            "name": "Structure Deck duels",
+            "detail": "Even matches with ready-made decks — fair and great to learn."
           }
         ],
         "faq": [
           {
-            "q": "What is OTS?",
-            "a": "Official Tournament Store — the status to run sanctioned Yu-Gi-Oh! tournaments with prizing."
-          },
-          {
             "q": "Is the game hard to start?",
-            "a": "Structure Decks are made exactly for beginners and are easy to learn."
+            "a": "Structure Decks are made for beginners. You learn the basics in a single game, and depth comes with time."
           },
           {
-            "q": "How long is a match?",
-            "a": "Duels are fast — usually 10–20 minutes per match."
+            "q": "What is OTS?",
+            "a": "Official Tournament Store — the status to run sanctioned Yu-Gi-Oh! tournaments with official prizing."
+          },
+          {
+            "q": "How many cards are in a deck?",
+            "a": "A Main Deck is 40–60 cards (closer to 40 recommended), plus Extra and Side decks. At most 3 copies of a card."
+          },
+          {
+            "q": "How long is a duel?",
+            "a": "Usually 20–40 minutes; Speed Duel is even faster."
           }
         ],
         "facts": {
           "players": "2",
-          "time": "10–20 min",
+          "time": "20–40 min",
           "complexity": "Medium",
           "age": "10+"
         },
-        "glossary": [
+        "about": [
+          "The Yu-Gi-Oh! TRADING CARD GAME, created in 1999 after the famous manga, is one of the best-selling card games of all time. It’s known for fast, spectacular plays and powerful combos.",
+          "Two duelists battle with Monster, Spell and Trap cards to bring the opponent’s Life Points from 8000 down to 0. Summoning powerful monsters and chaining effects make every duel dynamic.",
+          "A Main Deck is 40 to 60 cards (closer to 40 is recommended), plus a separate Extra Deck for advanced summons and a Side Deck to adapt between games. At most 3 copies of any card are allowed.",
+          "As an OTS (Official Tournament Store), Dragon Games runs sanctioned Yu-Gi-Oh! tournaments with prizing. Beginners start with Structure Decks and jump in quickly with the community’s help."
+        ],
+        "references": [
           {
-            "term": "Summoning",
-            "def": "Placing a monster on the field; normal or special."
+            "label": "Rulebook & beginner’s guide (Konami)",
+            "url": "https://www.yugioh-card.com/en/rulebook/"
           },
           {
-            "term": "Chain",
-            "def": "The order in which effects activate and resolve in reverse."
-          },
-          {
-            "term": "Tribute",
-            "def": "Sacrificing monsters to summon stronger ones."
-          },
-          {
-            "term": "Set card",
-            "def": "Placed face-down, ready to be activated."
+            "label": "Speed Duel beginner’s guide",
+            "url": "https://www.yugioh-card.com/eu/play/speed-duel-beginners-guide/"
           }
         ]
       },
@@ -614,76 +618,78 @@
         "overview": "Riftbound is a new card game set in the League of Legends universe. Play your favorite champions, control the battlefield and outplay your opponent in fast, tactical matches.",
         "steps": [
           {
-            "title": "Get a Starter deck",
-            "detail": "Focused on a single champion — ready to play out of the box."
+            "title": "Choose a champion (Legend)",
+            "detail": "The Champion Legend card sets your deck’s colors and the champion you build your strategy around."
           },
           {
-            "title": "Meet your champion",
-            "detail": "Each deck revolves around one LoL champion and their style."
+            "title": "Build a 40-card deck",
+            "detail": "Units, spells and gear in your Legend’s colors — at most 3 copies of any card."
           },
           {
-            "title": "Fight for battlefields",
-            "detail": "Controlling terrain and resources wins the game."
+            "title": "Conquer battlefields",
+            "detail": "Send units to battlefields and hold them — board control earns the points that win the game."
           },
           {
             "title": "Come to a demo night",
-            "detail": "Try the game without buying and meet the community."
+            "detail": "Try the game without buying, guided by our players, and meet the Riftbound community."
           }
         ],
         "formats": [
           {
             "name": "Constructed",
-            "detail": "Build your own deck and compete."
+            "detail": "Build your own 40-card deck around a chosen champion and compete."
           },
           {
-            "name": "Starter duels",
-            "detail": "Even matches with ready-made decks."
+            "name": "2v2 (team)",
+            "detail": "Pairs play to 11 points — a dynamic variant for groups."
           },
           {
             "name": "Demo nights",
-            "detail": "Try the game for free with our guides."
+            "detail": "Try the game for free with ready decks and our guides."
           },
           {
             "name": "Casual leagues",
-            "detail": "Relaxed games and progress through the season."
+            "detail": "Relaxed games and progress through the season in a friendly setting."
           }
         ],
         "faq": [
           {
             "q": "Do I have to play League of Legends?",
-            "a": "No — Riftbound is a standalone game, though familiar champions are a nice bonus."
+            "a": "No — Riftbound is a standalone game. Knowing the champions is a nice bonus, but not required."
+          },
+          {
+            "q": "How many players can play?",
+            "a": "2 to 4 players — classic 1v1, plus a team 2v2 mode."
+          },
+          {
+            "q": "How do you win?",
+            "a": "Be first to 8 points (11 in 2v2) by conquering and holding battlefields with your units."
           },
           {
             "q": "Where can I try the game?",
-            "a": "We host demo nights where you can play without buying anything."
-          },
-          {
-            "q": "Is the game available at your shop?",
-            "a": "Yes, we bring in Riftbound products as soon as they become available."
+            "a": "At our demo nights — we’ll hand you a ready deck and walk you through your first game."
           }
         ],
         "facts": {
-          "players": "2",
-          "time": "20–30 min",
+          "players": "2–4",
+          "time": "20–40 min",
           "complexity": "Medium",
           "age": "14+"
         },
-        "glossary": [
+        "about": [
+          "Riftbound is the official trading card game set in the League of Legends universe, unveiled in 2025. It’s a game for 2 to 4 players: you choose a champion and send your army to take control of battlefields.",
+          "The goal is to be the first to reach 8 points (11 in team play), conquering and holding battlefields with your units. Fast, tactical matches reward board control and smart spending of resources.",
+          "You build your deck around a Champion Legend card that sets your colors (domains) and champion. A deck is exactly 40 cards (including the champion), at most 3 copies of any card, and you pay for cards with Runes.",
+          "Riftbound is new and growing fast. At Dragon Games we host demo nights where you can try the game without buying and meet the community gathered around their favorite champions."
+        ],
+        "references": [
           {
-            "term": "Champion",
-            "def": "The central card of a deck, inspired by a League of Legends hero."
+            "label": "How to Play (Riftbound)",
+            "url": "https://riftbound.leagueoflegends.com/en-us/news/rules-and-releases/how-to-play-get-started/"
           },
           {
-            "term": "Battlefield",
-            "def": "A location players fight over during the game."
-          },
-          {
-            "term": "Rune / Resource",
-            "def": "The energy you use to play cards and abilities."
-          },
-          {
-            "term": "Range",
-            "def": "How far a unit can act on the field."
+            "label": "Core rules",
+            "url": "https://riftbound.leagueoflegends.com/en-us/news/rules-and-releases/gameplay-guide-core-rules/"
           }
         ]
       }

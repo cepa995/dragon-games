@@ -28,16 +28,35 @@ export const GAME_CARDS: Record<GuideGame, GuideCard[]> = {
     { src: '/images/guides/mtg/g-craterhoof.jpg', w: 488, h: 680, label: 'Craterhoof Behemoth' },
   ],
   pokemon: [
-    { src: '/images/hero-cards/pokemon-charizard.png', w: 733, h: 1024, label: 'Charizard' },
+    { src: '/images/guides/pokemon/charizard.webp', w: 600, h: 825, label: 'Charizard' },
+    { src: '/images/guides/pokemon/blastoise.webp', w: 600, h: 825, label: 'Blastoise' },
+    { src: '/images/guides/pokemon/venusaur.webp', w: 600, h: 825, label: 'Venusaur' },
+    { src: '/images/guides/pokemon/pikachu.webp', w: 600, h: 825, label: 'Pikachu' },
+    { src: '/images/guides/pokemon/mewtwo.webp', w: 600, h: 825, label: 'Mewtwo' },
   ],
-  yugioh: [{ src: '/images/hero-cards/ygo-slifer.jpg', w: 813, h: 1185, label: 'Slifer' }],
-  riftbound: [
+  yugioh: [
     {
-      src: '/images/hero-cards/riftbound-elder-dragon.webp',
-      w: 437,
-      h: 610,
-      label: 'Elder Dragon',
+      src: '/images/guides/yugioh/blue-eyes.jpg',
+      w: 813,
+      h: 1185,
+      label: 'Blue-Eyes White Dragon',
     },
+    { src: '/images/guides/yugioh/dark-magician.jpg', w: 813, h: 1185, label: 'Dark Magician' },
+    { src: '/images/guides/yugioh/red-eyes.jpg', w: 813, h: 1185, label: 'Red-Eyes Black Dragon' },
+    { src: '/images/guides/yugioh/slifer.jpg', w: 813, h: 1185, label: 'Slifer the Sky Dragon' },
+    { src: '/images/guides/yugioh/obelisk.jpg', w: 813, h: 1185, label: 'Obelisk the Tormentor' },
+  ],
+  riftbound: [
+    { src: '/images/guides/riftbound/jinx.webp', w: 750, h: 1047, label: 'Jinx' },
+    {
+      src: '/images/guides/riftbound/mageseeker.webp',
+      w: 750,
+      h: 1047,
+      label: 'Mageseeker Warden',
+    },
+    { src: '/images/guides/riftbound/ekko.webp', w: 750, h: 1047, label: 'Ekko' },
+    { src: '/images/guides/riftbound/kogmaw.webp', w: 750, h: 1047, label: "Kog'Maw" },
+    { src: '/images/guides/riftbound/stormbringer.webp', w: 750, h: 1047, label: 'Stormbringer' },
   ],
 };
 
