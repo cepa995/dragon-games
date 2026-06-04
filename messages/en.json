@@ -369,12 +369,41 @@
         "tagline": "The deepest trading card game in the world.",
         "overview": "Magic: The Gathering is a strategy game where you play a powerful wizard and use a deck of cards — spells, creatures and lands — to defeat your opponent. Easy to learn, with nearly endless depth.",
         "steps": [
-          "Grab a Starter or Foundations set to learn the basics.",
-          "Pick two mana colors you like and build a 60-card deck.",
-          "Come to FNM (Friday Night Magic) and play your first matches with our players.",
-          "Grow your collection through booster packs and new sets."
+          {
+            "title": "Get a starter set",
+            "detail": "A Foundations or Starter set gives you cards and the basic rules for your first games."
+          },
+          {
+            "title": "Pick your colors",
+            "detail": "Choose one or two of the five mana colors that suit your playstyle."
+          },
+          {
+            "title": "Build a 60-card deck",
+            "detail": "Mix lands, creatures and spells — we are happy to help with your first deck."
+          },
+          {
+            "title": "Come to FNM",
+            "detail": "We play Friday Night Magic — a relaxed setting that is ideal for learning."
+          }
         ],
-        "formats": ["Standard", "Commander (EDH)", "Draft & Sealed (Prerelease)", "Modern"],
+        "formats": [
+          {
+            "name": "Standard",
+            "detail": "The newest sets; ideal to start and follow the current meta."
+          },
+          {
+            "name": "Commander (EDH)",
+            "detail": "A 100-card deck, 3–4 players, casual and social."
+          },
+          {
+            "name": "Draft & Sealed",
+            "detail": "Open boosters and build on the spot — Prerelease events."
+          },
+          {
+            "name": "Modern",
+            "detail": "A large format with cards from many sets for experienced players."
+          }
+        ],
         "faq": [
           {
             "q": "Do I need an expensive deck to start?",
@@ -388,18 +417,71 @@
             "q": "Do you host beginner tournaments?",
             "a": "Yes — FNM nights are relaxed and ideal for learning alongside experienced players."
           }
+        ],
+        "facts": {
+          "players": "2+",
+          "time": "20–40 min",
+          "complexity": "Medium",
+          "age": "13+"
+        },
+        "glossary": [
+          {
+            "term": "Mana",
+            "def": "The resource you pay spells with; produced by lands."
+          },
+          {
+            "term": "Planeswalker",
+            "def": "A powerful ally card with abilities you use each turn."
+          },
+          {
+            "term": "Tapping",
+            "def": "Turning a card sideways to mark it as used."
+          },
+          {
+            "term": "Mulligan",
+            "def": "Redrawing your opening hand if you do not like it."
+          }
         ]
       },
       "pokemon": {
         "tagline": "Catch them all — on the field and in your deck.",
         "overview": "Pokémon TCG is a dynamic game where you use Pokémon, Trainer cards and Energy to knock out your opponent's Pokémon. Colorful, approachable and fun for all ages.",
         "steps": [
-          "Start with an Elite Trainer Box or a ready-made deck.",
-          "Learn the energy types and how to evolve your Pokémon.",
-          "Practice against friends or come to our Pokémon matches.",
-          "Upgrade your deck through new sets and single cards."
+          {
+            "title": "Grab an Elite Trainer Box",
+            "detail": "It contains boosters, energy and every accessory to start."
+          },
+          {
+            "title": "Learn the energy types",
+            "detail": "Each Pokémon uses a specific energy type for its attacks."
+          },
+          {
+            "title": "Evolve your Pokémon",
+            "detail": "From basics into stronger forms during the game."
+          },
+          {
+            "title": "Come to league",
+            "detail": "We play Pokémon matches on Saturdays — come and meet the community."
+          }
         ],
-        "formats": ["Standard", "Expanded", "Prerelease events", "Saturday league"],
+        "formats": [
+          {
+            "name": "Standard",
+            "detail": "The newest sets; the format for most official events."
+          },
+          {
+            "name": "Expanded",
+            "detail": "A larger pool of legal sets for more options."
+          },
+          {
+            "name": "Prerelease",
+            "detail": "Play with the newest set before its official release."
+          },
+          {
+            "name": "Saturday league",
+            "detail": "Relaxed games and experience with prizes."
+          }
+        ],
         "faq": [
           {
             "q": "What age is the game for?",
@@ -413,18 +495,71 @@
             "q": "Can I play without a big collection?",
             "a": "Yes, ready-made decks are great to start and are ready to play out of the box."
           }
+        ],
+        "facts": {
+          "players": "2",
+          "time": "15–30 min",
+          "complexity": "Easy",
+          "age": "6+"
+        },
+        "glossary": [
+          {
+            "term": "Energy",
+            "def": "Cards that power your Pokémon attacks."
+          },
+          {
+            "term": "Evolution",
+            "def": "Upgrading a Pokémon into a stronger form."
+          },
+          {
+            "term": "Trainer cards",
+            "def": "Cards that give you extra effects and advantages."
+          },
+          {
+            "term": "Prize cards",
+            "def": "Cards you take when you knock out an opposing Pokémon."
+          }
         ]
       },
       "yugioh": {
         "tagline": "Fast combos and spectacular plays.",
         "overview": "Yu-Gi-Oh! is a fast game of summoning powerful monsters and chaining effects. Known for its combos and dynamic matches, it rewards creativity and card knowledge.",
         "steps": [
-          "Pick up a Structure Deck — a ready-made deck designed for learning.",
-          "Learn the core card types: monsters, spells and traps.",
-          "Play your first duels with help from our OTS players.",
-          "Upgrade your deck with new sets and the current meta."
+          {
+            "title": "Pick up a Structure Deck",
+            "detail": "A ready-made deck built exactly for learning the basics."
+          },
+          {
+            "title": "Meet the card types",
+            "detail": "Monsters, spells and traps — each has its own role."
+          },
+          {
+            "title": "Learn the turn phases",
+            "detail": "From draw to battle — the order is the key to strategy."
+          },
+          {
+            "title": "Play your first duel",
+            "detail": "Our OTS players will gladly show you the ropes."
+          }
         ],
-        "formats": ["Advanced (official)", "Structure Deck duels", "OTS tournaments", "Speed Duel"],
+        "formats": [
+          {
+            "name": "Advanced",
+            "detail": "The official format with the current ban list."
+          },
+          {
+            "name": "Structure Deck duels",
+            "detail": "Even matches with ready-made decks — great to start."
+          },
+          {
+            "name": "OTS tournaments",
+            "detail": "Sanctioned tournaments with prizing and ranking."
+          },
+          {
+            "name": "Speed Duel",
+            "detail": "A faster variant with smaller decks."
+          }
+        ],
         "faq": [
           {
             "q": "What is OTS?",
@@ -438,18 +573,71 @@
             "q": "How long is a match?",
             "a": "Duels are fast — usually 10–20 minutes per match."
           }
+        ],
+        "facts": {
+          "players": "2",
+          "time": "10–20 min",
+          "complexity": "Medium",
+          "age": "10+"
+        },
+        "glossary": [
+          {
+            "term": "Summoning",
+            "def": "Placing a monster on the field; normal or special."
+          },
+          {
+            "term": "Chain",
+            "def": "The order in which effects activate and resolve in reverse."
+          },
+          {
+            "term": "Tribute",
+            "def": "Sacrificing monsters to summon stronger ones."
+          },
+          {
+            "term": "Set card",
+            "def": "Placed face-down, ready to be activated."
+          }
         ]
       },
       "riftbound": {
         "tagline": "The official trading card game of League of Legends.",
         "overview": "Riftbound is a new card game set in the League of Legends universe. Play your favorite champions, control the battlefield and outplay your opponent in fast, tactical matches.",
         "steps": [
-          "Start with a Starter deck focused on a single champion.",
-          "Learn how to fight for battlefields and use resources.",
-          "Come to our Riftbound matches and meet the community.",
-          "Grow your collection through new releases."
+          {
+            "title": "Get a Starter deck",
+            "detail": "Focused on a single champion — ready to play out of the box."
+          },
+          {
+            "title": "Meet your champion",
+            "detail": "Each deck revolves around one LoL champion and their style."
+          },
+          {
+            "title": "Fight for battlefields",
+            "detail": "Controlling terrain and resources wins the game."
+          },
+          {
+            "title": "Come to a demo night",
+            "detail": "Try the game without buying and meet the community."
+          }
         ],
-        "formats": ["Constructed", "Starter duels", "Demo nights", "Casual league play"],
+        "formats": [
+          {
+            "name": "Constructed",
+            "detail": "Build your own deck and compete."
+          },
+          {
+            "name": "Starter duels",
+            "detail": "Even matches with ready-made decks."
+          },
+          {
+            "name": "Demo nights",
+            "detail": "Try the game for free with our guides."
+          },
+          {
+            "name": "Casual leagues",
+            "detail": "Relaxed games and progress through the season."
+          }
+        ],
         "faq": [
           {
             "q": "Do I have to play League of Legends?",
@@ -463,9 +651,46 @@
             "q": "Is the game available at your shop?",
             "a": "Yes, we bring in Riftbound products as soon as they become available."
           }
+        ],
+        "facts": {
+          "players": "2",
+          "time": "20–30 min",
+          "complexity": "Medium",
+          "age": "14+"
+        },
+        "glossary": [
+          {
+            "term": "Champion",
+            "def": "The central card of a deck, inspired by a League of Legends hero."
+          },
+          {
+            "term": "Battlefield",
+            "def": "A location players fight over during the game."
+          },
+          {
+            "term": "Rune / Resource",
+            "def": "The energy you use to play cards and abilities."
+          },
+          {
+            "term": "Range",
+            "def": "How far a unit can act on the field."
+          }
         ]
       }
-    }
+    },
+    "overviewTitle": "About the game",
+    "glossaryTitle": "Key terms",
+    "facts": {
+      "players": "Players",
+      "time": "Play time",
+      "complexity": "Complexity",
+      "age": "Age"
+    },
+    "ctaTitle": "Ready for your first game?",
+    "ctaSubtitle": "Drop by the club, reach out, or come to a tournament — we'll help you get started.",
+    "ctaVisit": "Visit the club",
+    "ctaContact": "Contact",
+    "ctaTournaments": "Tournaments"
   },
   "notFound": {
     "title": "Page not found",

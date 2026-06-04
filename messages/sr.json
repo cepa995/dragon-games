@@ -369,12 +369,41 @@
         "tagline": "Najdublja kolekcionarska kartična igra na svetu.",
         "overview": "Magic: The Gathering je strateška igra u kojoj preuzimaš ulogu moćnog čarobnjaka i koristiš špil karata — čarolije, stvorenja i zemlje — da poraziš protivnika. Lako se uči, a nudi gotovo beskrajnu dubinu.",
         "steps": [
-          "Nabavi Starter ili Foundations set da naučiš osnove.",
-          "Odaberi dve boje mane koje ti odgovaraju i sastavi špil od 60 karata.",
-          "Dođi na FNM (Friday Night Magic) i odigraj prve mečeve uz pomoć naših igrača.",
-          "Proširuj kolekciju kroz booster pakovanja i nove setove."
+          {
+            "title": "Nabavi početni set",
+            "detail": "Foundations ili Starter set ti daje karte i osnovna pravila za prve partije."
+          },
+          {
+            "title": "Izaberi svoje boje",
+            "detail": "Odaberi jednu ili dve od pet boja mane koje ti odgovaraju po stilu igre."
+          },
+          {
+            "title": "Sastavi špil od 60 karata",
+            "detail": "Kombinuj zemlje, stvorenja i čarolije — rado pomognemo oko prvog špila."
+          },
+          {
+            "title": "Dođi na FNM",
+            "detail": "Petkom igramo Friday Night Magic — opušteno okruženje idealno za učenje."
+          }
         ],
-        "formats": ["Standard", "Commander (EDH)", "Draft i Sealed (Prerelease)", "Modern"],
+        "formats": [
+          {
+            "name": "Standard",
+            "detail": "Najnoviji setovi; idealan za početak i praćenje aktuelne mete."
+          },
+          {
+            "name": "Commander (EDH)",
+            "detail": "Špil od 100 karata, 3–4 igrača, opušteno i društveno."
+          },
+          {
+            "name": "Draft & Sealed",
+            "detail": "Otvaraš boostere i praviš špil na licu mesta — Prerelease eventi."
+          },
+          {
+            "name": "Modern",
+            "detail": "Veliki format sa kartama iz mnogo setova za iskusnije igrače."
+          }
+        ],
         "faq": [
           {
             "q": "Da li mi treba skup špil za početak?",
@@ -388,18 +417,71 @@
             "q": "Organizujete li turnire za početnike?",
             "a": "Da — FNM večeri su opuštene i idealne za učenje uz iskusne igrače."
           }
+        ],
+        "facts": {
+          "players": "2+",
+          "time": "20–40 min",
+          "complexity": "Srednja",
+          "age": "13+"
+        },
+        "glossary": [
+          {
+            "term": "Mana",
+            "def": "Resurs kojim plaćaš čarolije; dobijaš ga iz zemalja."
+          },
+          {
+            "term": "Planeswalker",
+            "def": "Moćna karta-saveznik sa sposobnostima svakog poteza."
+          },
+          {
+            "term": "Tapovanje",
+            "def": "Okretanje karte u stranu da označiš da je iskorišćena."
+          },
+          {
+            "term": "Mulligan",
+            "def": "Zamena početne ruke ako ti se ne dopada."
+          }
         ]
       },
       "pokemon": {
         "tagline": "Uhvati ih sve — i na terenu i u špilu.",
         "overview": "Pokémon TCG je dinamična igra u kojoj koristiš Pokémone, Trener karte i Energiju da onesvestiš protivnikove Pokémone. Šarena, pristupačna i zabavna za sve uzraste.",
         "steps": [
-          "Počni sa Elite Trainer Box-om ili gotovim špilom.",
-          "Nauči tipove energije i kako evoluiraš Pokémone.",
-          "Vežbaj protiv prijatelja ili dođi na naše Pokémon mečeve.",
-          "Dograđuj špil kroz nove setove i pojedinačne karte."
+          {
+            "title": "Uzmi Elite Trainer Box",
+            "detail": "Sadrži boostere, energije i sve dodatke za početak."
+          },
+          {
+            "title": "Nauči tipove energije",
+            "detail": "Svaki Pokémon koristi određeni tip energije za napade."
+          },
+          {
+            "title": "Evoluiraj svoje Pokémone",
+            "detail": "Od osnovnih do moćnijih oblika tokom partije."
+          },
+          {
+            "title": "Dođi na ligu",
+            "detail": "Subotom igramo Pokémon mečeve — dođi i upoznaj zajednicu."
+          }
         ],
-        "formats": ["Standard", "Expanded", "Prerelease eventi", "Liga subotom"],
+        "formats": [
+          {
+            "name": "Standard",
+            "detail": "Najnoviji setovi; format za većinu zvaničnih događaja."
+          },
+          {
+            "name": "Expanded",
+            "detail": "Veći broj dozvoljenih setova za više opcija."
+          },
+          {
+            "name": "Prerelease",
+            "detail": "Igraj sa najnovijim setom pre zvaničnog izlaska."
+          },
+          {
+            "name": "Liga subotom",
+            "detail": "Opuštene partije i sticanje iskustva uz nagrade."
+          }
+        ],
         "faq": [
           {
             "q": "Za koji uzrast je igra?",
@@ -413,18 +495,71 @@
             "q": "Mogu li da igram bez velike kolekcije?",
             "a": "Da, gotovi špilovi su odlični za početak i odmah su spremni za igru."
           }
+        ],
+        "facts": {
+          "players": "2",
+          "time": "15–30 min",
+          "complexity": "Laka",
+          "age": "6+"
+        },
+        "glossary": [
+          {
+            "term": "Energija",
+            "def": "Karte koje napajaju napade tvojih Pokémona."
+          },
+          {
+            "term": "Evolucija",
+            "def": "Nadogradnja Pokémona u jači oblik."
+          },
+          {
+            "term": "Trener karte",
+            "def": "Karte koje ti daju dodatne efekte i prednosti."
+          },
+          {
+            "term": "Prize karte",
+            "def": "Karte koje uzimaš kad onesvestiš protivnikovog Pokémona."
+          }
         ]
       },
       "yugioh": {
         "tagline": "Brze kombinacije i spektakularni potezi.",
         "overview": "Yu-Gi-Oh! je brza igra prizivanja moćnih čudovišta i lančanih efekata. Poznata po kombinacijama i dinamičnim mečevima, nagrađuje kreativnost i poznavanje karata.",
         "steps": [
-          "Uzmi Structure Deck — gotov špil dizajniran za učenje.",
-          "Nauči osnovne tipove karata: čudovišta, magije i zamke.",
-          "Odigraj prve duele uz pomoć naših OTS igrača.",
-          "Nadograđuj špil novim setovima i aktuelnom metom."
+          {
+            "title": "Uzmi Structure Deck",
+            "detail": "Gotov špil napravljen baš za učenje osnova."
+          },
+          {
+            "title": "Upoznaj tipove karata",
+            "detail": "Čudovišta, magije i zamke — svaka ima svoju ulogu."
+          },
+          {
+            "title": "Nauči faze poteza",
+            "detail": "Od izvlačenja do borbe — redosled je ključ strategije."
+          },
+          {
+            "title": "Odigraj prvi duel",
+            "detail": "Naši OTS igrači će ti rado pokazati kako se igra."
+          }
         ],
-        "formats": ["Advanced (zvanični)", "Structure Deck dueli", "OTS turniri", "Speed Duel"],
+        "formats": [
+          {
+            "name": "Advanced",
+            "detail": "Zvanični format sa aktuelnom ban-listom."
+          },
+          {
+            "name": "Structure Deck dueli",
+            "detail": "Ujednačeni mečevi gotovim špilovima — odlični za početak."
+          },
+          {
+            "name": "OTS turniri",
+            "detail": "Zvanični turniri sa nagradama i rangiranjem."
+          },
+          {
+            "name": "Speed Duel",
+            "detail": "Brža varijanta sa manjim špilovima."
+          }
+        ],
         "faq": [
           {
             "q": "Šta je OTS?",
@@ -438,18 +573,71 @@
             "q": "Koliko traje meč?",
             "a": "Dueli su brzi — obično 10–20 minuta po meču."
           }
+        ],
+        "facts": {
+          "players": "2",
+          "time": "10–20 min",
+          "complexity": "Srednja",
+          "age": "10+"
+        },
+        "glossary": [
+          {
+            "term": "Prizivanje",
+            "def": "Stavljanje čudovišta na teren; normalno ili specijalno."
+          },
+          {
+            "term": "Lanac (Chain)",
+            "def": "Redosled aktiviranja efekata koji se rešavaju obrnuto."
+          },
+          {
+            "term": "Tribute",
+            "def": "Žrtvovanje čudovišta da prizoveš jače."
+          },
+          {
+            "term": "Set karta",
+            "def": "Postavljena licem nadole, spremna za aktiviranje."
+          }
         ]
       },
       "riftbound": {
         "tagline": "Zvanična kartična igra sveta League of Legends.",
         "overview": "Riftbound je nova kartična igra smeštena u univerzum League of Legends. Igraj omiljenim šampionima, kontroliši bojište i savladaj protivnika u brzim, taktičkim mečevima.",
         "steps": [
-          "Počni sa Starter špilom posvećenim jednom šampionu.",
-          "Nauči kako se boriš za bojišta i koristiš resurse.",
-          "Dođi na naše Riftbound mečeve i upoznaj zajednicu.",
-          "Proširuj kolekciju kroz nova izdanja."
+          {
+            "title": "Uzmi Starter špil",
+            "detail": "Posvećen jednom šampionu — spreman za igru iz kutije."
+          },
+          {
+            "title": "Upoznaj šampiona",
+            "detail": "Svaki špil se vrti oko jednog LoL šampiona i njegovog stila."
+          },
+          {
+            "title": "Bori se za bojišta",
+            "detail": "Kontrola terena i resursa donosi pobedu."
+          },
+          {
+            "title": "Dođi na demo veče",
+            "detail": "Probaj igru bez kupovine i upoznaj zajednicu."
+          }
         ],
-        "formats": ["Constructed", "Starter dueli", "Demo večeri", "Casual ligaške partije"],
+        "formats": [
+          {
+            "name": "Constructed",
+            "detail": "Sastavi sopstveni špil i takmiči se."
+          },
+          {
+            "name": "Starter dueli",
+            "detail": "Ujednačeni mečevi gotovim špilovima."
+          },
+          {
+            "name": "Demo večeri",
+            "detail": "Besplatno isprobavanje igre uz naše vodiče."
+          },
+          {
+            "name": "Casual lige",
+            "detail": "Opuštene partije i napredovanje kroz sezonu."
+          }
+        ],
         "faq": [
           {
             "q": "Da li moram da igram League of Legends?",
@@ -463,9 +651,46 @@
             "q": "Da li je igra dostupna kod vas?",
             "a": "Da, donosimo Riftbound proizvode čim postanu dostupni."
           }
+        ],
+        "facts": {
+          "players": "2",
+          "time": "20–30 min",
+          "complexity": "Srednja",
+          "age": "14+"
+        },
+        "glossary": [
+          {
+            "term": "Šampion",
+            "def": "Centralna karta špila inspirisana herojem iz League of Legends."
+          },
+          {
+            "term": "Bojište",
+            "def": "Lokacija za koju se igrači bore tokom partije."
+          },
+          {
+            "term": "Runa / Resurs",
+            "def": "Energija kojom igraš karte i sposobnosti."
+          },
+          {
+            "term": "Domet (Range)",
+            "def": "Koliko daleko jedinica može da deluje na terenu."
+          }
         ]
       }
-    }
+    },
+    "overviewTitle": "O igri",
+    "glossaryTitle": "Korisni pojmovi",
+    "facts": {
+      "players": "Igrača",
+      "time": "Trajanje",
+      "complexity": "Složenost",
+      "age": "Uzrast"
+    },
+    "ctaTitle": "Spreman za prvu partiju?",
+    "ctaSubtitle": "Svrati u klub, javi nam se ili dođi na turnir — pomoći ćemo ti da počneš.",
+    "ctaVisit": "Poseti klub",
+    "ctaContact": "Kontakt",
+    "ctaTournaments": "Turniri"
   },
   "notFound": {
     "title": "Stranica nije pronađena",
