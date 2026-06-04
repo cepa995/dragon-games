@@ -347,7 +347,8 @@
       "email": "Email",
       "social": "Social",
       "address": "Address",
-      "hours": "Opening hours"
+      "hours": "Opening hours",
+      "directions": "Get directions"
     }
   },
   "guides": {
@@ -465,5 +466,12 @@
         ]
       }
     }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Looks like this page wandered off into another dimension. Let's get you back on track.",
+    "home": "Home",
+    "guides": "Game guides",
+    "code": "Error 404"
   }
 }

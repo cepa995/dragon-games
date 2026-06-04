@@ -347,7 +347,8 @@
       "email": "Email",
       "social": "Društvene mreže",
       "address": "Adresa",
-      "hours": "Radno vreme"
+      "hours": "Radno vreme",
+      "directions": "Uputstva za dolazak"
     }
   },
   "guides": {
@@ -465,5 +466,12 @@
         ]
       }
     }
+  },
+  "notFound": {
+    "title": "Stranica nije pronađena",
+    "description": "Izgleda da je ova stranica odlutala u drugu dimenziju. Hajde da te vratimo na sigurno.",
+    "home": "Početna strana",
+    "guides": "Vodiči za igre",
+    "code": "Greška 404"
   }
 }
