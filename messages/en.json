@@ -428,7 +428,6 @@
           "complexity": "Medium",
           "age": "13+"
         },
-        "cardsNote": "The five colors of Magic: white, blue, black, red and green.",
         "references": [
           {
             "label": "How to Play (Wizards of the Coast)",
@@ -450,7 +449,8 @@
         "about": [
           "Magic: The Gathering, the world’s first trading card game, was created in 1993 by mathematician Richard Garfield. Today it’s played by millions of people in more than 70 countries, with over twenty-five thousand unique cards.",
           "In every game you take on the role of a planeswalker — a powerful mage who travels between worlds. Your deck is your arsenal: lands produce mana, creatures fight for you, and spells shift the course of the duel. The goal is to bring your opponent’s life from 20 down to 0.",
-          "What makes Magic special is its depth. Five colors of mana, thousands of combinations and dozens of formats mean there is always a new deck to build and a new strategy to master. Easy to learn in an afternoon, rewarding to refine for years."
+          "What makes Magic special is its depth. Five colors of mana, thousands of combinations and dozens of formats mean there is always a new deck to build and a new strategy to master. Easy to learn in an afternoon, rewarding to refine for years.",
+          "Magic is both a game and a collecting hobby — many collect cards for their stunning illustrations, and some grow in value over the years. At Dragon Games, a WPN-certified store, you can play, collect and compete, supported by a community that has been here for decades."
         ]
       },
       "pokemon": {

@@ -67,7 +67,6 @@ export default async function GuidePage({
   const about = t.has(`games.${game}.about`)
     ? (t.raw(`games.${game}.about`) as string[])
     : [t(`games.${game}.overview`)];
-  const hasCardsNote = t.has(`games.${game}.cardsNote`);
   const references = t.has(`games.${game}.references`)
     ? (t.raw(`games.${game}.references`) as Reference[])
     : [];
@@ -135,13 +134,8 @@ export default async function GuidePage({
             </div>
 
             {/* Card art — a fanned hand of real cards */}
-            <div className="flex flex-col items-center gap-4">
+            <div className="flex justify-center">
               <GuideCardFan cards={cards} accent={meta.accent} />
-              {hasCardsNote && (
-                <p className="text-muted-foreground max-w-xs text-center text-xs">
-                  {t(`games.${game}.cardsNote`)}
-                </p>
-              )}
             </div>
           </div>
         </div>
@@ -172,28 +166,42 @@ export default async function GuidePage({
                 return (
                   <li
                     key={i}
-                    className="rounded-hero border-border bg-surface group relative overflow-hidden border p-6"
+                    className="rounded-hero border-border bg-surface group relative overflow-hidden border p-6 transition-all duration-300 hover:-translate-y-1"
                   >
+                    {/* accent corner glow */}
+                    <div
+                      className="pointer-events-none absolute -top-12 -right-12 size-32 rounded-full opacity-40 blur-2xl transition-opacity duration-300 group-hover:opacity-80"
+                      style={{ background: 'color-mix(in oklch, var(--a) 35%, transparent)' }}
+                    />
+                    {/* hover ring */}
                     <span
-                      className="font-display pointer-events-none absolute -top-4 right-2 text-7xl opacity-[0.08] select-none"
-                      style={{ color: 'var(--a)' }}
-                    >
-                      {i + 1}
-                    </span>
-                    <span
-                      className="flex size-12 items-center justify-center rounded-2xl"
+                      className="pointer-events-none absolute inset-0 rounded-[inherit] opacity-0 ring-1 transition-opacity duration-300 group-hover:opacity-100"
                       style={{
-                        color: 'var(--a)',
-                        background: 'color-mix(in oklch, var(--a) 16%, transparent)',
-                        boxShadow: 'inset 0 0 0 1px color-mix(in oklch, var(--a) 30%, transparent)',
+                        ['--tw-ring-color' as string]:
+                          'color-mix(in oklch, var(--a) 45%, transparent)',
                       }}
-                    >
-                      <Icon className="size-6" />
-                    </span>
-                    <h3 className="font-display mt-4 text-lg">
-                      <span style={{ color: 'var(--a)' }}>{i + 1}.</span> {step.title}
-                    </h3>
-                    <p className="text-muted-foreground mt-1.5 text-sm leading-relaxed">
+                    />
+                    <div className="relative flex items-center gap-4">
+                      <span
+                        className="relative flex size-14 shrink-0 items-center justify-center rounded-2xl"
+                        style={{
+                          background:
+                            'linear-gradient(135deg, color-mix(in oklch, var(--a) 28%, var(--color-surface)), var(--color-surface))',
+                          boxShadow:
+                            'inset 0 0 0 1px color-mix(in oklch, var(--a) 35%, transparent)',
+                        }}
+                      >
+                        <Icon className="size-6" style={{ color: 'var(--a)' }} />
+                        <span
+                          className="font-display absolute -top-2 -right-2 flex size-6 items-center justify-center rounded-full text-xs font-bold"
+                          style={{ background: 'var(--a)', color: 'var(--color-background)' }}
+                        >
+                          {i + 1}
+                        </span>
+                      </span>
+                      <h3 className="font-display text-lg leading-tight">{step.title}</h3>
+                    </div>
+                    <p className="text-muted-foreground relative mt-3 text-sm leading-relaxed">
                       {step.detail}
                     </p>
                   </li>
