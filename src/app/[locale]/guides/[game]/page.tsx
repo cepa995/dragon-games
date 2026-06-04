@@ -1,10 +1,14 @@
 import {
   ArrowLeft,
+  CalendarDays,
   Clock,
   ExternalLink,
   Gauge,
+  Layers,
   MapPin,
   MessageSquare,
+  Palette,
+  ShoppingBag,
   Trophy,
   Users,
 } from 'lucide-react';
@@ -24,11 +28,12 @@ export const dynamic = 'force-dynamic';
 
 type Step = { title: string; detail: string };
 type Format = { name: string; detail: string };
-type Term = { term: string; def: string };
 type FaqItem = { q: string; a: string };
 type Reference = { label: string; url: string };
 
 const FACT_ICONS = { players: Users, time: Clock, complexity: Gauge, age: Trophy } as const;
+// One icon per how-to-start step (by position).
+const STEP_ICONS = [ShoppingBag, Palette, Layers, CalendarDays] as const;
 
 export async function generateMetadata({
   params,
@@ -58,8 +63,10 @@ export default async function GuidePage({
 
   const steps = t.raw(`games.${game}.steps`) as Step[];
   const formats = t.raw(`games.${game}.formats`) as Format[];
-  const glossary = t.raw(`games.${game}.glossary`) as Term[];
   const faq = t.raw(`games.${game}.faq`) as FaqItem[];
+  const about = t.has(`games.${game}.about`)
+    ? (t.raw(`games.${game}.about`) as string[])
+    : [t(`games.${game}.overview`)];
   const hasCardsNote = t.has(`games.${game}.cardsNote`);
   const references = t.has(`games.${game}.references`)
     ? (t.raw(`games.${game}.references`) as Reference[])
@@ -141,39 +148,57 @@ export default async function GuidePage({
       </div>
 
       <div className="mx-auto w-full max-w-[1280px] space-y-16 px-4 py-16 sm:px-6 sm:py-20">
-        {/* Overview */}
+        {/* Overview — full width, multi-column */}
         <Reveal>
-          <section className="max-w-3xl">
-            <h2 className="font-display mb-4 text-3xl">{t('overviewTitle')}</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              {t(`games.${game}.overview`)}
-            </p>
+          <section>
+            <h2 className="font-display mb-5 text-3xl">{t('overviewTitle')}</h2>
+            <div className="text-muted-foreground gap-x-12 text-lg leading-relaxed md:columns-2">
+              {about.map((para, i) => (
+                <p key={i} className="mb-4 break-inside-avoid">
+                  {para}
+                </p>
+              ))}
+            </div>
           </section>
         </Reveal>
 
-        {/* How to start — timeline */}
+        {/* How to start — numbered step cards */}
         <Reveal>
           <section>
             <h2 className="font-display mb-8 text-3xl">{t('startTitle')}</h2>
-            <ol className="relative space-y-5 before:absolute before:top-2 before:bottom-2 before:left-[19px] before:w-px before:bg-[color-mix(in_oklch,var(--a)_30%,var(--color-border))]">
-              {steps.map((step, i) => (
-                <li key={i} className="relative flex gap-5">
-                  <span
-                    className="font-display relative z-10 flex size-10 shrink-0 items-center justify-center rounded-full text-sm"
-                    style={{
-                      color: 'var(--a)',
-                      background: 'color-mix(in oklch, var(--a) 16%, var(--color-surface))',
-                      boxShadow: 'inset 0 0 0 1px color-mix(in oklch, var(--a) 40%, transparent)',
-                    }}
+            <ol className="grid gap-5 sm:grid-cols-2">
+              {steps.map((step, i) => {
+                const Icon = STEP_ICONS[i] ?? ShoppingBag;
+                return (
+                  <li
+                    key={i}
+                    className="rounded-hero border-border bg-surface group relative overflow-hidden border p-6"
                   >
-                    {i + 1}
-                  </span>
-                  <div className="rounded-hero border-border bg-surface flex-1 border p-5">
-                    <h3 className="font-display text-lg">{step.title}</h3>
-                    <p className="text-muted-foreground mt-1 text-sm">{step.detail}</p>
-                  </div>
-                </li>
-              ))}
+                    <span
+                      className="font-display pointer-events-none absolute -top-4 right-2 text-7xl opacity-[0.08] select-none"
+                      style={{ color: 'var(--a)' }}
+                    >
+                      {i + 1}
+                    </span>
+                    <span
+                      className="flex size-12 items-center justify-center rounded-2xl"
+                      style={{
+                        color: 'var(--a)',
+                        background: 'color-mix(in oklch, var(--a) 16%, transparent)',
+                        boxShadow: 'inset 0 0 0 1px color-mix(in oklch, var(--a) 30%, transparent)',
+                      }}
+                    >
+                      <Icon className="size-6" />
+                    </span>
+                    <h3 className="font-display mt-4 text-lg">
+                      <span style={{ color: 'var(--a)' }}>{i + 1}.</span> {step.title}
+                    </h3>
+                    <p className="text-muted-foreground mt-1.5 text-sm leading-relaxed">
+                      {step.detail}
+                    </p>
+                  </li>
+                );
+              })}
             </ol>
           </section>
         </Reveal>
@@ -215,21 +240,6 @@ export default async function GuidePage({
                 </div>
               ))}
             </div>
-          </section>
-        </Reveal>
-
-        {/* Glossary */}
-        <Reveal>
-          <section>
-            <h2 className="font-display mb-6 text-3xl">{t('glossaryTitle')}</h2>
-            <dl className="grid gap-4 sm:grid-cols-2">
-              {glossary.map((item) => (
-                <div key={item.term} className="rounded-hero border-border bg-surface border p-5">
-                  <dt className="font-semibold">{item.term}</dt>
-                  <dd className="text-muted-foreground mt-1 text-sm">{item.def}</dd>
-                </div>
-              ))}
-            </dl>
           </section>
         </Reveal>
 

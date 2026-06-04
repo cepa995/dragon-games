@@ -371,19 +371,19 @@
         "steps": [
           {
             "title": "Počni sa Foundations setom",
-            "detail": "MTG Foundations je zvanični uvodni set napravljen da ostane u Standardu godinama — idealan prvi korak."
+            "detail": "MTG Foundations je zvanični uvodni set, napravljen da ostane u Standardu narednih godina. Beginner Box te kroz vodič uči pravila korak po korak."
           },
           {
-            "title": "Upoznaj pet boja mane",
-            "detail": "Bela, plava, crna, crvena i zelena — svaka ima svoj stil. Početnici obično biraju jednu ili dve."
+            "title": "Izaberi svoje boje",
+            "detail": "Pet boja mane — bela, plava, crna, crvena i zelena — određuju stil igre. Početnici obično kreću sa jednom ili dve koje im najviše odgovaraju."
           },
           {
             "title": "Sastavi špil od 60 karata",
-            "detail": "Konstruktni špil ima najmanje 60 karata i najviše 4 primerka svake karte (osim osnovnih zemalja)."
+            "detail": "Konstruktni špil ima najmanje 60 karata, sa najviše 4 primerka svake (osim osnovnih zemalja). Otprilike trećina špila su zemlje koje daju manu."
           },
           {
             "title": "Dođi na FNM",
-            "detail": "Friday Night Magic je nedeljni događaj za sve nivoe — najlakši način da naučiš uz druge igrače."
+            "detail": "Friday Night Magic je nedeljni događaj za sve nivoe znanja — najlakši način da naučiš jeste da odigraš prve mečeve uz pomoć naših igrača."
           }
         ],
         "formats": [
@@ -406,20 +406,20 @@
         ],
         "faq": [
           {
-            "q": "Da li mi treba skup špil za početak?",
-            "a": "Ne. MTG Foundations i početni setovi su pristupačni i sadrže sve što ti treba za prve partije."
+            "q": "Koliko košta da se počne?",
+            "a": "Vrlo pristupačno — Foundations Starter Collection ili gotov špil dovoljni su za prve partije, bez velikih ulaganja."
           },
           {
-            "q": "Koliko karata ima špil?",
-            "a": "Konstruktni špil ima najmanje 60 karata; Commander špil ima tačno 100 (99 + komandant)."
+            "q": "Mogu li da igram bez velike kolekcije?",
+            "a": "Da. U Limited formatima (Draft i Sealed) svi grade špil od istih, sveže otvorenih karata — kolekcija nije potrebna."
           },
           {
-            "q": "Sa koliko života se počinje?",
-            "a": "U većini formata svaki igrač počinje sa 20 života; u Commanderu sa 40."
+            "q": "Koji format je najbolji za početnike?",
+            "a": "Standard i Commander. Standard koristi samo najnovije setove, a Commander je opušten i društven, idealan za druženje."
           },
           {
-            "q": "Organizujete li turnire za početnike?",
-            "a": "Da — FNM večeri su opuštene i idealne za učenje uz iskusne igrače."
+            "q": "Gde mogu da naučim pravila?",
+            "a": "Na našim FNM večerima pokazaćemo ti uživo. Možeš vežbati i besplatno preko Magic: The Gathering Arena ili kroz zvanični vodič."
           }
         ],
         "facts": {
@@ -428,32 +428,6 @@
           "complexity": "Srednja",
           "age": "13+"
         },
-        "glossary": [
-          {
-            "term": "Mana",
-            "def": "Resurs u pet boja kojim plaćaš karte; najčešće dolazi od zemalja."
-          },
-          {
-            "term": "Zemlja (Land)",
-            "def": "Karta koja proizvodi manu; igraš jednu po potezu i osnova je svakog špila."
-          },
-          {
-            "term": "Stek (Stack)",
-            "def": "Red u kome se čarolije i sposobnosti rešavaju — poslednja dodata prva se rešava."
-          },
-          {
-            "term": "Tapovanje",
-            "def": "Okretanje karte u stranu da označiš da je iskorišćena (za manu, napad i sl.)."
-          },
-          {
-            "term": "Mulligan",
-            "def": "Zamena početne ruke od 7 karata: vučeš novih 7 i vraćaš jednu na dno špila."
-          },
-          {
-            "term": "Planeswalker",
-            "def": "Moćna karta-saveznik sa sposobnostima koje koristiš jednom po potezu."
-          }
-        ],
         "cardsNote": "Pet boja Magije: bela, plava, crna, crvena i zelena.",
         "references": [
           {
@@ -472,6 +446,11 @@
             "label": "Commander format",
             "url": "https://magic.wizards.com/en/formats/commander"
           }
+        ],
+        "about": [
+          "Magic: The Gathering, prva kolekcionarska kartična igra na svetu, nastala je 1993. godine iz pera matematičara Ričarda Garfilda. Danas je igraju milioni ljudi u preko 70 zemalja, a broji više od dvadeset pet hiljada različitih karata.",
+          "U svakoj partiji uživljavaš se u ulogu planeswalkera — moćnog čarobnjaka koji putuje između svetova. Tvoj špil je tvoj arsenal: zemlje proizvode manu, stvorenja se bore za tebe, a čarolije menjaju tok dvoboja. Cilj je svesti protivnikov život sa 20 na 0.",
+          "Ono što Magic čini posebnim jeste dubina. Pet boja mane, hiljade kombinacija i desetine formata znače da uvek postoji novi špil za sastavljanje i nova strategija za savladavanje. Lako se uči za jedno popodne, a usavršava godinama."
         ]
       },
       "pokemon": {

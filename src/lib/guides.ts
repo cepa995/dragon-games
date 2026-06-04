@@ -16,16 +16,16 @@ export type GuideCard = { src: string; w: number; h: number; label: string };
  */
 export const GAME_CARDS: Record<GuideGame, GuideCard[]> = {
   mtg: [
-    { src: '/images/guides/mtg/w-serra-angel.jpg', w: 488, h: 680, label: 'Serra Angel' },
-    { src: '/images/guides/mtg/u-counterspell.jpg', w: 488, h: 680, label: 'Counterspell' },
+    { src: '/images/guides/mtg/w-elspeth.jpg', w: 488, h: 680, label: "Elspeth, Sun's Champion" },
+    { src: '/images/guides/mtg/u-jace.jpg', w: 488, h: 680, label: 'Jace, the Mind Sculptor' },
     {
-      src: '/images/guides/mtg/b-vampire-nighthawk.jpg',
+      src: '/images/guides/mtg/b-sheoldred.jpg',
       w: 488,
       h: 680,
-      label: 'Vampire Nighthawk',
+      label: 'Sheoldred, the Apocalypse',
     },
-    { src: '/images/guides/mtg/r-lightning-bolt.jpg', w: 488, h: 680, label: 'Lightning Bolt' },
-    { src: '/images/guides/mtg/g-llanowar-elves.jpg', w: 488, h: 680, label: 'Llanowar Elves' },
+    { src: '/images/guides/mtg/r-glorybringer.jpg', w: 488, h: 680, label: 'Glorybringer' },
+    { src: '/images/guides/mtg/g-craterhoof.jpg', w: 488, h: 680, label: 'Craterhoof Behemoth' },
   ],
   pokemon: [
     { src: '/images/hero-cards/pokemon-charizard.png', w: 733, h: 1024, label: 'Charizard' },

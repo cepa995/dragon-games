@@ -5,8 +5,10 @@ use on the Dragon Games guides. Magic: The Gathering cards, names and artwork ar
 © Wizards of the Coast. Card art by the respective illustrators credited on each
 card. Used to illustrate gameplay for newcomers; not for resale.
 
-- w-serra-angel.jpg — Serra Angel
-- u-counterspell.jpg — Counterspell
-- b-vampire-nighthawk.jpg — Vampire Nighthawk
-- r-lightning-bolt.jpg — Lightning Bolt
-- g-llanowar-elves.jpg — Llanowar Elves
+A high-rarity card per Magic color (rares & mythics):
+
+- w-elspeth.jpg — Elspeth, Sun's Champion (W, mythic)
+- u-jace.jpg — Jace, the Mind Sculptor (U, mythic)
+- b-sheoldred.jpg — Sheoldred, the Apocalypse (B, mythic)
+- r-glorybringer.jpg — Glorybringer (R, rare)
+- g-craterhoof.jpg — Craterhoof Behemoth (G, mythic)

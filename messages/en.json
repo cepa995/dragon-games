@@ -371,19 +371,19 @@
         "steps": [
           {
             "title": "Start with the Foundations set",
-            "detail": "MTG Foundations is the official entry set, built to stay in Standard for years — the ideal first step."
+            "detail": "MTG Foundations is the official entry set, built to stay in Standard for years to come. Its Beginner Box walks you through the rules step by step."
           },
           {
-            "title": "Learn the five colors of mana",
-            "detail": "White, blue, black, red and green — each has its own style. Beginners usually pick one or two."
+            "title": "Choose your colors",
+            "detail": "The five colors of mana — white, blue, black, red and green — define your playstyle. Beginners usually start with one or two that suit them."
           },
           {
             "title": "Build a 60-card deck",
-            "detail": "A constructed deck has at least 60 cards and at most 4 copies of any card (except basic lands)."
+            "detail": "A constructed deck has at least 60 cards, with at most 4 copies of any card (except basic lands). Around a third of the deck is lands that produce mana."
           },
           {
             "title": "Come to FNM",
-            "detail": "Friday Night Magic is a weekly event for all levels — the easiest way to learn alongside other players."
+            "detail": "Friday Night Magic is a weekly event for all skill levels — the easiest way to learn is to play your first matches with help from our players."
           }
         ],
         "formats": [
@@ -406,20 +406,20 @@
         ],
         "faq": [
           {
-            "q": "Do I need an expensive deck to start?",
-            "a": "No. MTG Foundations and starter sets are affordable and contain everything you need for your first games."
+            "q": "How much does it cost to start?",
+            "a": "Very little — a Foundations Starter Collection or a ready-made deck is enough for your first games, with no big investment."
           },
           {
-            "q": "How many cards are in a deck?",
-            "a": "A constructed deck has at least 60 cards; a Commander deck has exactly 100 (99 + the commander)."
+            "q": "Can I play without a big collection?",
+            "a": "Yes. In Limited formats (Draft and Sealed) everyone builds a deck from the same freshly opened cards — no collection needed."
           },
           {
-            "q": "How much life do you start with?",
-            "a": "In most formats each player starts at 20 life; in Commander, at 40."
+            "q": "Which format is best for beginners?",
+            "a": "Standard and Commander. Standard uses only the newest sets, while Commander is casual and social — great for group play."
           },
           {
-            "q": "Do you host beginner tournaments?",
-            "a": "Yes — FNM nights are relaxed and ideal for learning alongside experienced players."
+            "q": "Where can I learn the rules?",
+            "a": "We’ll show you in person at FNM nights. You can also practice free on Magic: The Gathering Arena or via the official guide."
           }
         ],
         "facts": {
@@ -428,32 +428,6 @@
           "complexity": "Medium",
           "age": "13+"
         },
-        "glossary": [
-          {
-            "term": "Mana",
-            "def": "A five-color resource used to pay for cards; mostly produced by lands."
-          },
-          {
-            "term": "Land",
-            "def": "A card that produces mana; you play one per turn and it is the backbone of every deck."
-          },
-          {
-            "term": "Stack",
-            "def": "The order in which spells and abilities resolve — the last added resolves first."
-          },
-          {
-            "term": "Tapping",
-            "def": "Turning a card sideways to show it is used (for mana, attacking, etc.)."
-          },
-          {
-            "term": "Mulligan",
-            "def": "Redrawing your 7-card opening hand: draw a new 7 and put one on the bottom."
-          },
-          {
-            "term": "Planeswalker",
-            "def": "A powerful ally card with abilities you use once per turn."
-          }
-        ],
         "cardsNote": "The five colors of Magic: white, blue, black, red and green.",
         "references": [
           {
@@ -472,6 +446,11 @@
             "label": "Commander format",
             "url": "https://magic.wizards.com/en/formats/commander"
           }
+        ],
+        "about": [
+          "Magic: The Gathering, the world’s first trading card game, was created in 1993 by mathematician Richard Garfield. Today it’s played by millions of people in more than 70 countries, with over twenty-five thousand unique cards.",
+          "In every game you take on the role of a planeswalker — a powerful mage who travels between worlds. Your deck is your arsenal: lands produce mana, creatures fight for you, and spells shift the course of the duel. The goal is to bring your opponent’s life from 20 down to 0.",
+          "What makes Magic special is its depth. Five colors of mana, thousands of combinations and dozens of formats mean there is always a new deck to build and a new strategy to master. Easy to learn in an afternoon, rewarding to refine for years."
         ]
       },
       "pokemon": {
