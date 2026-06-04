@@ -1,12 +1,22 @@
-import { ArrowLeft, Clock, Gauge, MapPin, MessageSquare, Trophy, Users } from 'lucide-react';
+import {
+  ArrowLeft,
+  Clock,
+  ExternalLink,
+  Gauge,
+  MapPin,
+  MessageSquare,
+  Trophy,
+  Users,
+} from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
+import { GuideCardFan } from '@/components/guides/guide-card-fan';
 import { StarterProductCard } from '@/components/guides/starter-product-card';
 import { Reveal } from '@/components/motion/reveal';
 import { Link } from '@/i18n/navigation';
-import { GAME_ART, isGuideGame, starterProducts } from '@/lib/guides';
+import { GAME_CARDS, isGuideGame, starterProducts } from '@/lib/guides';
 import { TCGS } from '@/lib/tcg';
 
 // Reads recommended products from the DB, so it is rendered per request.
@@ -16,6 +26,7 @@ type Step = { title: string; detail: string };
 type Format = { name: string; detail: string };
 type Term = { term: string; def: string };
 type FaqItem = { q: string; a: string };
+type Reference = { label: string; url: string };
 
 const FACT_ICONS = { players: Users, time: Clock, complexity: Gauge, age: Trophy } as const;
 
@@ -42,13 +53,17 @@ export default async function GuidePage({
 
   const t = await getTranslations('guides');
   const meta = TCGS.find((g) => g.key === game)!;
-  const art = GAME_ART[game];
+  const cards = GAME_CARDS[game];
   const products = await starterProducts(game);
 
   const steps = t.raw(`games.${game}.steps`) as Step[];
   const formats = t.raw(`games.${game}.formats`) as Format[];
   const glossary = t.raw(`games.${game}.glossary`) as Term[];
   const faq = t.raw(`games.${game}.faq`) as FaqItem[];
+  const hasCardsNote = t.has(`games.${game}.cardsNote`);
+  const references = t.has(`games.${game}.references`)
+    ? (t.raw(`games.${game}.references`) as Reference[])
+    : [];
   const facts = (['players', 'time', 'complexity', 'age'] as const).map((key) => ({
     key,
     Icon: FACT_ICONS[key],
@@ -112,25 +127,14 @@ export default async function GuidePage({
               </dl>
             </div>
 
-            {/* Card art */}
-            <div className="relative hidden justify-center lg:flex">
-              <div
-                className="absolute top-1/2 left-1/2 size-72 -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
-                style={{ background: 'color-mix(in oklch, var(--a) 28%, transparent)' }}
-              />
-              <Image
-                src={art.src}
-                alt={meta.label}
-                width={art.w}
-                height={art.h}
-                priority
-                className="relative h-auto w-[clamp(180px,18vw,240px)] -rotate-3 rounded-2xl shadow-[0_30px_70px_-20px_rgba(0,0,0,0.7)] ring-1"
-                style={
-                  {
-                    ['--tw-ring-color' as string]: 'color-mix(in oklch, var(--a) 55%, transparent)',
-                  } as React.CSSProperties
-                }
-              />
+            {/* Card art — a fanned hand of real cards */}
+            <div className="flex flex-col items-center gap-4">
+              <GuideCardFan cards={cards} accent={meta.accent} />
+              {hasCardsNote && (
+                <p className="text-muted-foreground max-w-xs text-center text-xs">
+                  {t(`games.${game}.cardsNote`)}
+                </p>
+              )}
             </div>
           </div>
         </div>
@@ -248,6 +252,30 @@ export default async function GuidePage({
             </div>
           </section>
         </Reveal>
+
+        {/* References */}
+        {references.length > 0 && (
+          <Reveal>
+            <section>
+              <h2 className="font-display mb-6 text-3xl">{t('referencesTitle')}</h2>
+              <ul className="flex flex-wrap gap-3">
+                {references.map((ref) => (
+                  <li key={ref.url}>
+                    <a
+                      href={ref.url}
+                      target="_blank"
+                      rel="noreferrer noopener"
+                      className="border-border text-muted-foreground hover:border-accent/50 hover:text-accent inline-flex items-center gap-1.5 rounded-full border px-4 py-2 text-sm font-medium transition-colors"
+                    >
+                      <ExternalLink className="size-3.5" />
+                      {ref.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          </Reveal>
+        )}
 
         {/* CTA */}
         <Reveal>

@@ -367,51 +367,55 @@
     "games": {
       "mtg": {
         "tagline": "The deepest trading card game in the world.",
-        "overview": "Magic: The Gathering is a strategy game where you play a powerful wizard and use a deck of cards — spells, creatures and lands — to defeat your opponent. Easy to learn, with nearly endless depth.",
+        "overview": "Magic: The Gathering, the world's first trading card game, launched in 1993. You take on the role of a planeswalker — a powerful mage — using a deck of lands (which produce mana), creatures and spells to reduce your opponent's life from 20 to 0. It's easy to learn, yet its strategic depth and tens of thousands of cards make it nearly inexhaustible.",
         "steps": [
           {
-            "title": "Get a starter set",
-            "detail": "A Foundations or Starter set gives you cards and the basic rules for your first games."
+            "title": "Start with the Foundations set",
+            "detail": "MTG Foundations is the official entry set, built to stay in Standard for years — the ideal first step."
           },
           {
-            "title": "Pick your colors",
-            "detail": "Choose one or two of the five mana colors that suit your playstyle."
+            "title": "Learn the five colors of mana",
+            "detail": "White, blue, black, red and green — each has its own style. Beginners usually pick one or two."
           },
           {
             "title": "Build a 60-card deck",
-            "detail": "Mix lands, creatures and spells — we are happy to help with your first deck."
+            "detail": "A constructed deck has at least 60 cards and at most 4 copies of any card (except basic lands)."
           },
           {
             "title": "Come to FNM",
-            "detail": "We play Friday Night Magic — a relaxed setting that is ideal for learning."
+            "detail": "Friday Night Magic is a weekly event for all levels — the easiest way to learn alongside other players."
           }
         ],
         "formats": [
           {
             "name": "Standard",
-            "detail": "The newest sets; ideal to start and follow the current meta."
+            "detail": "Sets from roughly the last 2 years; rotates once a year. The best format to begin."
           },
           {
             "name": "Commander (EDH)",
-            "detail": "A 100-card deck, 3–4 players, casual and social."
+            "detail": "A social 3–4 player format: a 100-card singleton deck, a commander and 40 life."
           },
           {
-            "name": "Draft & Sealed",
-            "detail": "Open boosters and build on the spot — Prerelease events."
+            "name": "Limited (Draft & Sealed)",
+            "detail": "Build a 40-card minimum deck from fresh boosters — Prerelease weekends are the perfect entry."
           },
           {
             "name": "Modern",
-            "detail": "A large format with cards from many sets for experienced players."
+            "detail": "A large constructed format with cards from Eighth Edition (2003) onward."
           }
         ],
         "faq": [
           {
             "q": "Do I need an expensive deck to start?",
-            "a": "No. Foundations and Starter sets are affordable and contain everything you need for your first games."
+            "a": "No. MTG Foundations and starter sets are affordable and contain everything you need for your first games."
           },
           {
             "q": "How many cards are in a deck?",
-            "a": "A constructed deck has a minimum of 60 cards; a Commander deck has exactly 100."
+            "a": "A constructed deck has at least 60 cards; a Commander deck has exactly 100 (99 + the commander)."
+          },
+          {
+            "q": "How much life do you start with?",
+            "a": "In most formats each player starts at 20 life; in Commander, at 40."
           },
           {
             "q": "Do you host beginner tournaments?",
@@ -427,19 +431,46 @@
         "glossary": [
           {
             "term": "Mana",
-            "def": "The resource you pay spells with; produced by lands."
+            "def": "A five-color resource used to pay for cards; mostly produced by lands."
           },
           {
-            "term": "Planeswalker",
-            "def": "A powerful ally card with abilities you use each turn."
+            "term": "Land",
+            "def": "A card that produces mana; you play one per turn and it is the backbone of every deck."
+          },
+          {
+            "term": "Stack",
+            "def": "The order in which spells and abilities resolve — the last added resolves first."
           },
           {
             "term": "Tapping",
-            "def": "Turning a card sideways to mark it as used."
+            "def": "Turning a card sideways to show it is used (for mana, attacking, etc.)."
           },
           {
             "term": "Mulligan",
-            "def": "Redrawing your opening hand if you do not like it."
+            "def": "Redrawing your 7-card opening hand: draw a new 7 and put one on the bottom."
+          },
+          {
+            "term": "Planeswalker",
+            "def": "A powerful ally card with abilities you use once per turn."
+          }
+        ],
+        "cardsNote": "The five colors of Magic: white, blue, black, red and green.",
+        "references": [
+          {
+            "label": "How to Play (Wizards of the Coast)",
+            "url": "https://magic.wizards.com/en/how-to-play"
+          },
+          {
+            "label": "Formats overview",
+            "url": "https://magic.wizards.com/en/formats"
+          },
+          {
+            "label": "Standard format",
+            "url": "https://magic.wizards.com/en/formats/standard"
+          },
+          {
+            "label": "Commander format",
+            "url": "https://magic.wizards.com/en/formats/commander"
           }
         ]
       },
@@ -690,7 +721,8 @@
     "ctaSubtitle": "Drop by the club, reach out, or come to a tournament — we'll help you get started.",
     "ctaVisit": "Visit the club",
     "ctaContact": "Contact",
-    "ctaTournaments": "Tournaments"
+    "ctaTournaments": "Tournaments",
+    "referencesTitle": "Sources & official rules"
   },
   "notFound": {
     "title": "Page not found",

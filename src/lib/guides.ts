@@ -8,12 +8,37 @@ export function isGuideGame(value: string): value is GuideGame {
   return (GUIDE_GAMES as readonly string[]).includes(value);
 }
 
-/** Hero/overview card art per game (reuses the home hero-card imagery). */
-export const GAME_ART: Record<GuideGame, { src: string; w: number; h: number }> = {
-  mtg: { src: '/images/hero-cards/mtg-dragon.jpg', w: 488, h: 680 },
-  pokemon: { src: '/images/hero-cards/pokemon-charizard.png', w: 733, h: 1024 },
-  yugioh: { src: '/images/hero-cards/ygo-slifer.jpg', w: 813, h: 1185 },
-  riftbound: { src: '/images/hero-cards/riftbound-elder-dragon.webp', w: 437, h: 610 },
+export type GuideCard = { src: string; w: number; h: number; label: string };
+
+/**
+ * Hero card art per game. MTG shows the five colors of Magic with real cards
+ * (sourced via Scryfall); the others use a single signature card for now.
+ */
+export const GAME_CARDS: Record<GuideGame, GuideCard[]> = {
+  mtg: [
+    { src: '/images/guides/mtg/w-serra-angel.jpg', w: 488, h: 680, label: 'Serra Angel' },
+    { src: '/images/guides/mtg/u-counterspell.jpg', w: 488, h: 680, label: 'Counterspell' },
+    {
+      src: '/images/guides/mtg/b-vampire-nighthawk.jpg',
+      w: 488,
+      h: 680,
+      label: 'Vampire Nighthawk',
+    },
+    { src: '/images/guides/mtg/r-lightning-bolt.jpg', w: 488, h: 680, label: 'Lightning Bolt' },
+    { src: '/images/guides/mtg/g-llanowar-elves.jpg', w: 488, h: 680, label: 'Llanowar Elves' },
+  ],
+  pokemon: [
+    { src: '/images/hero-cards/pokemon-charizard.png', w: 733, h: 1024, label: 'Charizard' },
+  ],
+  yugioh: [{ src: '/images/hero-cards/ygo-slifer.jpg', w: 813, h: 1185, label: 'Slifer' }],
+  riftbound: [
+    {
+      src: '/images/hero-cards/riftbound-elder-dragon.webp',
+      w: 437,
+      h: 610,
+      label: 'Elder Dragon',
+    },
+  ],
 };
 
 // Recommended starter products per game (by slug). The catalog/admin (M5/M8)

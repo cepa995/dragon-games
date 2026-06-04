@@ -367,51 +367,55 @@
     "games": {
       "mtg": {
         "tagline": "Najdublja kolekcionarska kartična igra na svetu.",
-        "overview": "Magic: The Gathering je strateška igra u kojoj preuzimaš ulogu moćnog čarobnjaka i koristiš špil karata — čarolije, stvorenja i zemlje — da poraziš protivnika. Lako se uči, a nudi gotovo beskrajnu dubinu.",
+        "overview": "Magic: The Gathering, prva kolekcionarska kartična igra na svetu, izašla je 1993. godine. Uživljavaš se u ulogu planeswalkera — moćnog čarobnjaka — i koristiš špil sastavljen od zemalja (koje daju manu), stvorenja i čarolija da svedeš protivnikov život sa 20 na 0. Lako se uči, a dubina strategije i desetine hiljada karata čine je gotovo neiscrpnom.",
         "steps": [
           {
-            "title": "Nabavi početni set",
-            "detail": "Foundations ili Starter set ti daje karte i osnovna pravila za prve partije."
+            "title": "Počni sa Foundations setom",
+            "detail": "MTG Foundations je zvanični uvodni set napravljen da ostane u Standardu godinama — idealan prvi korak."
           },
           {
-            "title": "Izaberi svoje boje",
-            "detail": "Odaberi jednu ili dve od pet boja mane koje ti odgovaraju po stilu igre."
+            "title": "Upoznaj pet boja mane",
+            "detail": "Bela, plava, crna, crvena i zelena — svaka ima svoj stil. Početnici obično biraju jednu ili dve."
           },
           {
             "title": "Sastavi špil od 60 karata",
-            "detail": "Kombinuj zemlje, stvorenja i čarolije — rado pomognemo oko prvog špila."
+            "detail": "Konstruktni špil ima najmanje 60 karata i najviše 4 primerka svake karte (osim osnovnih zemalja)."
           },
           {
             "title": "Dođi na FNM",
-            "detail": "Petkom igramo Friday Night Magic — opušteno okruženje idealno za učenje."
+            "detail": "Friday Night Magic je nedeljni događaj za sve nivoe — najlakši način da naučiš uz druge igrače."
           }
         ],
         "formats": [
           {
             "name": "Standard",
-            "detail": "Najnoviji setovi; idealan za početak i praćenje aktuelne mete."
+            "detail": "Setovi iz poslednjih ~2 godine; rotira jednom godišnje. Najbolji format za početak."
           },
           {
             "name": "Commander (EDH)",
-            "detail": "Špil od 100 karata, 3–4 igrača, opušteno i društveno."
+            "detail": "Društveni format za 3–4 igrača: špil od 100 različitih karata, komandant i 40 života."
           },
           {
-            "name": "Draft & Sealed",
-            "detail": "Otvaraš boostere i praviš špil na licu mesta — Prerelease eventi."
+            "name": "Limited (Draft & Sealed)",
+            "detail": "Praviš špil od najmanje 40 karata iz svežih boostera — Prerelease vikendi su savršen ulaz."
           },
           {
             "name": "Modern",
-            "detail": "Veliki format sa kartama iz mnogo setova za iskusnije igrače."
+            "detail": "Veliki konstruktni format sa kartama od 8. izdanja (2003) naovamo."
           }
         ],
         "faq": [
           {
             "q": "Da li mi treba skup špil za početak?",
-            "a": "Ne. Foundations i Starter setovi su pristupačni i sadrže sve što ti treba za prve partije."
+            "a": "Ne. MTG Foundations i početni setovi su pristupačni i sadrže sve što ti treba za prve partije."
           },
           {
             "q": "Koliko karata ima špil?",
-            "a": "Konstruktni špil ima minimum 60 karata; Commander špil ima tačno 100."
+            "a": "Konstruktni špil ima najmanje 60 karata; Commander špil ima tačno 100 (99 + komandant)."
+          },
+          {
+            "q": "Sa koliko života se počinje?",
+            "a": "U većini formata svaki igrač počinje sa 20 života; u Commanderu sa 40."
           },
           {
             "q": "Organizujete li turnire za početnike?",
@@ -427,19 +431,46 @@
         "glossary": [
           {
             "term": "Mana",
-            "def": "Resurs kojim plaćaš čarolije; dobijaš ga iz zemalja."
+            "def": "Resurs u pet boja kojim plaćaš karte; najčešće dolazi od zemalja."
           },
           {
-            "term": "Planeswalker",
-            "def": "Moćna karta-saveznik sa sposobnostima svakog poteza."
+            "term": "Zemlja (Land)",
+            "def": "Karta koja proizvodi manu; igraš jednu po potezu i osnova je svakog špila."
+          },
+          {
+            "term": "Stek (Stack)",
+            "def": "Red u kome se čarolije i sposobnosti rešavaju — poslednja dodata prva se rešava."
           },
           {
             "term": "Tapovanje",
-            "def": "Okretanje karte u stranu da označiš da je iskorišćena."
+            "def": "Okretanje karte u stranu da označiš da je iskorišćena (za manu, napad i sl.)."
           },
           {
             "term": "Mulligan",
-            "def": "Zamena početne ruke ako ti se ne dopada."
+            "def": "Zamena početne ruke od 7 karata: vučeš novih 7 i vraćaš jednu na dno špila."
+          },
+          {
+            "term": "Planeswalker",
+            "def": "Moćna karta-saveznik sa sposobnostima koje koristiš jednom po potezu."
+          }
+        ],
+        "cardsNote": "Pet boja Magije: bela, plava, crna, crvena i zelena.",
+        "references": [
+          {
+            "label": "Kako se igra (Wizards of the Coast)",
+            "url": "https://magic.wizards.com/en/how-to-play"
+          },
+          {
+            "label": "Pregled formata",
+            "url": "https://magic.wizards.com/en/formats"
+          },
+          {
+            "label": "Standard format",
+            "url": "https://magic.wizards.com/en/formats/standard"
+          },
+          {
+            "label": "Commander format",
+            "url": "https://magic.wizards.com/en/formats/commander"
           }
         ]
       },
@@ -690,7 +721,8 @@
     "ctaSubtitle": "Svrati u klub, javi nam se ili dođi na turnir — pomoći ćemo ti da počneš.",
     "ctaVisit": "Poseti klub",
     "ctaContact": "Kontakt",
-    "ctaTournaments": "Turniri"
+    "ctaTournaments": "Turniri",
+    "referencesTitle": "Izvori i zvanična pravila"
   },
   "notFound": {
     "title": "Stranica nije pronađena",
