@@ -318,5 +318,36 @@
     "unsubscribeErrorTitle": "Invalid link",
     "unsubscribeErrorBody": "This unsubscribe link is invalid or has already been used.",
     "backHome": "Back to home"
+  },
+  "contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Get in touch with the Dragon Games team — phone, Viber, email and a contact form. Novi Sad, Kralja Aleksandra 4.",
+    "title": "Contact us",
+    "intro": "Have a question about a product, a tournament or a partnership? Write to us or drop by — we're happy to help.",
+    "form": {
+      "heading": "Send a message",
+      "name": "Full name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thanks! Your message has been sent. We'll get back to you soon.",
+      "errors": {
+        "invalid": "Please check your details and try again.",
+        "rate": "Too many attempts. Please try again in a minute.",
+        "spam": "Spam check failed. Please try again.",
+        "server": "Something went wrong. Please try again later."
+      }
+    },
+    "channels": {
+      "heading": "Other ways",
+      "phone": "Phone",
+      "viber": "Viber",
+      "email": "Email",
+      "social": "Social",
+      "address": "Address",
+      "hours": "Opening hours"
+    }
   }
 }

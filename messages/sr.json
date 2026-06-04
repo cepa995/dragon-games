@@ -318,5 +318,36 @@
     "unsubscribeErrorTitle": "Link nije važeći",
     "unsubscribeErrorBody": "Ovaj link za odjavu je neispravan ili je već iskorišćen.",
     "backHome": "Nazad na početnu"
+  },
+  "contact": {
+    "metaTitle": "Kontakt",
+    "metaDescription": "Javite se Dragon Games timu — telefon, Viber, email i kontakt forma. Novi Sad, Kralja Aleksandra 4.",
+    "title": "Kontaktirajte nas",
+    "intro": "Imate pitanje o proizvodu, turniru ili saradnji? Pišite nam ili svratite — rado ćemo pomoći.",
+    "form": {
+      "heading": "Pošaljite poruku",
+      "name": "Ime i prezime",
+      "email": "Email",
+      "subject": "Naslov",
+      "message": "Poruka",
+      "submit": "Pošalji poruku",
+      "sending": "Slanje…",
+      "success": "Hvala! Vaša poruka je poslata. Javićemo se uskoro.",
+      "errors": {
+        "invalid": "Proverite unete podatke i pokušajte ponovo.",
+        "rate": "Previše pokušaja. Pokušajte ponovo za koji minut.",
+        "spam": "Provera protiv spama nije uspela. Pokušajte ponovo.",
+        "server": "Došlo je do greške. Pokušajte ponovo kasnije."
+      }
+    },
+    "channels": {
+      "heading": "Drugi načini",
+      "phone": "Telefon",
+      "viber": "Viber",
+      "email": "Email",
+      "social": "Društvene mreže",
+      "address": "Adresa",
+      "hours": "Radno vreme"
+    }
   }
 }

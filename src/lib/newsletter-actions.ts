@@ -9,8 +9,9 @@ import { subscribeEmail } from './newsletter';
 const schema = z.object({
   email: z.string().trim().toLowerCase().email(),
   source: z.string().trim().max(40).optional(),
-  // Honeypot — real users never fill this hidden field.
-  company: z.string().max(0).optional(),
+  // Honeypot — accept any value so a bot-filled field reaches the silent
+  // success branch instead of failing validation and revealing the trap.
+  company: z.string().optional(),
 });
 
 export interface NewsletterState {
