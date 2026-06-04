@@ -349,5 +349,121 @@
       "address": "Adresa",
       "hours": "Radno vreme"
     }
+  },
+  "guides": {
+    "metaTitle": "Vodiči za igre",
+    "metaDescription": "Vodiči za početnike: Magic, Pokémon, Yu-Gi-Oh! i Riftbound — kako da počneš, formati koje organizujemo i česta pitanja.",
+    "title": "Vodiči za igre",
+    "intro": "Novi si u svetu kartičnih igara? Izaberi igru i saznaj kako da počneš, koje setove preporučujemo i koje formate organizujemo u Dragon Games klubu.",
+    "startTitle": "Kako da počneš",
+    "formatsTitle": "Formati koje organizujemo",
+    "faqTitle": "Česta pitanja",
+    "startersTitle": "Preporučeni setovi za početak",
+    "startersEmpty": "Uskoro dodajemo preporuke — svrati u prodavnicu za savet.",
+    "viewProduct": "Pogledaj u katalogu",
+    "openGuide": "Otvori vodič",
+    "backToGuides": "Svi vodiči",
+    "games": {
+      "mtg": {
+        "tagline": "Najdublja kolekcionarska kartična igra na svetu.",
+        "overview": "Magic: The Gathering je strateška igra u kojoj preuzimaš ulogu moćnog čarobnjaka i koristiš špil karata — čarolije, stvorenja i zemlje — da poraziš protivnika. Lako se uči, a nudi gotovo beskrajnu dubinu.",
+        "steps": [
+          "Nabavi Starter ili Foundations set da naučiš osnove.",
+          "Odaberi dve boje mane koje ti odgovaraju i sastavi špil od 60 karata.",
+          "Dođi na FNM (Friday Night Magic) i odigraj prve mečeve uz pomoć naših igrača.",
+          "Proširuj kolekciju kroz booster pakovanja i nove setove."
+        ],
+        "formats": ["Standard", "Commander (EDH)", "Draft i Sealed (Prerelease)", "Modern"],
+        "faq": [
+          {
+            "q": "Da li mi treba skup špil za početak?",
+            "a": "Ne. Foundations i Starter setovi su pristupačni i sadrže sve što ti treba za prve partije."
+          },
+          {
+            "q": "Koliko karata ima špil?",
+            "a": "Konstruktni špil ima minimum 60 karata; Commander špil ima tačno 100."
+          },
+          {
+            "q": "Organizujete li turnire za početnike?",
+            "a": "Da — FNM večeri su opuštene i idealne za učenje uz iskusne igrače."
+          }
+        ]
+      },
+      "pokemon": {
+        "tagline": "Uhvati ih sve — i na terenu i u špilu.",
+        "overview": "Pokémon TCG je dinamična igra u kojoj koristiš Pokémone, Trener karte i Energiju da onesvestiš protivnikove Pokémone. Šarena, pristupačna i zabavna za sve uzraste.",
+        "steps": [
+          "Počni sa Elite Trainer Box-om ili gotovim špilom.",
+          "Nauči tipove energije i kako evoluiraš Pokémone.",
+          "Vežbaj protiv prijatelja ili dođi na naše Pokémon mečeve.",
+          "Dograđuj špil kroz nove setove i pojedinačne karte."
+        ],
+        "formats": ["Standard", "Expanded", "Prerelease eventi", "Liga subotom"],
+        "faq": [
+          {
+            "q": "Za koji uzrast je igra?",
+            "a": "Pokémon TCG je sjajan za decu i odrasle — pravila su jednostavna, a strategija dovoljno duboka."
+          },
+          {
+            "q": "Šta je Elite Trainer Box?",
+            "a": "Set koji sadrži boostere, energije i dodatke — najbolji početak za nove igrače."
+          },
+          {
+            "q": "Mogu li da igram bez velike kolekcije?",
+            "a": "Da, gotovi špilovi su odlični za početak i odmah su spremni za igru."
+          }
+        ]
+      },
+      "yugioh": {
+        "tagline": "Brze kombinacije i spektakularni potezi.",
+        "overview": "Yu-Gi-Oh! je brza igra prizivanja moćnih čudovišta i lančanih efekata. Poznata po kombinacijama i dinamičnim mečevima, nagrađuje kreativnost i poznavanje karata.",
+        "steps": [
+          "Uzmi Structure Deck — gotov špil dizajniran za učenje.",
+          "Nauči osnovne tipove karata: čudovišta, magije i zamke.",
+          "Odigraj prve duele uz pomoć naših OTS igrača.",
+          "Nadograđuj špil novim setovima i aktuelnom metom."
+        ],
+        "formats": ["Advanced (zvanični)", "Structure Deck dueli", "OTS turniri", "Speed Duel"],
+        "faq": [
+          {
+            "q": "Šta je OTS?",
+            "a": "Official Tournament Store — zvanični status za organizaciju Yu-Gi-Oh! turnira sa nagradama."
+          },
+          {
+            "q": "Da li je igra teška za početak?",
+            "a": "Structure Deck-ovi su napravljeni baš za početnike i lako se uče."
+          },
+          {
+            "q": "Koliko traje meč?",
+            "a": "Dueli su brzi — obično 10–20 minuta po meču."
+          }
+        ]
+      },
+      "riftbound": {
+        "tagline": "Zvanična kartična igra sveta League of Legends.",
+        "overview": "Riftbound je nova kartična igra smeštena u univerzum League of Legends. Igraj omiljenim šampionima, kontroliši bojište i savladaj protivnika u brzim, taktičkim mečevima.",
+        "steps": [
+          "Počni sa Starter špilom posvećenim jednom šampionu.",
+          "Nauči kako se boriš za bojišta i koristiš resurse.",
+          "Dođi na naše Riftbound mečeve i upoznaj zajednicu.",
+          "Proširuj kolekciju kroz nova izdanja."
+        ],
+        "formats": ["Constructed", "Starter dueli", "Demo večeri", "Casual ligaške partije"],
+        "faq": [
+          {
+            "q": "Da li moram da igram League of Legends?",
+            "a": "Ne — Riftbound je samostalna igra, mada će ti poznati šampioni biti prijatan bonus."
+          },
+          {
+            "q": "Gde mogu da probam igru?",
+            "a": "Organizujemo demo večeri gde možeš da igraš bez kupovine."
+          },
+          {
+            "q": "Da li je igra dostupna kod vas?",
+            "a": "Da, donosimo Riftbound proizvode čim postanu dostupni."
+          }
+        ]
+      }
+    }
   }
 }
