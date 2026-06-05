@@ -41,7 +41,8 @@
       "title": "Izdvojeno iz ponude",
       "subtitle": "Najnovija pakovanja, špilovi i dodaci na lageru.",
       "viewAll": "Ceo katalog",
-      "empty": "Uskoro dodajemo izdvojene proizvode."
+      "empty": "Uskoro dodajemo izdvojene proizvode.",
+      "viewProduct": "Pogledaj proizvod"
     },
     "tournaments": {
       "title": "Predstojeći turniri",

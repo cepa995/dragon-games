@@ -41,7 +41,8 @@
       "title": "Featured products",
       "subtitle": "The latest boxes, decks and accessories in stock.",
       "viewAll": "Full catalog",
-      "empty": "Featured products are coming soon."
+      "empty": "Featured products are coming soon.",
+      "viewProduct": "View product"
     },
     "tournaments": {
       "title": "Upcoming tournaments",
