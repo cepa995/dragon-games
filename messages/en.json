@@ -81,6 +81,32 @@
       "success": "Thanks! Check your email to confirm.",
       "error": "Something went wrong. Please try again.",
       "privacy": "No spam. Unsubscribe anytime."
+    },
+    "stats": {
+      "eyebrow": "Why Dragon Games",
+      "since": {
+        "value": "1994",
+        "label": "Playing since"
+      },
+      "wpn": {
+        "value": "WPN",
+        "label": "Certified store"
+      },
+      "ots": {
+        "value": "OTS",
+        "label": "Official tournaments"
+      },
+      "events": {
+        "value": "52+",
+        "label": "Tournaments a year"
+      }
+    },
+    "community": {
+      "eyebrow": "Community",
+      "title": "Your seat at the table is waiting",
+      "subtitle": "Magic, Pokémon, Yu-Gi-Oh! and Riftbound — learn, play and compete alongside players of every level.",
+      "guides": "Game guides",
+      "tournaments": "Upcoming tournaments"
     }
   },
   "product": {

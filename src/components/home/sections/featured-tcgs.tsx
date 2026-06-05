@@ -14,7 +14,7 @@ export async function FeaturedTcgs() {
         {TCGS.map((g) => (
           <Link
             key={g.key}
-            href={`/catalog?game=${g.slug}`}
+            href={`/guides/${g.key}`}
             aria-label={g.label}
             className="group rounded-hero border-border relative aspect-[16/9] overflow-hidden border"
             style={{ ['--accent' as string]: g.accent } as React.CSSProperties}

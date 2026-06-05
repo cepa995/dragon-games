@@ -81,6 +81,32 @@
       "success": "Hvala! Proveri email da potvrdiš prijavu.",
       "error": "Došlo je do greške. Pokušaj ponovo.",
       "privacy": "Bez spama. Odjava u svakom trenutku."
+    },
+    "stats": {
+      "eyebrow": "Zašto Dragon Games",
+      "since": {
+        "value": "1994",
+        "label": "Igramo od"
+      },
+      "wpn": {
+        "value": "WPN",
+        "label": "Sertifikovana prodavnica"
+      },
+      "ots": {
+        "value": "OTS",
+        "label": "Zvanični turniri"
+      },
+      "events": {
+        "value": "52+",
+        "label": "Turnira godišnje"
+      }
+    },
+    "community": {
+      "eyebrow": "Zajednica",
+      "title": "Tvoje mesto za stolom već čeka",
+      "subtitle": "Magic, Pokémon, Yu-Gi-Oh! i Riftbound — uči, igraj i takmiči se uz igrače svih nivoa.",
+      "guides": "Vodiči za igre",
+      "tournaments": "Predstojeći turniri"
     }
   },
   "product": {

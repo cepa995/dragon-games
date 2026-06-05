@@ -8,9 +8,9 @@ test('home content is fully visible under reduced motion', async ({ page }) => {
   await expect(heading).toBeVisible();
 
   // With reduced motion the reveal/page-transition wrappers must not leave
-  // content mid-animation: opacity is 1.
-  const opacity = await heading.evaluate((el) => getComputedStyle(el).opacity);
-  expect(opacity).toBe('1');
+  // content mid-animation: opacity settles to 1 (poll to avoid evaluating the
+  // node mid re-render).
+  await expect.poll(async () => heading.evaluate((el) => getComputedStyle(el).opacity)).toBe('1');
 });
 
 test('home content settles to full opacity with motion enabled', async ({ page }) => {

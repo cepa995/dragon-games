@@ -30,10 +30,12 @@ test('mobile menu opens and closes', async ({ page }) => {
   await expect(mobileNav).toBeHidden();
 });
 
-test('header gains a blurred background after scrolling', async ({ page }) => {
+test('header gains a solid border/background after scrolling', async ({ page }) => {
   await page.goto('/sr');
   const header = page.locator('header');
-  await expect(header).not.toHaveClass(/backdrop-blur/);
+  // The header is always a dark glass bar; at the top its border is transparent
+  // and it becomes solid (border-border) once scrolled past the threshold.
+  await expect(header).toHaveClass(/border-transparent/);
   await page.evaluate(() => window.scrollTo(0, 200));
-  await expect(header).toHaveClass(/backdrop-blur/);
+  await expect(header).toHaveClass(/border-border/);
 });
