@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { getTranslations } from 'next-intl/server';
 import { Reveal } from '@/components/motion/reveal';
 import { Link } from '@/i18n/navigation';
@@ -14,6 +15,20 @@ export async function WelcomeBand() {
 
   return (
     <section className="relative">
+      {/* Club photo backdrop — blurred, low-opacity, edges faded so it blends
+          into the shared canvas rather than reading as a box. Replace
+          public/images/home/welcome-bg.jpg with a real club interior photo. */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+        <Image
+          src="/images/home/welcome-bg.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          className="scale-105 [mask-image:radial-gradient(ellipse_80%_72%_at_center,#000_28%,transparent_78%)] object-cover opacity-[0.2] blur-[2px]"
+        />
+        <div className="from-background via-background/55 to-background absolute inset-0 bg-gradient-to-b" />
+      </div>
+
       <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6 sm:py-24">
         <Reveal>
           <p className="text-accent text-xs font-semibold tracking-[0.3em] uppercase">
