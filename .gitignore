@@ -51,3 +51,6 @@ logs
 
 # sentry
 .sentryclirc
+
+# Isolated build dir for a second (agent) dev server
+.next-agent/
