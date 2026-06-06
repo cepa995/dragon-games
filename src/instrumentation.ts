@@ -5,10 +5,12 @@ import * as Sentry from '@sentry/nextjs';
  * active runtime and validates the environment (fail-fast at boot, NFR-8.5).
  */
 export async function register() {
-  // Validate env at startup (skipped during builds via SKIP_ENV_VALIDATION).
-  await import('@/env');
-
   if (process.env.NEXT_RUNTIME === 'nodejs') {
+    // Validate env at startup (fail-fast) — only in the Node runtime, where the
+    // DB/auth actually run. The Edge runtime (middleware) must NOT validate the
+    // server schema: it doesn't use DATABASE_URL etc., and throwing there crashes
+    // every request with MIDDLEWARE_INVOCATION_FAILED on Vercel.
+    await import('@/env');
     await import('../sentry.server.config');
   }
   if (process.env.NEXT_RUNTIME === 'edge') {
