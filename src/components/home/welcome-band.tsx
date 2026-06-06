@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { DealingHand } from '@/components/home/dealing-hand';
+import { DeckSpread } from '@/components/home/deck-spread';
 import { Reveal } from '@/components/motion/reveal';
 import { Link } from '@/i18n/navigation';
 
@@ -57,7 +57,7 @@ export async function WelcomeBand() {
         </Reveal>
 
         <div className="flex justify-center lg:justify-end">
-          <DealingHand />
+          <DeckSpread />
         </div>
       </div>
     </section>
