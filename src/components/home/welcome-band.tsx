@@ -1,16 +1,8 @@
 import { ArrowRight } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import { GuideCardFan } from '@/components/guides/guide-card-fan';
+import { DealingHand } from '@/components/home/dealing-hand';
 import { Reveal } from '@/components/motion/reveal';
 import { Link } from '@/i18n/navigation';
-
-// A fanned hand mixing one signature card per game.
-const WELCOME_CARDS = [
-  { src: '/images/guides/pokemon/charizard.webp', w: 600, h: 825, label: 'Charizard' },
-  { src: '/images/guides/yugioh/blue-eyes.jpg', w: 813, h: 1185, label: 'Blue-Eyes White Dragon' },
-  { src: '/images/guides/mtg/r-glorybringer.jpg', w: 488, h: 680, label: 'Glorybringer' },
-  { src: '/images/guides/riftbound/jinx.webp', w: 750, h: 1047, label: 'Jinx' },
-];
 
 /** Welcome / manifesto band — narrative warmth right after the hero. */
 export async function WelcomeBand() {
@@ -64,9 +56,9 @@ export async function WelcomeBand() {
           </div>
         </Reveal>
 
-        <Reveal className="flex justify-center lg:justify-end">
-          <GuideCardFan cards={WELCOME_CARDS} accent="var(--color-accent)" />
-        </Reveal>
+        <div className="flex justify-center lg:justify-end">
+          <DealingHand />
+        </div>
       </div>
     </section>
   );
