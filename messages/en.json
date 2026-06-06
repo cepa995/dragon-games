@@ -21,7 +21,8 @@
     "switchLanguage": "Switch language",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "browseCatalog": "Browse catalog"
+    "browseCatalog": "Browse catalog",
+    "backToTop": "Back to top"
   },
   "home": {
     "hero": {
@@ -108,6 +109,13 @@
       "subtitle": "Magic, Pokémon, Yu-Gi-Oh! and Riftbound — learn, play and compete alongside players of every level.",
       "guides": "Game guides",
       "tournaments": "Upcoming tournaments"
+    },
+    "welcome": {
+      "eyebrow": "Welcome",
+      "title": "More than a shop — a place where the community gathers",
+      "body": "Since 1994, Dragon Games has been home to players of Magic, Pokémon, Yu-Gi-Oh! and Riftbound. A WPN-certified store and OTS center, with weekly tournaments and doors open to everyone — from your first move to the competitive table.",
+      "badges": ["Since 1994", "WPN store", "OTS center"],
+      "cta": "Our story"
     }
   },
   "product": {

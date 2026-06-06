@@ -7,8 +7,8 @@ import { FeaturedTcgs } from '@/components/home/sections/featured-tcgs';
 import { LatestNews } from '@/components/home/sections/latest-news';
 import { LocationsPreview } from '@/components/home/sections/locations-preview';
 import { NewsletterSignup } from '@/components/home/sections/newsletter-signup';
-import { StatsBand } from '@/components/home/sections/stats-band';
 import { UpcomingTournaments } from '@/components/home/sections/upcoming-tournaments';
+import { WelcomeBand } from '@/components/home/welcome-band';
 
 // The featured sections read live data (products/tournaments/news) from the DB,
 // so the page is server-rendered per request. Caching/ISR is added in M9 (#41).
@@ -22,7 +22,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     <main id="main-content" className="relative">
       <AshField />
       <Hero />
-      <StatsBand />
+      <WelcomeBand />
+      {/* Credibility stats (StatsBand in sections/stats-band.tsx) are kept and
+          can be dropped back in here if we want them again. */}
       <FeaturedTcgs />
       <FeaturedProducts locale={locale} />
       <UpcomingTournaments locale={locale} />

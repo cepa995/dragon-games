@@ -4,6 +4,7 @@ import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server
 import { notFound } from 'next/navigation';
 import { Footer } from '@/components/layout/footer';
 import { Header } from '@/components/layout/header';
+import { ScrollToTop } from '@/components/layout/scroll-to-top';
 import { SkipLink } from '@/components/layout/skip-link';
 import { MotionProvider } from '@/components/motion/motion-provider';
 import { ThemeProvider } from '@/components/theme/theme-provider';
@@ -61,6 +62,7 @@ export default async function LocaleLayout({
                 <div className="flex-1">{children}</div>
                 <Footer />
               </div>
+              <ScrollToTop />
             </MotionProvider>
           </ThemeProvider>
         </NextIntlClientProvider>

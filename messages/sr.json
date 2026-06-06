@@ -21,7 +21,8 @@
     "switchLanguage": "Promeni jezik",
     "openMenu": "Otvori meni",
     "closeMenu": "Zatvori meni",
-    "browseCatalog": "Pregledaj katalog"
+    "browseCatalog": "Pregledaj katalog",
+    "backToTop": "Nazad na vrh"
   },
   "home": {
     "hero": {
@@ -108,6 +109,13 @@
       "subtitle": "Magic, Pokémon, Yu-Gi-Oh! i Riftbound — uči, igraj i takmiči se uz igrače svih nivoa.",
       "guides": "Vodiči za igre",
       "tournaments": "Predstojeći turniri"
+    },
+    "welcome": {
+      "eyebrow": "Dobrodošli",
+      "title": "Više od prodavnice — mesto gde se zajednica okuplja",
+      "body": "Od 1994. godine Dragon Games je dom igračima Magic-a, Pokémon-a, Yu-Gi-Oh!-a i Riftbound-a. WPN sertifikovana prodavnica i OTS centar, sa nedeljnim turnirima i vratima otvorenim za svakoga — od prvog poteza do takmičarskog stola.",
+      "badges": ["Od 1994.", "WPN prodavnica", "OTS centar"],
+      "cta": "Naša priča"
     }
   },
   "product": {

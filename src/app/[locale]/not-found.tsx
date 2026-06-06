@@ -1,6 +1,5 @@
 import { Compass, Home } from 'lucide-react';
 import { getTranslations } from 'next-intl/server';
-import Image from 'next/image';
 import { Link } from '@/i18n/navigation';
 
 /**
@@ -25,18 +24,12 @@ export default async function NotFound() {
         }}
       />
 
-      <Image
-        src="/images/hero-cards/dragon-3d-model-v3.png"
-        alt=""
-        aria-hidden
-        width={1254}
-        height={1254}
-        priority
-        className="relative h-40 w-auto opacity-90 drop-shadow-[0_24px_60px_rgba(0,0,0,0.55)] sm:h-48"
-      />
+      <p className="text-accent relative text-xs font-semibold tracking-[0.3em] uppercase">
+        {t('code')}
+      </p>
 
       <p
-        className="font-display relative text-7xl leading-none sm:text-8xl"
+        className="font-display relative text-8xl leading-none sm:text-9xl"
         style={{
           backgroundImage:
             'linear-gradient(180deg, var(--color-foreground) 30%, color-mix(in oklch, var(--color-accent) 85%, var(--color-foreground)))',
