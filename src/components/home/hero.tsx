@@ -18,6 +18,8 @@ const CARDS: HeroCard[] = [
     image: '/images/hero-cards/mtg-dragon.jpg',
     w: 488,
     h: 680,
+    // A bit smaller on phones so it doesn't crowd the headline.
+    imgWidthClass: 'w-[96px] sm:w-[clamp(124px,13vw,184px)]',
     left: '4%',
     top: '19%',
     rotate: -13,
@@ -37,6 +39,8 @@ const CARDS: HeroCard[] = [
     image: '/images/hero-cards/pokemon-charizard.png',
     w: 733,
     h: 1024,
+    // A bit smaller on phones so it doesn't crowd the headline.
+    imgWidthClass: 'w-[96px] sm:w-[clamp(124px,13vw,184px)]',
     left: '72%',
     top: '12%',
     rotate: 11,

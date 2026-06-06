@@ -24,7 +24,7 @@ export async function WelcomeBand() {
           alt=""
           fill
           sizes="100vw"
-          className="scale-110 [mask-image:radial-gradient(ellipse_88%_82%_at_center,#000_6%,transparent_92%)] object-cover opacity-[0.2] blur-[3px]"
+          className="scale-110 [mask-image:radial-gradient(ellipse_88%_82%_at_center,#000_6%,transparent_92%)] object-cover opacity-[0.3] blur-[3px]"
         />
         <div className="from-background via-background/55 to-background absolute inset-0 bg-gradient-to-b" />
       </div>

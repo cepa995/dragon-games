@@ -19,6 +19,8 @@ export type HeroCard = {
   image?: string;
   w?: number;
   h?: number;
+  /** Override the rendered image width (e.g. smaller on mobile). */
+  imgWidthClass?: string;
   left: string;
   top: string;
   rotate: number;
@@ -137,7 +139,7 @@ export function HoloCard({
               width={card.w ?? 488}
               height={card.h ?? 680}
               sizes="200px"
-              className="block h-auto w-[clamp(124px,13vw,184px)]"
+              className={`block h-auto ${card.imgWidthClass ?? 'w-[clamp(124px,13vw,184px)]'}`}
             />
           ) : (
             <div
