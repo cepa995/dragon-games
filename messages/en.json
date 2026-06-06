@@ -21,23 +21,120 @@
     "switchLanguage": "Switch language",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "browseCatalog": "Browse catalog"
+    "browseCatalog": "Browse catalog",
+    "backToTop": "Back to top"
   },
   "home": {
-    "tagline": "TCG & board games club since 1994.",
-    "subtitle": "The new web platform is in the works. The app foundation is in place — catalog, tournaments and accounts are coming soon."
+    "hero": {
+      "eyebrow": "Dragon Games · Novi Sad · since 1994",
+      "title": "The game begins here",
+      "subtitle": "Magic, Pokémon, Yu-Gi-Oh!, Riftbound, board games and tournaments — in the heart of Novi Sad.",
+      "ctaCatalog": "Browse catalog",
+      "ctaTournaments": "Upcoming tournaments",
+      "scrollHint": "Scroll"
+    },
+    "featuredTcgs": {
+      "title": "Games we play",
+      "subtitle": "From Magic to Riftbound — find your game and dive in.",
+      "explore": "Explore"
+    },
+    "featuredProducts": {
+      "title": "Featured products",
+      "subtitle": "The latest boxes, decks and accessories in stock.",
+      "viewAll": "Full catalog",
+      "empty": "Featured products are coming soon.",
+      "viewProduct": "View product"
+    },
+    "tournaments": {
+      "title": "Upcoming tournaments",
+      "subtitle": "Join the game — FNM, prereleases and more.",
+      "viewAll": "All tournaments",
+      "empty": "No tournaments scheduled right now. Check back soon.",
+      "free": "Free",
+      "entryFee": "Entry",
+      "statusOpen": "Registration open",
+      "statusFull": "Full",
+      "spots": "{count, plural, one {# spot} other {# spots}}",
+      "at": "at"
+    },
+    "news": {
+      "title": "Latest news",
+      "subtitle": "Announcements, tournament reports and club news.",
+      "viewAll": "All news",
+      "empty": "No news published yet.",
+      "readMore": "Read more"
+    },
+    "locations": {
+      "title": "Visit us",
+      "subtitle": "Our shop in the heart of Novi Sad.",
+      "shopLabel": "Shop",
+      "clubLabel": "Club",
+      "hoursLabel": "Opening hours",
+      "directions": "Get directions",
+      "openNow": "Open now",
+      "closed": "Closed",
+      "viewPage": "View location"
+    },
+    "newsletter": {
+      "title": "Stay in the loop",
+      "subtitle": "Subscribe for new set releases and tournament announcements.",
+      "placeholder": "you@email.com",
+      "submit": "Subscribe",
+      "success": "Thanks! Check your email to confirm.",
+      "error": "Something went wrong. Please try again.",
+      "privacy": "No spam. Unsubscribe anytime."
+    },
+    "stats": {
+      "eyebrow": "Why Dragon Games",
+      "since": {
+        "value": "1994",
+        "label": "Playing since"
+      },
+      "wpn": {
+        "value": "WPN",
+        "label": "Certified store"
+      },
+      "ots": {
+        "value": "OTS",
+        "label": "Official tournaments"
+      },
+      "events": {
+        "value": "52+",
+        "label": "Tournaments a year"
+      }
+    },
+    "community": {
+      "eyebrow": "Community",
+      "title": "Your seat at the table is waiting",
+      "subtitle": "Magic, Pokémon, Yu-Gi-Oh! and Riftbound — learn, play and compete alongside players of every level.",
+      "guides": "Game guides",
+      "tournaments": "Upcoming tournaments"
+    },
+    "welcome": {
+      "eyebrow": "Welcome",
+      "title": "More than a shop — a place where the community gathers",
+      "body": "Since 1994, Dragon Games has been home to players of Magic, Pokémon, Yu-Gi-Oh! and Riftbound. A WPN-certified store and OTS center, with weekly tournaments and doors open to everyone — from your first move to the competitive table.",
+      "badges": ["Since 1994", "WPN store", "OTS center"],
+      "cta": "Our story"
+    }
+  },
+  "product": {
+    "inStock": "In stock",
+    "lowStock": "Low stock",
+    "outOfStock": "Out of stock",
+    "preOrder": "Pre-order"
   },
   "footer": {
     "hours": "Opening hours",
     "hoursValue": "Wednesday – Sunday, 15:00 – 21:00",
-    "locations": "Locations",
-    "shop": "Shop: Stražilovska 3, Novi Sad",
-    "club": "Club: Kralja Aleksandra 4, Novi Sad",
+    "locations": "Location",
+    "shop": "Kralja Aleksandra 4, Novi Sad",
     "follow": "Follow us",
     "legal": "Legal",
     "privacy": "Privacy policy",
     "terms": "Terms of service",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "explore": "Explore"
   },
   "cart": {
     "summary": "{count, plural, =0 {Your cart is empty} one {# item} other {# items}}"
@@ -164,5 +261,494 @@
       "delete": "Delete",
       "save": "Save address"
     }
+  },
+  "about": {
+    "metaTitle": "About",
+    "metaDescription": "Dragon Games — a TCG and board-games club and shop in Novi Sad since 1994. WPN and OTS certified.",
+    "eyebrow": "Since 1994",
+    "title": "Where the gaming community comes together",
+    "lead": "Dragon Games is a TCG and board-games club and shop in Novi Sad. Since 1994 we've brought players together, run tournaments and shared a love of card and board games.",
+    "stats": {
+      "since": {
+        "value": "1994",
+        "label": "Founded"
+      },
+      "wpn": {
+        "value": "WPN",
+        "label": "Certified MTG store"
+      },
+      "ots": {
+        "value": "OTS",
+        "label": "Official Yu-Gi-Oh tournaments"
+      },
+      "community": {
+        "value": "30+",
+        "label": "Years of community"
+      }
+    },
+    "story": {
+      "title": "Our story",
+      "p1": "We started back in 1994 as a small group of enthusiasts gathered around Magic: The Gathering. Over the decades we've grown into one of the oldest and best-known spots for card and board game fans in Serbia.",
+      "p2": "Today Dragon Games offers a wide range of products, regular tournaments and a space where generations of players still gather, learn and compete."
+    },
+    "mission": {
+      "title": "Our mission",
+      "p1": "We believe games bring people together. Our goal is an open, welcoming community where everyone — from beginners to seasoned competitors — finds their place at the table.",
+      "p2": "We work to bring the latest releases, run fair and well-organized tournaments, and support the local card and board gaming scene."
+    },
+    "highlights": {
+      "title": "What sets us apart",
+      "wpn": {
+        "title": "WPN store",
+        "body": "Officially certified Wizards Play Network store for Magic: The Gathering."
+      },
+      "ots": {
+        "title": "OTS center",
+        "body": "Official Tournament Store for Yu-Gi-Oh! — sanctioned tournaments and prizing."
+      },
+      "community": {
+        "title": "Community-driven",
+        "body": "Three decades of bringing together players of all ages and skill levels."
+      },
+      "events": {
+        "title": "Regular events",
+        "body": "Weekly tournaments, prerelease events and meetups throughout the year."
+      }
+    },
+    "cta": {
+      "title": "Drop by and meet us",
+      "subtitle": "Our doors are open to all game lovers. Visit us in Novi Sad or get in touch.",
+      "locations": "View location",
+      "contact": "Contact us"
+    },
+    "games": {
+      "title": "Games we nurture",
+      "subtitle": "From Magic to Riftbound — every game has its place at the table here."
+    },
+    "galleryAlt": "Inside the Dragon Games club"
+  },
+  "locations": {
+    "metaTitle": "Location",
+    "metaDescription": "Visit Dragon Games in Novi Sad — Kralja Aleksandra 4. Map, opening hours and contact.",
+    "title": "Visit us",
+    "intro": "Our shop and club are in the heart of Novi Sad. Drop by for a tournament, some shopping or just a game.",
+    "shopClubLabel": "Shop & club",
+    "openNow": "Open now",
+    "closedNow": "Closed",
+    "hoursLabel": "Opening hours",
+    "closedDay": "Closed",
+    "directions": "Get directions",
+    "email": "Email",
+    "mapTitle": "Map — {address}"
+  },
+  "newsletter": {
+    "metaConfirm": "Confirm subscription",
+    "metaUnsubscribe": "Unsubscribe",
+    "confirmedTitle": "Subscription confirmed 🎉",
+    "confirmedBody": "Thanks! You're now subscribed to the Dragon Games newsletter.",
+    "confirmErrorTitle": "Invalid link",
+    "confirmErrorBody": "This confirmation link is invalid or has already been used.",
+    "unsubscribedTitle": "Unsubscribed",
+    "unsubscribedBody": "You've been unsubscribed from the newsletter. Sorry to see you go!",
+    "unsubscribeErrorTitle": "Invalid link",
+    "unsubscribeErrorBody": "This unsubscribe link is invalid or has already been used.",
+    "backHome": "Back to home"
+  },
+  "contact": {
+    "metaTitle": "Contact",
+    "metaDescription": "Get in touch with the Dragon Games team — phone, Viber, email and a contact form. Novi Sad, Kralja Aleksandra 4.",
+    "title": "Contact us",
+    "intro": "Have a question about a product, a tournament or a partnership? Write to us or drop by — we're happy to help.",
+    "form": {
+      "heading": "Send a message",
+      "name": "Full name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thanks! Your message has been sent. We'll get back to you soon.",
+      "errors": {
+        "invalid": "Please check your details and try again.",
+        "rate": "Too many attempts. Please try again in a minute.",
+        "spam": "Spam check failed. Please try again.",
+        "server": "Something went wrong. Please try again later."
+      }
+    },
+    "channels": {
+      "heading": "Other ways",
+      "phone": "Phone",
+      "viber": "Viber",
+      "email": "Email",
+      "social": "Social",
+      "address": "Address",
+      "hours": "Opening hours",
+      "directions": "Get directions"
+    }
+  },
+  "guides": {
+    "metaTitle": "Game guides",
+    "metaDescription": "Beginner guides: Magic, Pokémon, Yu-Gi-Oh! and Riftbound — how to start, the formats we host, and FAQs.",
+    "title": "Game guides",
+    "intro": "New to trading card games? Pick a game and learn how to start, which sets we recommend, and which formats we host at the Dragon Games club.",
+    "startTitle": "How to start",
+    "formatsTitle": "Formats we host",
+    "faqTitle": "Frequently asked questions",
+    "startersTitle": "Recommended starter sets",
+    "startersEmpty": "Recommendations coming soon — drop by the shop for advice.",
+    "viewProduct": "View in catalog",
+    "openGuide": "Open guide",
+    "backToGuides": "All guides",
+    "games": {
+      "mtg": {
+        "tagline": "The deepest trading card game in the world.",
+        "overview": "Magic: The Gathering, the world's first trading card game, launched in 1993. You take on the role of a planeswalker — a powerful mage — using a deck of lands (which produce mana), creatures and spells to reduce your opponent's life from 20 to 0. It's easy to learn, yet its strategic depth and tens of thousands of cards make it nearly inexhaustible.",
+        "steps": [
+          {
+            "title": "Start with the Foundations set",
+            "detail": "MTG Foundations is the official entry set, built to stay in Standard for years to come. Its Beginner Box walks you through the rules step by step."
+          },
+          {
+            "title": "Choose your colors",
+            "detail": "The five colors of mana — white, blue, black, red and green — define your playstyle. Beginners usually start with one or two that suit them."
+          },
+          {
+            "title": "Build a 60-card deck",
+            "detail": "A constructed deck has at least 60 cards, with at most 4 copies of any card (except basic lands). Around a third of the deck is lands that produce mana."
+          },
+          {
+            "title": "Come to FNM",
+            "detail": "Friday Night Magic is a weekly event for all skill levels — the easiest way to learn is to play your first matches with help from our players."
+          }
+        ],
+        "formats": [
+          {
+            "name": "Standard",
+            "detail": "Sets from roughly the last 2 years; rotates once a year. The best format to begin."
+          },
+          {
+            "name": "Commander (EDH)",
+            "detail": "A social 3–4 player format: a 100-card singleton deck, a commander and 40 life."
+          },
+          {
+            "name": "Limited (Draft & Sealed)",
+            "detail": "Build a 40-card minimum deck from fresh boosters — Prerelease weekends are the perfect entry."
+          },
+          {
+            "name": "Modern",
+            "detail": "A large constructed format with cards from Eighth Edition (2003) onward."
+          }
+        ],
+        "faq": [
+          {
+            "q": "How much does it cost to start?",
+            "a": "Very little — a Foundations Starter Collection or a ready-made deck is enough for your first games, with no big investment."
+          },
+          {
+            "q": "Can I play without a big collection?",
+            "a": "Yes. In Limited formats (Draft and Sealed) everyone builds a deck from the same freshly opened cards — no collection needed."
+          },
+          {
+            "q": "Which format is best for beginners?",
+            "a": "Standard and Commander. Standard uses only the newest sets, while Commander is casual and social — great for group play."
+          },
+          {
+            "q": "Where can I learn the rules?",
+            "a": "We’ll show you in person at FNM nights. You can also practice free on Magic: The Gathering Arena or via the official guide."
+          }
+        ],
+        "facts": {
+          "players": "2+",
+          "time": "20–40 min",
+          "complexity": "Medium",
+          "age": "13+"
+        },
+        "references": [
+          {
+            "label": "How to Play (Wizards of the Coast)",
+            "url": "https://magic.wizards.com/en/how-to-play"
+          },
+          {
+            "label": "Formats overview",
+            "url": "https://magic.wizards.com/en/formats"
+          },
+          {
+            "label": "Standard format",
+            "url": "https://magic.wizards.com/en/formats/standard"
+          },
+          {
+            "label": "Commander format",
+            "url": "https://magic.wizards.com/en/formats/commander"
+          }
+        ],
+        "about": [
+          "Magic: The Gathering, the world’s first trading card game, was created in 1993 by mathematician Richard Garfield. Today it’s played by millions of people in more than 70 countries, with over twenty-five thousand unique cards.",
+          "In every game you take on the role of a planeswalker — a powerful mage who travels between worlds. Your deck is your arsenal: lands produce mana, creatures fight for you, and spells shift the course of the duel. The goal is to bring your opponent’s life from 20 down to 0.",
+          "What makes Magic special is its depth. Five colors of mana, thousands of combinations and dozens of formats mean there is always a new deck to build and a new strategy to master. Easy to learn in an afternoon, rewarding to refine for years.",
+          "Magic is both a game and a collecting hobby — many collect cards for their stunning illustrations, and some grow in value over the years. At Dragon Games, a WPN-certified store, you can play, collect and compete, supported by a community that has been here for decades."
+        ]
+      },
+      "pokemon": {
+        "tagline": "Catch them all — on the field and in your deck.",
+        "overview": "Pokémon TCG is a dynamic game where you use Pokémon, Trainer cards and Energy to knock out your opponent's Pokémon. Colorful, approachable and fun for all ages.",
+        "steps": [
+          {
+            "title": "Grab an Elite Trainer Box or a ready deck",
+            "detail": "An Elite Trainer Box has boosters, Energy and every accessory. Ready-made decks are playable straight away."
+          },
+          {
+            "title": "Learn the types and Energy",
+            "detail": "Each Pokémon has a type (fire, water, grass…) and attacks using the matching Energy you attach each turn."
+          },
+          {
+            "title": "Evolve and build a 60-card deck",
+            "detail": "From basic Pokémon to stronger evolutions. A deck is Pokémon, Trainers and Energy — at most 4 of any card."
+          },
+          {
+            "title": "Come to league",
+            "detail": "We play Pokémon matches and leagues on Saturdays — the easiest way to learn is a game with our players."
+          }
+        ],
+        "formats": [
+          {
+            "name": "Standard",
+            "detail": "The newest sets; the legal card list rotates each year. The most approachable format to begin."
+          },
+          {
+            "name": "Expanded",
+            "detail": "A much larger pool — from Black & White (2011) onward, with a small ban list."
+          },
+          {
+            "name": "Prerelease",
+            "detail": "Play with the newest set before its official release, building from fresh boosters."
+          },
+          {
+            "name": "League",
+            "detail": "Relaxed games through the season, with promos and prizes — great for new players."
+          }
+        ],
+        "faq": [
+          {
+            "q": "What age is the game for?",
+            "a": "Pokémon TCG is great for kids (6+) and adults — the rules are simple, the strategy deep enough."
+          },
+          {
+            "q": "What do I need for a first game?",
+            "a": "A single ready-made deck or an Elite Trainer Box is enough. You don’t need a big collection to start."
+          },
+          {
+            "q": "How do you win?",
+            "a": "Take all six Prize cards by knocking out the opponent’s Pokémon, or when they run out of Pokémon or cards to draw."
+          },
+          {
+            "q": "Where can I learn the rules?",
+            "a": "We’ll show you in person at league. There’s also an official guide and the free Pokémon TCG Live app."
+          }
+        ],
+        "facts": {
+          "players": "2",
+          "time": "15–30 min",
+          "complexity": "Easy",
+          "age": "6+"
+        },
+        "about": [
+          "The Pokémon TCG launched in 1996 and is today one of the most popular card games in the world, with more than 64 billion cards printed. It blends the colorful world of Pokémon with approachable yet deep strategy.",
+          "During a game you set up your Pokémon, power them with Energy and attack your opponent’s. You win by knocking out six of your opponent’s Pokémon and taking all six of your Prize cards.",
+          "A deck is exactly 60 cards — Pokémon, Trainer cards and Energy — with at most 4 copies of any card. Simple rules make it perfect for kids and beginners, while its depth keeps experienced players hooked.",
+          "At Dragon Games we run regular Pokémon matches and leagues where beginners learn alongside seasoned players. Many also collect the cards for their beautiful art, so Pokémon is both a game and a hobby."
+        ],
+        "references": [
+          {
+            "label": "How to Play (Pokémon)",
+            "url": "https://tcg.pokemon.com/en-us/how-to-play/"
+          },
+          {
+            "label": "Standard format (Bulbapedia)",
+            "url": "https://bulbapedia.bulbagarden.net/wiki/Standard_format_(TCG)"
+          }
+        ]
+      },
+      "yugioh": {
+        "tagline": "Fast combos and spectacular plays.",
+        "overview": "Yu-Gi-Oh! is a fast game of summoning powerful monsters and chaining effects. Known for its combos and dynamic matches, it rewards creativity and card knowledge.",
+        "steps": [
+          {
+            "title": "Pick up a Structure Deck",
+            "detail": "A ready-made deck designed for learning — balanced and playable out of the box."
+          },
+          {
+            "title": "Meet the card types",
+            "detail": "Monsters fight, Spells give effects, and Traps are set face-down for surprises."
+          },
+          {
+            "title": "Learn the turn phases",
+            "detail": "Draw, Main, Battle and End phases — the order of play is the key to strategy and timing."
+          },
+          {
+            "title": "Play your first duel",
+            "detail": "Our OTS players gladly show the basics; the fastest way to learn is a first duel with experienced players."
+          }
+        ],
+        "formats": [
+          {
+            "name": "Advanced",
+            "detail": "The official format with the current Forbidden & Limited list — the standard for most tournaments."
+          },
+          {
+            "name": "Speed Duel",
+            "detail": "A faster, simpler variant (4000 LP) based on Duel Links — ideal for beginners."
+          },
+          {
+            "name": "OTS tournaments",
+            "detail": "Sanctioned tournaments in our shop, with prizing and promo cards."
+          },
+          {
+            "name": "Structure Deck duels",
+            "detail": "Even matches with ready-made decks — fair and great to learn."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Is the game hard to start?",
+            "a": "Structure Decks are made for beginners. You learn the basics in a single game, and depth comes with time."
+          },
+          {
+            "q": "What is OTS?",
+            "a": "Official Tournament Store — the status to run sanctioned Yu-Gi-Oh! tournaments with official prizing."
+          },
+          {
+            "q": "How many cards are in a deck?",
+            "a": "A Main Deck is 40–60 cards (closer to 40 recommended), plus Extra and Side decks. At most 3 copies of a card."
+          },
+          {
+            "q": "How long is a duel?",
+            "a": "Usually 20–40 minutes; Speed Duel is even faster."
+          }
+        ],
+        "facts": {
+          "players": "2",
+          "time": "20–40 min",
+          "complexity": "Medium",
+          "age": "10+"
+        },
+        "about": [
+          "The Yu-Gi-Oh! TRADING CARD GAME, created in 1999 after the famous manga, is one of the best-selling card games of all time. It’s known for fast, spectacular plays and powerful combos.",
+          "Two duelists battle with Monster, Spell and Trap cards to bring the opponent’s Life Points from 8000 down to 0. Summoning powerful monsters and chaining effects make every duel dynamic.",
+          "A Main Deck is 40 to 60 cards (closer to 40 is recommended), plus a separate Extra Deck for advanced summons and a Side Deck to adapt between games. At most 3 copies of any card are allowed.",
+          "As an OTS (Official Tournament Store), Dragon Games runs sanctioned Yu-Gi-Oh! tournaments with prizing. Beginners start with Structure Decks and jump in quickly with the community’s help."
+        ],
+        "references": [
+          {
+            "label": "Rulebook & beginner’s guide (Konami)",
+            "url": "https://www.yugioh-card.com/en/rulebook/"
+          },
+          {
+            "label": "Speed Duel beginner’s guide",
+            "url": "https://www.yugioh-card.com/eu/play/speed-duel-beginners-guide/"
+          }
+        ]
+      },
+      "riftbound": {
+        "tagline": "The official trading card game of League of Legends.",
+        "overview": "Riftbound is a new card game set in the League of Legends universe. Play your favorite champions, control the battlefield and outplay your opponent in fast, tactical matches.",
+        "steps": [
+          {
+            "title": "Choose a champion (Legend)",
+            "detail": "The Champion Legend card sets your deck’s colors and the champion you build your strategy around."
+          },
+          {
+            "title": "Build a 40-card deck",
+            "detail": "Units, spells and gear in your Legend’s colors — at most 3 copies of any card."
+          },
+          {
+            "title": "Conquer battlefields",
+            "detail": "Send units to battlefields and hold them — board control earns the points that win the game."
+          },
+          {
+            "title": "Come to a demo night",
+            "detail": "Try the game without buying, guided by our players, and meet the Riftbound community."
+          }
+        ],
+        "formats": [
+          {
+            "name": "Constructed",
+            "detail": "Build your own 40-card deck around a chosen champion and compete."
+          },
+          {
+            "name": "2v2 (team)",
+            "detail": "Pairs play to 11 points — a dynamic variant for groups."
+          },
+          {
+            "name": "Demo nights",
+            "detail": "Try the game for free with ready decks and our guides."
+          },
+          {
+            "name": "Casual leagues",
+            "detail": "Relaxed games and progress through the season in a friendly setting."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Do I have to play League of Legends?",
+            "a": "No — Riftbound is a standalone game. Knowing the champions is a nice bonus, but not required."
+          },
+          {
+            "q": "How many players can play?",
+            "a": "2 to 4 players — classic 1v1, plus a team 2v2 mode."
+          },
+          {
+            "q": "How do you win?",
+            "a": "Be first to 8 points (11 in 2v2) by conquering and holding battlefields with your units."
+          },
+          {
+            "q": "Where can I try the game?",
+            "a": "At our demo nights — we’ll hand you a ready deck and walk you through your first game."
+          }
+        ],
+        "facts": {
+          "players": "2–4",
+          "time": "20–40 min",
+          "complexity": "Medium",
+          "age": "14+"
+        },
+        "about": [
+          "Riftbound is the official trading card game set in the League of Legends universe, unveiled in 2025. It’s a game for 2 to 4 players: you choose a champion and send your army to take control of battlefields.",
+          "The goal is to be the first to reach 8 points (11 in team play), conquering and holding battlefields with your units. Fast, tactical matches reward board control and smart spending of resources.",
+          "You build your deck around a Champion Legend card that sets your colors (domains) and champion. A deck is exactly 40 cards (including the champion), at most 3 copies of any card, and you pay for cards with Runes.",
+          "Riftbound is new and growing fast. At Dragon Games we host demo nights where you can try the game without buying and meet the community gathered around their favorite champions."
+        ],
+        "references": [
+          {
+            "label": "How to Play (Riftbound)",
+            "url": "https://riftbound.leagueoflegends.com/en-us/news/rules-and-releases/how-to-play-get-started/"
+          },
+          {
+            "label": "Core rules",
+            "url": "https://riftbound.leagueoflegends.com/en-us/news/rules-and-releases/gameplay-guide-core-rules/"
+          }
+        ]
+      }
+    },
+    "overviewTitle": "About the game",
+    "glossaryTitle": "Key terms",
+    "facts": {
+      "players": "Players",
+      "time": "Play time",
+      "complexity": "Complexity",
+      "age": "Age"
+    },
+    "ctaTitle": "Ready for your first game?",
+    "ctaSubtitle": "Drop by the club, reach out, or come to a tournament — we'll help you get started.",
+    "ctaVisit": "Visit the club",
+    "ctaContact": "Contact",
+    "ctaTournaments": "Tournaments",
+    "referencesTitle": "Sources & official rules"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "Looks like this page wandered off into another dimension. Let's get you back on track.",
+    "home": "Home",
+    "guides": "Game guides",
+    "code": "Error 404"
   }
 }

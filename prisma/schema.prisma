@@ -505,6 +505,7 @@ model NewsletterSubscriber {
   id               String    @id @default(cuid())
   email            String    @unique
   confirmedAt      DateTime?
+  confirmToken     String?   @unique
   source           String?
   unsubscribeToken String    @unique
   consentIp        String?

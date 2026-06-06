@@ -109,6 +109,9 @@ jobs:
           cache: pnpm
       - run: pnpm install --frozen-lockfile
       - run: pnpm exec prisma migrate deploy
+      # Seed so e2e runs against realistic content (products, news, location
+      # settings) that the guides/home pages rely on.
+      - run: pnpm db:seed
       - run: pnpm exec playwright install --with-deps chromium
       - run: pnpm build
       - run: pnpm exec playwright test

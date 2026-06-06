@@ -7,6 +7,11 @@ const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // Allow a second dev server (e.g. an agent taking screenshots) to use its own
+  // build directory so two `next dev` processes never corrupt one shared `.next`
+  // — the cause of "Cannot read properties of undefined (reading 'call')".
+  // Defaults to `.next`; set NEXT_DIST_DIR=.next-agent for the second server.
+  distDir: process.env.NEXT_DIST_DIR ?? '.next',
   images: {
     formats: ['image/avif', 'image/webp'],
   },

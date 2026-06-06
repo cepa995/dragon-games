@@ -12,7 +12,7 @@ test('language switch navigates to the selected locale', async ({ page }) => {
   await page.goto('/sr');
   await page.locator('header').getByRole('button', { name: 'EN', exact: true }).click();
   await expect(page).toHaveURL(/\/en$/);
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('since 1994');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('The game begins here');
 });
 
 test('mobile menu opens and closes', async ({ page }) => {
@@ -30,10 +30,12 @@ test('mobile menu opens and closes', async ({ page }) => {
   await expect(mobileNav).toBeHidden();
 });
 
-test('header gains a blurred background after scrolling', async ({ page }) => {
+test('header gains a solid border/background after scrolling', async ({ page }) => {
   await page.goto('/sr');
-  const header = page.locator('header');
-  await expect(header).not.toHaveClass(/backdrop-blur/);
+  // The blurred bar (inner div) carries the scroll-state classes: transparent
+  // border at the top, solid (border-border) once scrolled past the threshold.
+  const bar = page.locator('header > div').first();
+  await expect(bar).toHaveClass(/border-transparent/);
   await page.evaluate(() => window.scrollTo(0, 200));
-  await expect(header).toHaveClass(/backdrop-blur/);
+  await expect(bar).toHaveClass(/border-border/);
 });

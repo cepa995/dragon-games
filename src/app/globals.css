@@ -15,16 +15,21 @@
 /* `dark:` utilities target the dark theme (also the default, no-attribute state). */
 @custom-variant dark (&:where([data-theme='dark'], [data-theme='dark'] *, :root:not([data-theme='light']) *));
 
-:root {
-  /* Surfaces & text (dark) */
-  --background: oklch(0.17 0.015 285);
-  --surface: oklch(0.21 0.018 285);
-  --surface-elevated: oklch(0.25 0.02 285);
-  --foreground: oklch(0.96 0.005 285);
-  --muted: oklch(0.27 0.018 285);
-  --muted-foreground: oklch(0.7 0.015 285);
-  --border: oklch(0.3 0.02 285);
-  --input: oklch(0.3 0.02 285);
+/* Dark tokens live on :root (the default) AND on any [data-theme='dark']
+   subtree, so a nested data-theme="dark" wrapper (header/footer/newsletter)
+   re-establishes the dark palette even when the page root is light. */
+:root,
+[data-theme='dark'] {
+  /* Surfaces & text (dark) — deep "tavern at night", near-black with a faint
+     violet tint so the warm gold accent and per-TCG glows read strongly. */
+  --background: oklch(0.115 0.014 285);
+  --surface: oklch(0.155 0.016 285);
+  --surface-elevated: oklch(0.2 0.018 285);
+  --foreground: oklch(0.97 0.005 285);
+  --muted: oklch(0.21 0.016 285);
+  --muted-foreground: oklch(0.66 0.014 285);
+  --border: oklch(0.25 0.016 285);
+  --input: oklch(0.25 0.016 285);
   --ring: oklch(0.72 0.16 60);
 
   /* Brand accent — warm tavern firelight (amber/gold) */
@@ -38,6 +43,10 @@
   --destructive-foreground: oklch(0.98 0.01 25);
   --success: oklch(0.7 0.15 150);
   --warning: oklch(0.8 0.15 85);
+
+  /* Drifting ash particles — a warm ember-grey, subtle on the dark page. */
+  --ash: oklch(0.72 0.07 60);
+  --ash-strength: 1;
 
   /* Radii (SRS FR-23.4) */
   --radius-card: 0.5rem; /* 8px */
@@ -61,6 +70,10 @@
   --primary-foreground: oklch(0.98 0.01 85);
   --accent: oklch(0.6 0.16 62);
   --accent-foreground: oklch(0.98 0.01 85);
+
+  /* Darker, stronger ash so the particles stay visible on a light page. */
+  --ash: oklch(0.5 0.06 50);
+  --ash-strength: 1.8;
 
   color-scheme: light;
 }
@@ -131,7 +144,120 @@
   }
 }
 
-/* Respect reduced-motion globally (SRS C-8); motion primitives land in #9. */
+/* Hero ambiance (M4 / #16). Disabled under reduced-motion by the guard below. */
+@keyframes ember-rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  12% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-140px) scale(0.5);
+    opacity: 0;
+  }
+}
+
+@keyframes glow-pulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 0.75;
+    transform: translate(-50%, -50%) scale(1.12);
+  }
+}
+
+@keyframes nebula-drift {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(3%, -2.5%, 0) scale(1.12);
+  }
+}
+
+@keyframes rune-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes ash-float {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+    opacity: 0;
+  }
+  8% {
+    opacity: calc(var(--ash-opacity, 0.5) * var(--ash-strength, 1));
+  }
+  92% {
+    opacity: calc(var(--ash-opacity, 0.5) * var(--ash-strength, 1));
+  }
+  100% {
+    transform: translate3d(var(--ash-drift, 24px), -112vh, 0) rotate(160deg);
+    opacity: 0;
+  }
+}
+
+@keyframes menu-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.18);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes ray-shift {
+  0%,
+  100% {
+    opacity: 0.2;
+    transform: translateX(0) skewX(-14deg);
+  }
+  50% {
+    opacity: 0.45;
+    transform: translateX(3%) skewX(-14deg);
+  }
+}
+
+/* Respect reduced-motion globally (SRS C-8). */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

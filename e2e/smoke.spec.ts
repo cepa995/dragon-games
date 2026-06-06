@@ -3,7 +3,7 @@ import { expect, test } from '@playwright/test';
 test('root redirects to the Serbian locale and renders the home placeholder', async ({ page }) => {
   await page.goto('/');
   await expect(page).toHaveURL(/\/sr$/);
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('TCG i board games klub');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('Igra počinje ovde');
 });
 
 test('health endpoint reports ok with a database check', async ({ request }) => {

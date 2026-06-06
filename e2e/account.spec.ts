@@ -41,5 +41,6 @@ test('a member can update their profile and add an address', async ({ page }) =>
   await page.locator('input[name="city"]').fill('Novi Sad');
   await page.locator('input[name="postalCode"]').fill('21000');
   await page.getByRole('button', { name: 'Sačuvaj adresu' }).click();
-  await expect(page.getByText('Stražilovska 3')).toBeVisible();
+  // Exact match: the street also appears inside the address summary line.
+  await expect(page.getByText('Stražilovska 3', { exact: true })).toBeVisible();
 });

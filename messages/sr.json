@@ -21,23 +21,120 @@
     "switchLanguage": "Promeni jezik",
     "openMenu": "Otvori meni",
     "closeMenu": "Zatvori meni",
-    "browseCatalog": "Pregledaj katalog"
+    "browseCatalog": "Pregledaj katalog",
+    "backToTop": "Nazad na vrh"
   },
   "home": {
-    "tagline": "TCG i board games klub od 1994.",
-    "subtitle": "Nova web platforma je u izradi. Temelji aplikacije su postavljeni — katalog, turniri i nalozi stižu uskoro."
+    "hero": {
+      "eyebrow": "Dragon Games · Novi Sad · od 1994.",
+      "title": "Igra počinje ovde",
+      "subtitle": "Magic, Pokémon, Yu-Gi-Oh!, Riftbound, društvene igre i turniri — u srcu Novog Sada.",
+      "ctaCatalog": "Pregledaj katalog",
+      "ctaTournaments": "Predstojeći turniri",
+      "scrollHint": "Skroluj"
+    },
+    "featuredTcgs": {
+      "title": "Igre koje igramo",
+      "subtitle": "Od Magica do Riftbounda — pronađi svoju igru i zaroni.",
+      "explore": "Istraži"
+    },
+    "featuredProducts": {
+      "title": "Izdvojeno iz ponude",
+      "subtitle": "Najnovija pakovanja, špilovi i dodaci na lageru.",
+      "viewAll": "Ceo katalog",
+      "empty": "Uskoro dodajemo izdvojene proizvode.",
+      "viewProduct": "Pogledaj proizvod"
+    },
+    "tournaments": {
+      "title": "Predstojeći turniri",
+      "subtitle": "Pridruži se igri — FNM, prerelease i još mnogo toga.",
+      "viewAll": "Svi turniri",
+      "empty": "Trenutno nema zakazanih turnira. Vrati se uskoro.",
+      "free": "Besplatno",
+      "entryFee": "Kotizacija",
+      "statusOpen": "Prijave otvorene",
+      "statusFull": "Popunjeno",
+      "spots": "{count, plural, one {# mesto} few {# mesta} other {# mesta}}",
+      "at": "u"
+    },
+    "news": {
+      "title": "Najnovije vesti",
+      "subtitle": "Najave, izveštaji sa turnira i novosti iz kluba.",
+      "viewAll": "Sve vesti",
+      "empty": "Još nema objavljenih vesti.",
+      "readMore": "Pročitaj"
+    },
+    "locations": {
+      "title": "Posetite nas",
+      "subtitle": "Naša prodavnica u srcu Novog Sada.",
+      "shopLabel": "Prodavnica",
+      "clubLabel": "Klub",
+      "hoursLabel": "Radno vreme",
+      "directions": "Uputstva za dolazak",
+      "openNow": "Otvoreno",
+      "closed": "Zatvoreno",
+      "viewPage": "Pogledaj lokaciju"
+    },
+    "newsletter": {
+      "title": "Budi u toku",
+      "subtitle": "Prijavi se na newsletter za najave novih setova i turnira.",
+      "placeholder": "tvoj@email.com",
+      "submit": "Prijavi se",
+      "success": "Hvala! Proveri email da potvrdiš prijavu.",
+      "error": "Došlo je do greške. Pokušaj ponovo.",
+      "privacy": "Bez spama. Odjava u svakom trenutku."
+    },
+    "stats": {
+      "eyebrow": "Zašto Dragon Games",
+      "since": {
+        "value": "1994",
+        "label": "Igramo od"
+      },
+      "wpn": {
+        "value": "WPN",
+        "label": "Sertifikovana prodavnica"
+      },
+      "ots": {
+        "value": "OTS",
+        "label": "Zvanični turniri"
+      },
+      "events": {
+        "value": "52+",
+        "label": "Turnira godišnje"
+      }
+    },
+    "community": {
+      "eyebrow": "Zajednica",
+      "title": "Tvoje mesto za stolom već čeka",
+      "subtitle": "Magic, Pokémon, Yu-Gi-Oh! i Riftbound — uči, igraj i takmiči se uz igrače svih nivoa.",
+      "guides": "Vodiči za igre",
+      "tournaments": "Predstojeći turniri"
+    },
+    "welcome": {
+      "eyebrow": "Dobrodošli",
+      "title": "Više od prodavnice — mesto gde se zajednica okuplja",
+      "body": "Od 1994. godine Dragon Games je dom igračima Magic-a, Pokémon-a, Yu-Gi-Oh!-a i Riftbound-a. WPN sertifikovana prodavnica i OTS centar, sa nedeljnim turnirima i vratima otvorenim za svakoga — od prvog poteza do takmičarskog stola.",
+      "badges": ["Od 1994.", "WPN prodavnica", "OTS centar"],
+      "cta": "Naša priča"
+    }
+  },
+  "product": {
+    "inStock": "Na stanju",
+    "lowStock": "Poslednji komadi",
+    "outOfStock": "Rasprodato",
+    "preOrder": "Pretprodaja"
   },
   "footer": {
     "hours": "Radno vreme",
     "hoursValue": "Sreda – Nedelja, 15:00 – 21:00",
-    "locations": "Lokacije",
-    "shop": "Prodavnica: Stražilovska 3, Novi Sad",
-    "club": "Klub: Kralja Aleksandra 4, Novi Sad",
+    "locations": "Lokacija",
+    "shop": "Kralja Aleksandra 4, Novi Sad",
     "follow": "Pratite nas",
     "legal": "Pravne informacije",
     "privacy": "Politika privatnosti",
     "terms": "Uslovi korišćenja",
-    "rights": "Sva prava zadržana."
+    "rights": "Sva prava zadržana.",
+    "explore": "Istraži"
   },
   "cart": {
     "summary": "{count, plural, =0 {Korpa je prazna} one {# artikal} few {# artikla} other {# artikala}}"
@@ -164,5 +261,494 @@
       "delete": "Obriši",
       "save": "Sačuvaj adresu"
     }
+  },
+  "about": {
+    "metaTitle": "O nama",
+    "metaDescription": "Dragon Games — TCG i board games klub i prodavnica u Novom Sadu od 1994. WPN i OTS sertifikovani.",
+    "eyebrow": "Od 1994.",
+    "title": "Mesto gde se okuplja zajednica igrača",
+    "lead": "Dragon Games je TCG i board games klub i prodavnica iz Novog Sada. Od 1994. godine okupljamo igrače, organizujemo turnire i delimo ljubav prema kartičnim i društvenim igrama.",
+    "stats": {
+      "since": {
+        "value": "1994",
+        "label": "Godina osnivanja"
+      },
+      "wpn": {
+        "value": "WPN",
+        "label": "Sertifikovana MTG prodavnica"
+      },
+      "ots": {
+        "value": "OTS",
+        "label": "Zvanični Yu-Gi-Oh turniri"
+      },
+      "community": {
+        "value": "30+",
+        "label": "Godina zajednice"
+      }
+    },
+    "story": {
+      "title": "Naša priča",
+      "p1": "Počeli smo davne 1994. godine kao mala grupa entuzijasta okupljenih oko Magic: The Gathering karata. Kroz decenije smo izrasli u jedno od najstarijih i najpoznatijih mesta za ljubitelje kartičnih i društvenih igara u Srbiji.",
+      "p2": "Danas Dragon Games nudi širok asortiman proizvoda, redovne turnire i prostor u kome se generacije igrača i dalje okupljaju, uče i takmiče."
+    },
+    "mission": {
+      "title": "Naša misija",
+      "p1": "Verujemo da igre spajaju ljude. Naš cilj je otvorena i gostoljubiva zajednica u kojoj svako — od početnika do iskusnih takmičara — pronalazi svoje mesto za stolom.",
+      "p2": "Trudimo se da donesemo najnovija izdanja, organizujemo fer i kvalitetne turnire i podržimo lokalnu scenu kartičnih i društvenih igara."
+    },
+    "highlights": {
+      "title": "Šta nas izdvaja",
+      "wpn": {
+        "title": "WPN prodavnica",
+        "body": "Zvanično sertifikovana Wizards Play Network prodavnica za Magic: The Gathering."
+      },
+      "ots": {
+        "title": "OTS centar",
+        "body": "Official Tournament Store za Yu-Gi-Oh! — zvanični turniri i nagrade."
+      },
+      "community": {
+        "title": "Vođeni zajednicom",
+        "body": "Tri decenije okupljamo igrače svih uzrasta i nivoa iskustva."
+      },
+      "events": {
+        "title": "Redovni događaji",
+        "body": "Nedeljni turniri, prerelease eventi i druženja tokom cele godine."
+      }
+    },
+    "cta": {
+      "title": "Svrati i upoznaj nas",
+      "subtitle": "Naša vrata su otvorena za sve ljubitelje igara. Poseti nas u Novom Sadu ili nam se javi.",
+      "locations": "Pogledaj lokaciju",
+      "contact": "Kontaktiraj nas"
+    },
+    "games": {
+      "title": "Igre koje negujemo",
+      "subtitle": "Od Magic-a do Riftbound-a — kod nas svaka igra ima svoje mesto za stolom."
+    },
+    "galleryAlt": "Prostor kluba Dragon Games"
+  },
+  "locations": {
+    "metaTitle": "Lokacija",
+    "metaDescription": "Poseti Dragon Games u Novom Sadu — Kralja Aleksandra 4. Mapa, radno vreme i kontakt.",
+    "title": "Poseti nas",
+    "intro": "Naša prodavnica i klub nalaze se u srcu Novog Sada. Svrati na turnir, kupovinu ili samo na partiju.",
+    "shopClubLabel": "Prodavnica i klub",
+    "openNow": "Otvoreno",
+    "closedNow": "Zatvoreno",
+    "hoursLabel": "Radno vreme",
+    "closedDay": "Zatvoreno",
+    "directions": "Uputstva za dolazak",
+    "email": "Email",
+    "mapTitle": "Mapa — {address}"
+  },
+  "newsletter": {
+    "metaConfirm": "Potvrda prijave",
+    "metaUnsubscribe": "Odjava",
+    "confirmedTitle": "Prijava potvrđena 🎉",
+    "confirmedBody": "Hvala! Uspešno ste se prijavili na Dragon Games newsletter.",
+    "confirmErrorTitle": "Link nije važeći",
+    "confirmErrorBody": "Ovaj link za potvrdu je neispravan ili je već iskorišćen.",
+    "unsubscribedTitle": "Odjava uspešna",
+    "unsubscribedBody": "Odjavljeni ste sa newslettera. Žao nam je što odlazite!",
+    "unsubscribeErrorTitle": "Link nije važeći",
+    "unsubscribeErrorBody": "Ovaj link za odjavu je neispravan ili je već iskorišćen.",
+    "backHome": "Nazad na početnu"
+  },
+  "contact": {
+    "metaTitle": "Kontakt",
+    "metaDescription": "Javite se Dragon Games timu — telefon, Viber, email i kontakt forma. Novi Sad, Kralja Aleksandra 4.",
+    "title": "Kontaktirajte nas",
+    "intro": "Imate pitanje o proizvodu, turniru ili saradnji? Pišite nam ili svratite — rado ćemo pomoći.",
+    "form": {
+      "heading": "Pošaljite poruku",
+      "name": "Ime i prezime",
+      "email": "Email",
+      "subject": "Naslov",
+      "message": "Poruka",
+      "submit": "Pošalji poruku",
+      "sending": "Slanje…",
+      "success": "Hvala! Vaša poruka je poslata. Javićemo se uskoro.",
+      "errors": {
+        "invalid": "Proverite unete podatke i pokušajte ponovo.",
+        "rate": "Previše pokušaja. Pokušajte ponovo za koji minut.",
+        "spam": "Provera protiv spama nije uspela. Pokušajte ponovo.",
+        "server": "Došlo je do greške. Pokušajte ponovo kasnije."
+      }
+    },
+    "channels": {
+      "heading": "Drugi načini",
+      "phone": "Telefon",
+      "viber": "Viber",
+      "email": "Email",
+      "social": "Društvene mreže",
+      "address": "Adresa",
+      "hours": "Radno vreme",
+      "directions": "Uputstva za dolazak"
+    }
+  },
+  "guides": {
+    "metaTitle": "Vodiči za igre",
+    "metaDescription": "Vodiči za početnike: Magic, Pokémon, Yu-Gi-Oh! i Riftbound — kako da počneš, formati koje organizujemo i česta pitanja.",
+    "title": "Vodiči za igre",
+    "intro": "Novi si u svetu kartičnih igara? Izaberi igru i saznaj kako da počneš, koje setove preporučujemo i koje formate organizujemo u Dragon Games klubu.",
+    "startTitle": "Kako da počneš",
+    "formatsTitle": "Formati koje organizujemo",
+    "faqTitle": "Česta pitanja",
+    "startersTitle": "Preporučeni setovi za početak",
+    "startersEmpty": "Uskoro dodajemo preporuke — svrati u prodavnicu za savet.",
+    "viewProduct": "Pogledaj u katalogu",
+    "openGuide": "Otvori vodič",
+    "backToGuides": "Svi vodiči",
+    "games": {
+      "mtg": {
+        "tagline": "Najdublja kolekcionarska kartična igra na svetu.",
+        "overview": "Magic: The Gathering, prva kolekcionarska kartična igra na svetu, izašla je 1993. godine. Uživljavaš se u ulogu planeswalkera — moćnog čarobnjaka — i koristiš špil sastavljen od zemalja (koje daju manu), stvorenja i čarolija da svedeš protivnikov život sa 20 na 0. Lako se uči, a dubina strategije i desetine hiljada karata čine je gotovo neiscrpnom.",
+        "steps": [
+          {
+            "title": "Počni sa Foundations setom",
+            "detail": "MTG Foundations je zvanični uvodni set, napravljen da ostane u Standardu narednih godina. Beginner Box te kroz vodič uči pravila korak po korak."
+          },
+          {
+            "title": "Izaberi svoje boje",
+            "detail": "Pet boja mane — bela, plava, crna, crvena i zelena — određuju stil igre. Početnici obično kreću sa jednom ili dve koje im najviše odgovaraju."
+          },
+          {
+            "title": "Sastavi špil od 60 karata",
+            "detail": "Konstruktni špil ima najmanje 60 karata, sa najviše 4 primerka svake (osim osnovnih zemalja). Otprilike trećina špila su zemlje koje daju manu."
+          },
+          {
+            "title": "Dođi na FNM",
+            "detail": "Friday Night Magic je nedeljni događaj za sve nivoe znanja — najlakši način da naučiš jeste da odigraš prve mečeve uz pomoć naših igrača."
+          }
+        ],
+        "formats": [
+          {
+            "name": "Standard",
+            "detail": "Setovi iz poslednjih ~2 godine; rotira jednom godišnje. Najbolji format za početak."
+          },
+          {
+            "name": "Commander (EDH)",
+            "detail": "Društveni format za 3–4 igrača: špil od 100 različitih karata, komandant i 40 života."
+          },
+          {
+            "name": "Limited (Draft & Sealed)",
+            "detail": "Praviš špil od najmanje 40 karata iz svežih boostera — Prerelease vikendi su savršen ulaz."
+          },
+          {
+            "name": "Modern",
+            "detail": "Veliki konstruktni format sa kartama od 8. izdanja (2003) naovamo."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Koliko košta da se počne?",
+            "a": "Vrlo pristupačno — Foundations Starter Collection ili gotov špil dovoljni su za prve partije, bez velikih ulaganja."
+          },
+          {
+            "q": "Mogu li da igram bez velike kolekcije?",
+            "a": "Da. U Limited formatima (Draft i Sealed) svi grade špil od istih, sveže otvorenih karata — kolekcija nije potrebna."
+          },
+          {
+            "q": "Koji format je najbolji za početnike?",
+            "a": "Standard i Commander. Standard koristi samo najnovije setove, a Commander je opušten i društven, idealan za druženje."
+          },
+          {
+            "q": "Gde mogu da naučim pravila?",
+            "a": "Na našim FNM večerima pokazaćemo ti uživo. Možeš vežbati i besplatno preko Magic: The Gathering Arena ili kroz zvanični vodič."
+          }
+        ],
+        "facts": {
+          "players": "2+",
+          "time": "20–40 min",
+          "complexity": "Srednja",
+          "age": "13+"
+        },
+        "references": [
+          {
+            "label": "Kako se igra (Wizards of the Coast)",
+            "url": "https://magic.wizards.com/en/how-to-play"
+          },
+          {
+            "label": "Pregled formata",
+            "url": "https://magic.wizards.com/en/formats"
+          },
+          {
+            "label": "Standard format",
+            "url": "https://magic.wizards.com/en/formats/standard"
+          },
+          {
+            "label": "Commander format",
+            "url": "https://magic.wizards.com/en/formats/commander"
+          }
+        ],
+        "about": [
+          "Magic: The Gathering, prva kolekcionarska kartična igra na svetu, nastala je 1993. godine iz pera matematičara Ričarda Garfilda. Danas je igraju milioni ljudi u preko 70 zemalja, a broji više od dvadeset pet hiljada različitih karata.",
+          "U svakoj partiji uživljavaš se u ulogu planeswalkera — moćnog čarobnjaka koji putuje između svetova. Tvoj špil je tvoj arsenal: zemlje proizvode manu, stvorenja se bore za tebe, a čarolije menjaju tok dvoboja. Cilj je svesti protivnikov život sa 20 na 0.",
+          "Ono što Magic čini posebnim jeste dubina. Pet boja mane, hiljade kombinacija i desetine formata znače da uvek postoji novi špil za sastavljanje i nova strategija za savladavanje. Lako se uči za jedno popodne, a usavršava godinama.",
+          "Magic je istovremeno igra i hobi skupljanja — mnogi sakupljaju karte zbog fenomenalnih ilustracija, a vrednost pojedinih raste godinama. U Dragon Games-u, kao WPN sertifikovanoj prodavnici, možeš da igraš, skupljaš i takmičiš se uz podršku zajednice koja postoji decenijama."
+        ]
+      },
+      "pokemon": {
+        "tagline": "Uhvati ih sve — i na terenu i u špilu.",
+        "overview": "Pokémon TCG je dinamična igra u kojoj koristiš Pokémone, Trener karte i Energiju da onesvestiš protivnikove Pokémone. Šarena, pristupačna i zabavna za sve uzraste.",
+        "steps": [
+          {
+            "title": "Uzmi Elite Trainer Box ili gotov špil",
+            "detail": "Elite Trainer Box sadrži boostere, Energiju i sve dodatke. Gotovi špilovi su odmah spremni za igru."
+          },
+          {
+            "title": "Nauči tipove i Energiju",
+            "detail": "Svaki Pokémon pripada tipu (vatra, voda, trava…) i napada uz odgovarajuću Energiju koju mu prikačiš svakog poteza."
+          },
+          {
+            "title": "Evoluiraj i sastavi špil od 60 karata",
+            "detail": "Od osnovnih Pokémona ka moćnijim evolucijama. Špil čine Pokémoni, Treneri i Energija — najviše 4 iste karte."
+          },
+          {
+            "title": "Dođi na ligu",
+            "detail": "Subotom igramo Pokémon mečeve i lige — najlakši način da naučiš jeste partija uz naše igrače."
+          }
+        ],
+        "formats": [
+          {
+            "name": "Standard",
+            "detail": "Najnoviji setovi; lista dozvoljenih karata rotira svake godine. Najpristupačniji format za početak."
+          },
+          {
+            "name": "Expanded",
+            "detail": "Mnogo veći broj setova — od Black & White (2011) naovamo, uz manju ban-listu."
+          },
+          {
+            "name": "Prerelease",
+            "detail": "Igraj sa najnovijim setom pre zvaničnog izlaska, gradeći špil iz svežih boostera."
+          },
+          {
+            "name": "Liga (League)",
+            "detail": "Opuštene partije kroz sezonu, sa promo kartama i nagradama — odlično za nove igrače."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Za koji uzrast je igra?",
+            "a": "Pokémon TCG je sjajan za decu (6+) i odrasle — pravila su jednostavna, a strategija dovoljno duboka."
+          },
+          {
+            "q": "Šta mi treba za prvu partiju?",
+            "a": "Dovoljan je jedan gotov špil ili Elite Trainer Box. Ne treba ti velika kolekcija da bi počeo."
+          },
+          {
+            "q": "Kako se pobeđuje?",
+            "a": "Uzmeš svih šest Nagradnih karata onesposobljavajući protivničke Pokémone, ili kad protivnik ostane bez Pokémona ili karata za izvlačenje."
+          },
+          {
+            "q": "Gde mogu da naučim pravila?",
+            "a": "Na našim ligama pokazaćemo ti uživo. Postoji i zvanični vodič, kao i besplatna aplikacija Pokémon TCG Live."
+          }
+        ],
+        "facts": {
+          "players": "2",
+          "time": "15–30 min",
+          "complexity": "Laka",
+          "age": "6+"
+        },
+        "about": [
+          "Pokémon TCG nastao je 1996. godine i danas je jedna od najpopularnijih kartičnih igara na svetu, sa više od 64 milijarde odštampanih karata. Spaja šareni svet Pokémona sa pristupačnom, ali dubokom strategijom.",
+          "U partiji postavljaš svoje Pokémone, napajaš ih Energijom i napadaš protivničke. Pobeđuješ tako što onesposobiš šest protivničkih Pokémona i uzmeš svih šest Nagradnih (Prize) karata.",
+          "Špil ima tačno 60 karata — Pokémone, Trener karte i Energiju — sa najviše 4 primerka iste karte. Jednostavna pravila čine ga savršenim za decu i početnike, a dubina zadržava i iskusne igrače.",
+          "U Dragon Games-u organizujemo redovne Pokémon mečeve i lige, gde početnici uče uz iskusnije igrače. Karte sa prelepim ilustracijama mnogi i sakupljaju, pa je Pokémon istovremeno igra i hobi."
+        ],
+        "references": [
+          {
+            "label": "Kako se igra (Pokémon)",
+            "url": "https://tcg.pokemon.com/en-us/how-to-play/"
+          },
+          {
+            "label": "Standardni format (Bulbapedia)",
+            "url": "https://bulbapedia.bulbagarden.net/wiki/Standard_format_(TCG)"
+          }
+        ]
+      },
+      "yugioh": {
+        "tagline": "Brze kombinacije i spektakularni potezi.",
+        "overview": "Yu-Gi-Oh! je brza igra prizivanja moćnih čudovišta i lančanih efekata. Poznata po kombinacijama i dinamičnim mečevima, nagrađuje kreativnost i poznavanje karata.",
+        "steps": [
+          {
+            "title": "Uzmi Structure Deck",
+            "detail": "Gotov špil dizajniran za učenje — uravnotežen i spreman za igru iz kutije."
+          },
+          {
+            "title": "Upoznaj tipove karata",
+            "detail": "Monster karte se bore, Spell karte daju efekte, a Trap karte se postavljaju licem nadole za iznenađenja."
+          },
+          {
+            "title": "Nauči faze poteza",
+            "detail": "Draw, Main, Battle i End faza — redosled poteza je ključ strategije i tajminga."
+          },
+          {
+            "title": "Odigraj prvi duel",
+            "detail": "Naši OTS igrači rado pokazuju osnove; najbrže se uči kroz prvi duel uz iskusnije igrače."
+          }
+        ],
+        "formats": [
+          {
+            "name": "Advanced",
+            "detail": "Zvanični format sa aktuelnom Forbidden & Limited listom — standard za većinu turnira."
+          },
+          {
+            "name": "Speed Duel",
+            "detail": "Brža, jednostavnija varijanta (4000 LP) bazirana na Duel Links — idealna za početnike."
+          },
+          {
+            "name": "OTS turniri",
+            "detail": "Zvanični turniri u našoj prodavnici, sa nagradama i promo kartama."
+          },
+          {
+            "name": "Structure Deck dueli",
+            "detail": "Ujednačeni mečevi gotovim špilovima — fer i odlični za učenje."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Da li je igra teška za početak?",
+            "a": "Structure Deck-ovi su napravljeni baš za početnike. Osnove se nauče za jednu partiju, a dubina dolazi vremenom."
+          },
+          {
+            "q": "Šta je OTS?",
+            "a": "Official Tournament Store — zvanični status za organizaciju Yu-Gi-Oh! turnira sa zvaničnim nagradama."
+          },
+          {
+            "q": "Koliko karata ima špil?",
+            "a": "Glavni špil ima 40–60 karata (preporučeno bliže 40), uz Extra i Side špil. Najviše 3 primerka iste karte."
+          },
+          {
+            "q": "Koliko traje duel?",
+            "a": "Uobičajeno 20–40 minuta; Speed Duel je još brži."
+          }
+        ],
+        "facts": {
+          "players": "2",
+          "time": "20–40 min",
+          "complexity": "Srednja",
+          "age": "10+"
+        },
+        "about": [
+          "Yu-Gi-Oh! TRADING CARD GAME, nastao 1999. godine po uzoru na čuvenu mangu, jedna je od najprodavanijih kartičnih igara svih vremena. Poznat je po brzim, spektakularnim potezima i moćnim kombinacijama.",
+          "Dvojica duelista bore se Monster, Spell i Trap kartama da svedu protivnikove Životne poene sa 8000 na 0. Prizivanje moćnih čudovišta i lančani efekti čine svaki duel dinamičnim.",
+          "Glavni špil ima 40 do 60 karata (preporučeno bliže 40), uz poseban Extra špil za napredna prizivanja i Side špil za prilagođavanje meča. Dozvoljena su najviše 3 primerka iste karte.",
+          "Kao OTS (Official Tournament Store), Dragon Games organizuje zvanične Yu-Gi-Oh! turnire sa nagradama. Početnici kreću Structure špilovima i brzo ulaze u igru uz pomoć zajednice."
+        ],
+        "references": [
+          {
+            "label": "Pravilnik i vodič za početnike (Konami)",
+            "url": "https://www.yugioh-card.com/en/rulebook/"
+          },
+          {
+            "label": "Speed Duel vodič za početnike",
+            "url": "https://www.yugioh-card.com/eu/play/speed-duel-beginners-guide/"
+          }
+        ]
+      },
+      "riftbound": {
+        "tagline": "Zvanična kartična igra sveta League of Legends.",
+        "overview": "Riftbound je nova kartična igra smeštena u univerzum League of Legends. Igraj omiljenim šampionima, kontroliši bojište i savladaj protivnika u brzim, taktičkim mečevima.",
+        "steps": [
+          {
+            "title": "Izaberi šampiona (Legend)",
+            "detail": "Champion Legend karta određuje boje tvog špila i šampiona oko kog gradiš strategiju."
+          },
+          {
+            "title": "Sastavi špil od 40 karata",
+            "detail": "Jedinice, čarolije i opremu u bojama tvog Legenda — najviše 3 primerka iste karte."
+          },
+          {
+            "title": "Osvajaj bojišta",
+            "detail": "Šalji jedinice na bojišta i zadrži ih — kontrola terena donosi poene do pobede."
+          },
+          {
+            "title": "Dođi na demo veče",
+            "detail": "Probaj igru bez kupovine uz naše vodiče i upoznaj Riftbound zajednicu."
+          }
+        ],
+        "formats": [
+          {
+            "name": "Constructed",
+            "detail": "Sastavi sopstveni špil od 40 karata oko izabranog šampiona i takmiči se."
+          },
+          {
+            "name": "2v2 (timski)",
+            "detail": "Igra u parovima do 11 poena — dinamična varijanta za društvo."
+          },
+          {
+            "name": "Demo večeri",
+            "detail": "Besplatno isprobavanje igre uz gotove špilove i naše vodiče."
+          },
+          {
+            "name": "Casual lige",
+            "detail": "Opuštene partije i napredovanje kroz sezonu u prijateljskoj atmosferi."
+          }
+        ],
+        "faq": [
+          {
+            "q": "Da li moram da igram League of Legends?",
+            "a": "Ne — Riftbound je samostalna igra. Poznavanje šampiona je prijatan bonus, ali nije potrebno."
+          },
+          {
+            "q": "Koliko igrača može da igra?",
+            "a": "Od 2 do 4 igrača — klasično 1 na 1, a postoji i timski 2v2 režim."
+          },
+          {
+            "q": "Kako se pobeđuje?",
+            "a": "Prvi do 8 poena (11 u 2v2), osvajajući i držeći bojišta svojim jedinicama."
+          },
+          {
+            "q": "Gde mogu da probam igru?",
+            "a": "Na našim demo večerima — daćemo ti gotov špil i provešćemo te kroz prvu partiju."
+          }
+        ],
+        "facts": {
+          "players": "2–4",
+          "time": "20–40 min",
+          "complexity": "Srednja",
+          "age": "14+"
+        },
+        "about": [
+          "Riftbound je zvanična kartična igra smeštena u univerzum League of Legends, predstavljena 2025. godine. Namenjena je za 2 do 4 igrača: biraš šampiona i šalješ svoju vojsku da osvoji bojišta.",
+          "Cilj je da prvi sakupiš 8 poena (11 u timskoj igri), osvajajući i držeći bojišta svojim jedinicama. Brzi, taktički mečevi nagrađuju kontrolu terena i pametno trošenje resursa.",
+          "Špil gradiš oko Champion Legend karte koja određuje boje (domene) i šampiona. Špil ima tačno 40 karata (uključujući šampiona), najviše 3 primerka iste, a karte plaćaš Runama.",
+          "Riftbound je nov i brzo raste. U Dragon Games-u organizujemo demo večeri gde možeš da probaš igru bez kupovine i upoznaš zajednicu okupljenu oko omiljenih šampiona."
+        ],
+        "references": [
+          {
+            "label": "Kako se igra (Riftbound)",
+            "url": "https://riftbound.leagueoflegends.com/en-us/news/rules-and-releases/how-to-play-get-started/"
+          },
+          {
+            "label": "Osnovna pravila",
+            "url": "https://riftbound.leagueoflegends.com/en-us/news/rules-and-releases/gameplay-guide-core-rules/"
+          }
+        ]
+      }
+    },
+    "overviewTitle": "O igri",
+    "glossaryTitle": "Korisni pojmovi",
+    "facts": {
+      "players": "Igrača",
+      "time": "Trajanje",
+      "complexity": "Složenost",
+      "age": "Uzrast"
+    },
+    "ctaTitle": "Spreman za prvu partiju?",
+    "ctaSubtitle": "Svrati u klub, javi nam se ili dođi na turnir — pomoći ćemo ti da počneš.",
+    "ctaVisit": "Poseti klub",
+    "ctaContact": "Kontakt",
+    "ctaTournaments": "Turniri",
+    "referencesTitle": "Izvori i zvanična pravila"
+  },
+  "notFound": {
+    "title": "Stranica nije pronađena",
+    "description": "Izgleda da je ova stranica odlutala u drugu dimenziju. Hajde da te vratimo na sigurno.",
+    "home": "Početna strana",
+    "guides": "Vodiči za igre",
+    "code": "Greška 404"
   }
 }

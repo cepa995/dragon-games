@@ -45,6 +45,9 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  // Everything except Next internals and static assets (so `/api` is covered).
-  matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
+  // Run on app routes incl. `/api` (for correlation), but NOT on Next internals
+  // (`/_next/*`, incl. the image optimizer) or any static file with an extension
+  // (`/images/*.jpg`, favicon, etc.) — otherwise next-intl would locale-redirect
+  // them and break image/asset serving.
+  matcher: ['/((?!_next|.*\\.).*)'],
 };
