@@ -32,10 +32,10 @@ test('mobile menu opens and closes', async ({ page }) => {
 
 test('header gains a solid border/background after scrolling', async ({ page }) => {
   await page.goto('/sr');
-  const header = page.locator('header');
-  // The header is always a dark glass bar; at the top its border is transparent
-  // and it becomes solid (border-border) once scrolled past the threshold.
-  await expect(header).toHaveClass(/border-transparent/);
+  // The blurred bar (inner div) carries the scroll-state classes: transparent
+  // border at the top, solid (border-border) once scrolled past the threshold.
+  const bar = page.locator('header > div').first();
+  await expect(bar).toHaveClass(/border-transparent/);
   await page.evaluate(() => window.scrollTo(0, 200));
-  await expect(header).toHaveClass(/border-border/);
+  await expect(bar).toHaveClass(/border-border/);
 });
