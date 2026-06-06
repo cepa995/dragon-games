@@ -10,16 +10,20 @@ const STATS = [
   { key: 'events', icon: Swords, accent: 'var(--color-tcg-riftbound)' },
 ] as const;
 
-/** Full-bleed credibility band — breaks the section rhythm right after the hero. */
+/**
+ * Credibility stats — sits on the page's own dark canvas (no boxed band) so it
+ * reads as a "who we are" continuation flowing out of the hero rather than a
+ * separate strip. Atmospheric accent glows tie it to the hero.
+ */
 export async function StatsBand() {
   const t = await getTranslations('home.stats');
 
   return (
-    <section className="border-border bg-surface/40 relative overflow-hidden border-y">
-      <div className="bg-accent/10 pointer-events-none absolute -top-24 left-1/4 size-72 rounded-full blur-3xl" />
-      <div className="bg-tcg-yugioh/10 pointer-events-none absolute right-1/4 -bottom-24 size-72 rounded-full blur-3xl" />
+    <section className="relative overflow-hidden">
+      <div className="bg-accent/10 pointer-events-none absolute -top-16 left-[18%] size-72 rounded-full blur-3xl" />
+      <div className="bg-tcg-yugioh/10 pointer-events-none absolute right-[18%] -bottom-16 size-72 rounded-full blur-3xl" />
 
-      <div className="relative mx-auto max-w-[1280px] px-4 py-14 sm:px-6 sm:py-16">
+      <div className="relative mx-auto max-w-[1080px] px-4 py-10 sm:px-6 sm:py-12">
         <Reveal>
           <p className="text-accent text-center text-xs font-semibold tracking-[0.25em] uppercase">
             {t('eyebrow')}
