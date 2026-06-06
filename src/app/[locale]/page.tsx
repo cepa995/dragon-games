@@ -53,7 +53,14 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         <WelcomeBand />
         {/* Credibility stats (StatsBand in sections/stats-band.tsx) are kept and
             can be dropped back in here if we want them again. */}
-        <FeaturedTcgs />
+        <div className="relative">
+          {/* Soft top fade so the games section eases out of the welcome. */}
+          <div
+            aria-hidden
+            className="from-background pointer-events-none absolute inset-x-0 top-0 -z-10 h-40 bg-gradient-to-b to-transparent"
+          />
+          <FeaturedTcgs />
+        </div>
       </div>
 
       <FeaturedProducts locale={locale} />
