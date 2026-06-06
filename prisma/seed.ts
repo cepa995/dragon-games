@@ -345,7 +345,14 @@ async function main() {
   await seedSettings();
   const categoryIds = await seedCategories();
   await seedProducts(categoryIds);
-  await seedUsers();
+  // Dev-credential users (admin@dragon.rs / member@example.com) must NEVER exist
+  // in production. Skip them when NODE_ENV=production; promote a real registered
+  // user to ADMIN out-of-band instead.
+  if (process.env.NODE_ENV === 'production') {
+    console.log('↷ Skipping dev users (NODE_ENV=production).');
+  } else {
+    await seedUsers();
+  }
   await seedContent();
   console.log('✅ Seed complete.');
 }
