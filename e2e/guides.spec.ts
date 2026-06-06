@@ -6,7 +6,7 @@ test('guides hub lists all four games', async ({ page }) => {
   await page.goto('/sr/guides');
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
   for (const name of ['Magic: The Gathering', 'Pokémon', 'Yu-Gi-Oh!', 'Riftbound']) {
-    await expect(page.getByRole('heading', { name })).toBeVisible();
+    await expect(page.getByText(name, { exact: true }).first()).toBeVisible();
   }
 });
 

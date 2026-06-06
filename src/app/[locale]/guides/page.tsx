@@ -1,10 +1,20 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Clock, Gauge, Trophy, Users } from 'lucide-react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Reveal, Stagger, StaggerItem } from '@/components/motion/reveal';
+import { GuideCardFan } from '@/components/guides/guide-card-fan';
+import { AshField } from '@/components/home/ash-field';
+import { Reveal } from '@/components/motion/reveal';
 import { Link } from '@/i18n/navigation';
+import { GAME_CARDS } from '@/lib/guides';
 import { TCGS } from '@/lib/tcg';
+
+const FACTS = [
+  ['players', Users],
+  ['time', Clock],
+  ['complexity', Gauge],
+  ['age', Trophy],
+] as const;
 
 export async function generateMetadata({
   params,
@@ -22,44 +32,101 @@ export default async function GuidesHubPage({ params }: { params: Promise<{ loca
   const t = await getTranslations('guides');
 
   return (
-    <main id="main-content" className="mx-auto w-full max-w-[1280px] px-4 py-16 sm:px-6 sm:py-20">
-      <Reveal>
-        <div className="mb-10 max-w-2xl space-y-3">
-          <h1 className="font-display text-4xl sm:text-5xl">{t('title')}</h1>
-          <p className="text-muted-foreground text-lg">{t('intro')}</p>
-        </div>
-      </Reveal>
+    <main id="main-content" className="relative">
+      <AshField />
 
-      <Stagger className="grid gap-5 sm:grid-cols-2">
-        {TCGS.map((game) => (
-          <StaggerItem key={game.key} className="h-full">
-            <Link
-              href={`/guides/${game.key}`}
-              className="group rounded-hero border-border bg-surface hover:border-accent/40 relative flex h-full flex-col overflow-hidden border transition-all duration-300 hover:-translate-y-1.5"
-              style={{ ['--a' as string]: game.accent } as React.CSSProperties}
+      <div className="mx-auto w-full max-w-[1280px] px-4 pt-16 sm:px-6 sm:pt-20">
+        <Reveal>
+          <div className="max-w-3xl space-y-4">
+            <h1
+              className="font-display text-4xl leading-tight sm:text-5xl"
+              style={{
+                backgroundImage:
+                  'linear-gradient(180deg, var(--color-foreground) 35%, color-mix(in oklch, var(--color-accent) 85%, var(--color-foreground)))',
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                color: 'transparent',
+              }}
             >
-              <div className="bg-muted relative aspect-[16/9] overflow-hidden">
+              {t('title')}
+            </h1>
+            <p className="text-muted-foreground text-lg">{t('intro')}</p>
+          </div>
+        </Reveal>
+      </div>
+
+      {/* Immersive alternating feature row per game */}
+      <div className="mx-auto w-full max-w-[1280px] space-y-8 px-4 py-12 sm:px-6 sm:py-16">
+        {TCGS.map((game, i) => {
+          const cards = GAME_CARDS[game.key];
+          const flip = i % 2 === 1;
+          return (
+            <Reveal key={game.key}>
+              <div
+                className="rounded-hero border-border bg-surface relative overflow-hidden border"
+                style={{ ['--a' as string]: game.accent } as React.CSSProperties}
+              >
                 <Image
                   src={game.banner}
-                  alt={game.label}
+                  alt=""
+                  aria-hidden
                   fill
-                  sizes="(max-width: 640px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  sizes="100vw"
+                  className="-z-10 object-cover opacity-[0.08]"
                 />
-                <div className="from-surface absolute inset-0 bg-gradient-to-t to-transparent" />
+                <div
+                  className="absolute inset-0 -z-10"
+                  style={{
+                    background:
+                      'radial-gradient(80% 120% at 100% 0%, color-mix(in oklch, var(--a) 14%, transparent), transparent 60%)',
+                  }}
+                />
+
+                <div className="grid items-center gap-8 p-8 md:grid-cols-2 md:gap-10 md:p-12">
+                  <div className={`flex justify-center ${flip ? 'md:order-2' : ''}`}>
+                    <GuideCardFan cards={cards} accent={game.accent} />
+                  </div>
+
+                  <div className={flip ? 'md:order-1' : ''}>
+                    <p
+                      className="text-sm font-semibold tracking-[0.18em] uppercase"
+                      style={{ color: 'var(--a)' }}
+                    >
+                      {game.label}
+                    </p>
+                    <h2 className="font-display mt-2 text-2xl leading-snug sm:text-3xl">
+                      {t(`games.${game.key}.tagline`)}
+                    </h2>
+
+                    <ul className="mt-6 flex flex-wrap gap-2">
+                      {FACTS.map(([key, Icon]) => (
+                        <li
+                          key={key}
+                          className="border-border bg-background/40 flex items-center gap-1.5 rounded-full border px-3 py-1.5 text-sm"
+                        >
+                          <Icon className="size-4" style={{ color: 'var(--a)' }} />
+                          <span className="font-semibold">
+                            {t(`games.${game.key}.facts.${key}`)}
+                          </span>
+                          <span className="text-muted-foreground">{t(`facts.${key}`)}</span>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <Link
+                      href={`/guides/${game.key}`}
+                      className="group bg-accent text-accent-foreground hover:bg-accent/90 mt-7 inline-flex items-center gap-1.5 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors"
+                    >
+                      {t('openGuide')}
+                      <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                  </div>
+                </div>
               </div>
-              <div className="flex flex-1 flex-col gap-2 p-6">
-                <h2 className="font-display text-2xl">{game.label}</h2>
-                <p className="text-muted-foreground text-sm">{t(`games.${game.key}.tagline`)}</p>
-                <span className="text-accent mt-auto inline-flex items-center gap-1.5 pt-3 text-sm font-semibold">
-                  {t('openGuide')}
-                  <ArrowRight className="size-4 transition-transform group-hover:translate-x-0.5" />
-                </span>
-              </div>
-            </Link>
-          </StaggerItem>
-        ))}
-      </Stagger>
+            </Reveal>
+          );
+        })}
+      </div>
     </main>
   );
 }
